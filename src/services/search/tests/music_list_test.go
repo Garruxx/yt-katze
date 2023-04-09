@@ -12,7 +12,7 @@ func TestMusicList(t *testing.T) {
 	param := "EgWKAQIIAWoIEAMQBBAJEAo%3D"
 	visitorID := "CgswTi1jc3JLMnVuVSir06GhBg%3D%3D"
 
-	result, err := search.MusicList(query, param, &visitorID)
+	result, err := search.MusicList(query, param, visitorID)
 	if err != nil {
 		t.Errorf("Test case 1 failed: %v", err)
 	}
@@ -22,13 +22,13 @@ func TestMusicList(t *testing.T) {
 
 	// Test case 2: param is invalid
 	param = "Tirilil"
-	result, err = search.MusicList(query, param, &visitorID)
+	result, err = search.MusicList(query, param, visitorID)
 	if err != nil {
 		t.Errorf("Test case 2 failed: %v", err)
 	}
 
 	// Test case 3: visitorID is nil
-	var nilVisitorID *string
+	var nilVisitorID string
 	result, err = search.MusicList(query, param, nilVisitorID)
 	if err != nil {
 		t.Errorf("Test case 3 failed: %v", err)
@@ -39,7 +39,7 @@ func TestMusicList(t *testing.T) {
 
 	// Test case 4: invalid visitorID
 	visitorID = "Tirilil"
-	result, err = search.MusicList(query, param, &visitorID)
+	result, err = search.MusicList(query, param, visitorID)
 	if err != nil {
 		t.Errorf("Test case 4 failed: %v", err)
 	}

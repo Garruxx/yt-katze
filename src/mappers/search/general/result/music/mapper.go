@@ -2,8 +2,7 @@ package music
 
 import (
 	"fmt"
-	"katze/src/mappers/search/general/result/music/formatters"
-	"katze/src/mappers/search/utils/simplify"
+	"katze/src/mappers/utils/mappers"
 	"katze/src/models"
 	"katze/src/models/external"
 	"katze/src/models/lists"
@@ -28,12 +27,8 @@ func Mapper(musicShelfRenderer external.FluffyMusicShelfRenderer) (
 	// Loop through the musicShelfRenderer contents and get the songs
 	songs := []music.Song{}
 	for _, item := range musicShelfRenderer.Contents {
-		simplifyData, err := simplify.MusicResponsiveListItemRenderer(item)
-		if err != nil {
-			return lists.Music{}, err
-		}
 
-		song, err := formatters.Song(simplifyData)
+		song, err := mappers.Song(item)
 		if err != nil {
 			return lists.Music{}, err
 		}

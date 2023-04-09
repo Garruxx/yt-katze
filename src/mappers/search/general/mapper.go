@@ -6,15 +6,14 @@ import (
 	"katze/src/mappers/search/general/result/artists"
 	"katze/src/mappers/search/general/result/best"
 	"katze/src/mappers/search/general/result/music"
-	"katze/src/mappers/search/general/utils"
-	searchUtils "katze/src/mappers/search/utils"
+	"katze/src/mappers/search/utils"
 	"katze/src/models/external"
 	"katze/src/models/lists"
 	musicModels "katze/src/models/music"
 	"katze/src/models/shelves"
 )
 
-func Map(searchResult external.General) (
+func Mapper(searchResult external.General) (
 	shelves.General, error,
 ) {
 
@@ -33,12 +32,12 @@ func Map(searchResult external.General) (
 			Tabs[0].TabRenderer.Content.SectionListRenderer.Contents
 
 	/*
-	* if the error is not nil and the error is "could not find shelf" 
+	* if the error is not nil and the error is "could not find shelf"
 	* or "cloud not find best result" then return the list empty
-	*/
+	 */
 
 	//Get the best result
-	bestResultTab, err := searchUtils.GetBestResult(tabContents)
+	bestResultTab, err := utils.GetBestResult(tabContents)
 	if err == nil {
 		bestMatch, err = best.Mapper(bestResultTab)
 		if err != nil {
@@ -81,12 +80,8 @@ func Map(searchResult external.General) (
 		return shelves.General{}, err
 	}
 
-	// Get the visitor ID, the visitorID is needed to get the next page
+	// Get the visitor ID, if it exists
 	visitorID := searchResult.ResponseContext.VisitorData
-	if visitorID == "" {
-		err := fmt.Errorf("could not get visitor ID")
-		return shelves.General{}, err
-	}
 
 	return shelves.General{
 		BestMatch: bestMatch,

@@ -1,8 +1,8 @@
 package tests
 
 import (
-	"katze/src/mappers/search/general/utils"
-	"katze/src/mappers/search/general/utils/tests/data"
+	"katze/src/mappers/search/utils"
+	"katze/src/mappers/search/utils/tests/data"
 	"testing"
 )
 

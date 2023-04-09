@@ -8,12 +8,12 @@ import (
 	"katze/src/services/utils"
 )
 
-func MusicPagination(continuationID string, visitorID *string) (
+func MusicPagination(continuationID string, visitorID string) (
 	external.MusicPagination, error,
 ) {
 
 	req := models.Request{
-		GoogVisitorID: visitorID,
+		GoogVisitorID: &visitorID,
 		UrlPath:       "/youtubei/v1/search",
 		UrlQueries:    fmt.Sprintf("continuation=%s", continuationID),
 	}

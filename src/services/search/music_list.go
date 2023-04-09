@@ -8,14 +8,14 @@ import (
 	"katze/src/services/utils"
 )
 
-func MusicList(query string, param string, visitorID *string) (
+func MusicList(query string, param string, visitorID string) (
 	external.MusicList, error,
 ) {
 
 	req := models.Request{
 		Params:        param,
 		Query:         query,
-		GoogVisitorID: visitorID,
+		GoogVisitorID: &visitorID,
 		UrlPath:       "/youtubei/v1/search",
 	}
 	body, err := utils.Request(req)

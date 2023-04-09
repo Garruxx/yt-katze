@@ -1,17 +1,26 @@
-package formatters
+package song
 
 import (
 	"katze/src/mappers/search/general/utils"
-	"katze/src/mappers/search/models"
+	"katze/src/mappers/search/utils/simplify"
 	"katze/src/mappers/utils/columns"
+	"katze/src/models/external"
 	"katze/src/models/music"
 )
 
-func Song(itemRenderer models.MusicResponsiveListItemRenderer) (
+func Mapper(listItemRenderer external.MischievousContent) (
 	music.Song, error,
 ) {
+
+	//simplifyData
+	itemRenderer, err := simplify.MusicResponsiveListItemRenderer(
+		listItemRenderer,
+	)
+	if err != nil {
+		return music.Song{}, err
+	}
 	// Validate the item renderer
-	err := utils.ValidateItemRenderer(itemRenderer, "MUSIC_TYPE", 2)
+	err = utils.ValidateItemRenderer(itemRenderer, "MUSIC_TYPE", 2)
 	if err != nil {
 		return music.Song{}, err
 	}

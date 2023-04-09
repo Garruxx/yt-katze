@@ -505,26 +505,10 @@ type IndigoContent struct {
 
 type PurpleMusicShelfRenderer struct {
 	Title          TitleElement                    `json:"title"`
-	Contents       []MusicShelfContinuationContent `json:"contents"`
+	Contents       []MischievousContent `json:"contents"`
 	TrackingParams string                          `json:"trackingParams"`
 	Continuations  []Continuation                  `json:"continuations"`
 	ShelfDivider   ShelfDivider                    `json:"shelfDivider"`
-}
-
-type MusicShelfContinuationContent struct {
-	MusicResponsiveListItemRenderer FluffyMusicResponsiveListItemRenderer `json:"musicResponsiveListItemRenderer"`
-}
-
-type FluffyMusicResponsiveListItemRenderer struct {
-	TrackingParams         string                     `json:"trackingParams"`
-	Thumbnail              ThumbnailRendererClass     `json:"thumbnail"`
-	Overlay                ThumbnailOverlayClass      `json:"overlay"`
-	FlexColumns            []FluffyFlexColumn         `json:"flexColumns"`
-	Menu                   MusicCardShelfRendererMenu `json:"menu"`
-	PlaylistItemData       PlaylistItemData           `json:"playlistItemData"`
-	FlexColumnDisplayStyle string                     `json:"flexColumnDisplayStyle"`
-	ItemHeight             string                     `json:"itemHeight"`
-	Badges                 []Badge                    `json:"badges,omitempty"`
 }
 
 type FluffyFlexColumn struct {
@@ -687,7 +671,7 @@ type TracksPaginationContinuationContents struct {
 }
 
 type MusicShelf struct {
-	Contents            []MusicShelfContinuationContent `json:"contents"`
+	Contents            []MischievousContent `json:"contents"`
 	TrackingParams      string                          `json:"trackingParams"`
 	Continuations       []Continuation                  `json:"continuations"`
 	ShelfDivider        ShelfDivider                    `json:"shelfDivider"`
