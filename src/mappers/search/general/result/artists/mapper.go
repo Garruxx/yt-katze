@@ -2,12 +2,10 @@ package artists
 
 import (
 	"fmt"
-	"katze/src/mappers/search/general/result/artists/formatters"
-	"katze/src/mappers/search/utils/simplify"
+	"katze/src/mappers/utils/mappers"
 	"katze/src/models"
 	"katze/src/models/external"
 	"katze/src/models/lists"
-	"katze/src/models/music"
 )
 
 func Mapper(musicShelfRenderer external.FluffyMusicShelfRenderer) (
@@ -25,19 +23,9 @@ func Mapper(musicShelfRenderer external.FluffyMusicShelfRenderer) (
 	}
 
 	// Loop through the musicShelfRenderer contents and get the artists
-	artists := []music.Artist{}
-	for _, item := range musicShelfRenderer.Contents {
-
-		simpifyData, err := simplify.MusicResponsiveListItemRenderer(item)
-		if err != nil {
-			return lists.Artists{}, err
-		}
-
-		artist, err := formatters.Artist(simpifyData)
-		if err != nil {
-			return lists.Artists{}, err
-		}
-		artists = append(artists, artist)
+	artists, err := mappers.Artists(musicShelfRenderer.Contents)
+	if err != nil {
+		return lists.Artists{}, err
 	}
 
 	searchEndpoint := musicShelfRenderer.BottomEndpoint.SearchEndpoint

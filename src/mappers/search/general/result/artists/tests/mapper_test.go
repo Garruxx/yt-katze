@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestArtist(t *testing.T) {
+func TestMapper(t *testing.T) {
 
 	// Test case 1 valid data
 	shelfRenderer := data.MUSIC_SHELF_RENDERER_VALID_ARTISTS

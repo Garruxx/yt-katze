@@ -10,12 +10,12 @@ import (
 
 func main() {
 
-	result, err := search.MusicList("agua con chia sous sol", "EgWKAQIIAWoKEAMQBBAJEAoQBQ%3D%3D", "")
+	result, err := search.General("agua con chia sous sol", "")
 	if err != nil {
 		panic(logger.Errorf("error: %v", err))
 	}
 
-	resultMapped, err := searchMaps.MusicList(result)
+	resultMapped, err := searchMaps.GeneralResult(result)
 	if err != nil {
 		panic(logger.Errorf("error: %v", err))
 	}

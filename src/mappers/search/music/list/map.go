@@ -1,14 +1,14 @@
-package music
+package list
 
 import (
 	"fmt"
 	"katze/src/mappers/utils/mappers"
 	"katze/src/models/external"
-	"katze/src/models/music"
 	"katze/src/models/shelves"
 )
 
-func Mapper(musicResults external.MusicList) (shelves.Music, error) {
+func Map(musicResults external.MusicList) (shelves.Music, error) {
+
 
 	// Check if the musicResults is empty
 	results := musicResults.Contents
@@ -26,23 +26,20 @@ func Mapper(musicResults external.MusicList) (shelves.Music, error) {
 	playListShelf := results.TabbedSearchResultsRenderer.Tabs[0].TabRenderer.Content.SectionListRenderer.Contents[0].MusicShelfRenderer
 	musicShelf := playListShelf.Contents
 
+	// Check if the musicShelf is empty and return an empty list
+	// cause no results
 	if leng := len(musicShelf); leng == 0 {
 		return shelves.Music{}, nil
 	}
 
-	var musicItems []music.Song
-	for _, item := range musicShelf {
-
-		song, err := mappers.Song(item)
-		if err != nil {
-			return shelves.Music{}, err
-		}
-		musicItems = append(musicItems, song)
+	musicItems, err := mappers.Songs(musicShelf)
+	if err != nil {
+		return shelves.Music{}, err
 	}
 
 	// Get the visitorID is it exists
 	visitorID := musicResults.ResponseContext.VisitorData
-	
+
 	continuationID := playListShelf.Continuations[0].NextContinuationData.Continuation
 
 	return shelves.Music{

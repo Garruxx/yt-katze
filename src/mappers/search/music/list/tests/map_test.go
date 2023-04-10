@@ -1,8 +1,8 @@
 package tests
 
 import (
-	"katze/src/mappers/search/music"
-	"katze/src/mappers/search/music/tests/data"
+	"katze/src/mappers/search/music/list"
+	"katze/src/mappers/search/music/list/tests/data"
 	"testing"
 )
 
@@ -14,7 +14,7 @@ func TestMapper(t *testing.T) {
 		t.Errorf("test 1 failed, error: %v", err)
 	}
 	// test case 1.1 - check if the data has an error
-	result, err := music.Mapper(musicData)
+	result, err := list.Map(musicData)
 	if err != nil {
 		t.Errorf("test 1.1 failed, error: %v", err)
 	}
@@ -38,7 +38,7 @@ func TestMapper(t *testing.T) {
 		t.Errorf("test 2 failed, error: %v", err)
 	}
 	// test case 2.1 - check if the error exists
-	result, err = music.Mapper(musicData)
+	result, err = list.Map(musicData)
 	if err == nil {
 		t.Errorf("test 2.1 failed, error: %v", err)
 	}
@@ -49,7 +49,7 @@ func TestMapper(t *testing.T) {
 		t.Errorf("test 3 failed, error: %v", err)
 	}
 	// test case 3.1 - check if the error exists
-	result, err = music.Mapper(musicData)
+	result, err = list.Map(musicData)
 	if err != nil {
 		t.Errorf("test 3.1 failed, error: %v", err)
 	}

@@ -6,6 +6,8 @@ import (
 )
 
 type Artists struct {
-	Artists      []music.Artist      `json:"artists,omitempty"`
-	Continuation models.Continuation `json:"continuation,omitempty"`
+	Artists        []music.Artist      `json:"artists,omitempty"`
+	Continuation   models.Continuation `json:"continuation,omitempty"`
+	ContinuationID string              `json:"continuationId,omitempty"`
+	VisitorID      string              `json:"visitorId,omitempty"`
 }

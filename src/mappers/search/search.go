@@ -5,5 +5,6 @@ import (
 	"katze/src/mappers/search/music"
 )
 
-var General = general.Mapper
-var MusicList = music.Mapper
+var GeneralResult = general.Result
+var MusicList = music.List
+var MusicPagination = music.Pagination

@@ -1,0 +1,233 @@
+{
+    "responseContext": {
+        "visitorData": "CgtudV83YzFsaURyayiEzcyhBg%3D%3D",
+        "serviceTrackingParams": [
+            {
+                "service": "CSI",
+                "params": [
+                    {
+                        "key": "c",
+                        "value": "WEB_REMIX"
+                    },
+                    {
+                        "key": "cver",
+                        "value": "1.20230306.01.00"
+                    },
+                    {
+                        "key": "yt_li",
+                        "value": "0"
+                    },
+                    {
+                        "key": "GetSearch_rid",
+                        "value": "0x65360e17a55c7746"
+                    }
+                ]
+            },
+            {
+                "service": "GFEEDBACK",
+                "params": [
+                    {
+                        "key": "logged_in",
+                        "value": "0"
+                    },
+                    {
+                        "key": "e",
+                        "value": "1714256,23804281,23826897,23885487,23918597,23946420,23966208,23983296,23998056,24004644,24007246,24034168,24036948,24077241,24080738,24120820,24135310,24140247,24162920,24169501,24181174,24187043,24187377,24197450,24211178,24219713,24235780,24236210,24241378,24248956,24255165,24255543,24255545,24262346,24263796,24268142,24288047,24288664,24290971,24390675,24391537,24396565,24404640,24405913,24407191,24409417,24415864,24415866,24418298,24419114,24425063,24426636,24428902,24429095,24439361,24439483,24443595,24445497,24449915,24450131,24450367,24451319,24451437,24453129,24454095,24455284,24456681,24458317,24458324,24458329,24458839,24465011,24465099,24466371,24466458,24468691,24468724,24471752,24474986,24477227,24477512,24482081,24483011,24483503,24484079,24485239,24485421,24486580,24487521,24488188,24488209,24489834,24489888,24490469,24490486,24490538,24491070,24493982,24494077,24494198,24494984,24495060,24495962,24495965,24495986,24496739,24496968,24498344,24499293,24499298,24499464,24499570,24499577,24499792,24511619,24513984,24515366,24516017,24516157,24518452,24519061,24519081,24519102,24519142,24519223,24519257,24530043,24530194,24530296,24530334,24530441,24530948,24531268,24534336,24535859,24536116,39323074"
+                    }
+                ]
+            },
+            {
+                "service": "ECATCHER",
+                "params": [
+                    {
+                        "key": "client.version",
+                        "value": "1.20000101"
+                    },
+                    {
+                        "key": "client.name",
+                        "value": "WEB_REMIX"
+                    },
+                    {
+                        "key": "client.fexp",
+                        "value": "24468724,24268142,24409417,24219713,24453129,24518452,24535859,24490538,24439483,24499577,24499570,24415864,24162920,23918597,24458839,24496968,24458329,24450131,24494984,24290971,24511619,24530043,24530194,24485239,24288664,24236210,24519081,24530296,24390675,24519102,24466371,24077241,24255545,24451437,24036948,24418298,24499293,24197450,24120820,24536116,24455284,24255543,24530441,24495060,24493982,24486580,24465099,23946420,24396565,24485421,39323074,24405913,24487521,24439361,24494077,24488209,24080738,23966208,24140247,24488188,24407191,24496739,24499464,24468691,24466458,24498344,24450367,23804281,24482081,23983296,24187377,24489888,24484079,24465011,24477512,24445497,24519223,24262346,24135310,24483503,23998056,24211178,24241378,24519142,24451319,24187043,24456681,24516157,24489834,24491070,24248956,24419114,24288047,24263796,24483011,24449915,24495962,24513984,24415866,23826897,24499298,24426636,24534336,24516017,24458324,24458317,24004644,24007246,24477227,24391537,24235780,24425063,24499792,24531268,24490486,24530334,24494198,24429095,24404640,24034168,24515366,24519257,24471752,23885487,24255165,24443595,24530948,24519061,24428902,24169501,24454095,24474986,24181174,24490469,1714256,24495986,24495965"
+                    }
+                ]
+            }
+        ],
+        "maxAgeSeconds": 120
+    },
+    "continuationContents": {
+        "musicShelfContinuation": {
+            "contents": [],
+            "trackingParams": "CAgQ-V4iEwjdw-Hz153-AhWlBk8IHSjFDdE=",
+            "continuations": [
+                {
+                    "nextContinuationData": {
+                        "continuation": "EqQDEg1BZ3VhIGNvbiBjaGlhGpIDRWdXS0FRSUlBVWdvYWdnUUF4QUVFQWtRQ29JQkMzcHRRVGxWVG5CeFIyUlpnZ0VMT1MwNVRpMTZVbnBMT0dPQ0FRdGhNbWg2ZW5WdFgwRmxVWUlCQzFwcGNqWjBObnBYYWxSWmdnRUxkMGRQUjNoRE1UY3hPRy1DQVF0bGVucFJSR0k0WmxWM1RZSUJDM1JyYUVSRGFIbFBlVWd3Z2dFTE1rdE9aMGR3VVdJMGNWR0NBUXRxVURWVk4xQlVRamsyWTRJQkN5MXFTbXB6TFdVelQxVjNnZ0VMUTJ0dk4xWldjbVJIWmpTQ0FRc3hSRFpKWWtaYVJtSmZiNElCQzFkc1kxUTNlWHBzUzJKemdnRUxSVVp3V0RsdmFtVkllVm1DQVF0MVIyZFpiRmhqU2xkTlZZSUJDMVZ5UVhwM2RVTjJjMFZ6Z2dFTFMydGFPVWhUUmxGVVNUaUNBUXRKVG5ObFlURjRTWFZqYjRJQkMwMTBOVVZ3WDFZNFpVTlZnZ0VMYXpFek5IaEViMlZYWVVVJTNEGPHq0C4%3D",
+                        "clickTrackingParams": "CAkQybcCIhMI3cPh89ed_gIVpQZPCB0oxQ3R"
+                    }
+                }
+            ],
+            "shelfDivider": {
+                "musicShelfDividerRenderer": {
+                    "hidden": true
+                }
+            },
+            "autoReloadWhenEmpty": false
+        }
+    },
+    "trackingParams": "CAAQvGkiEwjdw-Hz153-AhWlBk8IHSjFDdE=",
+    "header": {
+        "musicHeaderRenderer": {
+            "header": {
+                "chipCloudRenderer": {
+                    "chips": [
+                        {
+                            "chipCloudChipRenderer": {
+                                "style": {
+                                    "styleType": "STYLE_SECONDARY"
+                                },
+                                "navigationEndpoint": {
+                                    "clickTrackingParams": "CAcQ_V0YACITCN3D4fPXnf4CFaUGTwgdKMUN0Q==",
+                                    "searchEndpoint": {
+                                        "query": "Agua con chia"
+                                    }
+                                },
+                                "trackingParams": "CAcQ_V0YACITCN3D4fPXnf4CFaUGTwgdKMUN0Q==",
+                                "icon": {
+                                    "iconType": "CLOSE"
+                                },
+                                "accessibilityData": {
+                                    "accessibilityData": {
+                                        "label": "Borrar filtros"
+                                    }
+                                },
+                                "isSelected": false
+                            }
+                        },
+                        {
+                            "chipCloudChipRenderer": {
+                                "style": {
+                                    "styleType": "STYLE_PRIMARY"
+                                },
+                                "text": {
+                                    "runs": [
+                                        {
+                                            "text": "Canciones"
+                                        }
+                                    ]
+                                },
+                                "navigationEndpoint": {
+                                    "clickTrackingParams": "CAYQ_V0YASITCN3D4fPXnf4CFaUGTwgdKMUN0Q==",
+                                    "searchEndpoint": {
+                                        "query": "Agua con chia",
+                                        "params": "EgWKAQIIAWoIEAMQBBAJEAo%3D"
+                                    }
+                                },
+                                "trackingParams": "CAYQ_V0YASITCN3D4fPXnf4CFaUGTwgdKMUN0Q==",
+                                "accessibilityData": {
+                                    "accessibilityData": {
+                                        "label": "Se seleccionó Mostrar los resultados de búsqueda de canciones"
+                                    }
+                                },
+                                "isSelected": true,
+                                "uniqueId": "Canciones"
+                            }
+                        },
+                        {
+                            "chipCloudChipRenderer": {
+                                "style": {
+                                    "styleType": "STYLE_DEFAULT"
+                                },
+                                "text": {
+                                    "runs": [
+                                        {
+                                            "text": "Videos"
+                                        }
+                                    ]
+                                },
+                                "navigationEndpoint": {
+                                    "clickTrackingParams": "CAUQ_V0YAiITCN3D4fPXnf4CFaUGTwgdKMUN0Q==",
+                                    "searchEndpoint": {
+                                        "query": "Agua con chia",
+                                        "params": "EgWKAQIQAWoIEAMQBBAJEAo%3D"
+                                    }
+                                },
+                                "trackingParams": "CAUQ_V0YAiITCN3D4fPXnf4CFaUGTwgdKMUN0Q==",
+                                "accessibilityData": {
+                                    "accessibilityData": {
+                                        "label": "Mostrar resultados de videos"
+                                    }
+                                },
+                                "isSelected": false,
+                                "uniqueId": "Videos"
+                            }
+                        },
+                        {
+                            "chipCloudChipRenderer": {
+                                "style": {
+                                    "styleType": "STYLE_DEFAULT"
+                                },
+                                "text": {
+                                    "runs": [
+                                        {
+                                            "text": "Álbumes"
+                                        }
+                                    ]
+                                },
+                                "navigationEndpoint": {
+                                    "clickTrackingParams": "CAQQ_V0YAyITCN3D4fPXnf4CFaUGTwgdKMUN0Q==",
+                                    "searchEndpoint": {
+                                        "query": "Agua con chia",
+                                        "params": "EgWKAQIYAWoIEAMQBBAJEAo%3D"
+                                    }
+                                },
+                                "trackingParams": "CAQQ_V0YAyITCN3D4fPXnf4CFaUGTwgdKMUN0Q==",
+                                "accessibilityData": {
+                                    "accessibilityData": {
+                                        "label": "Mostrar resultados de álbumes"
+                                    }
+                                },
+                                "isSelected": false,
+                                "uniqueId": "Álbumes"
+                            }
+                        },
+                        {
+                            "chipCloudChipRenderer": {
+                                "style": {
+                                    "styleType": "STYLE_DEFAULT"
+                                },
+                                "text": {
+                                    "runs": [
+                                        {
+                                            "text": "Listas de reproducción de la comunidad"
+                                        }
+                                    ]
+                                },
+                                "navigationEndpoint": {
+                                    "clickTrackingParams": "CAMQ_V0YBCITCN3D4fPXnf4CFaUGTwgdKMUN0Q==",
+                                    "searchEndpoint": {
+                                        "query": "Agua con chia",
+                                        "params": "EgeKAQQoAEABaggQAxAEEAkQCg%3D%3D"
+                                    }
+                                },
+                                "trackingParams": "CAMQ_V0YBCITCN3D4fPXnf4CFaUGTwgdKMUN0Q==",
+                                "accessibilityData": {
+                                    "accessibilityData": {
+                                        "label": "Mostrar resultados de las listas de reproducción de la comunidad"
+                                    }
+                                },
+                                "isSelected": false,
+                                "uniqueId": "Listas de reproducción de la comunidad"
+                            }
+                        }
+                    ],
+                    "collapsedRowCount": 1,
+                    "trackingParams": "CAIQ_F0iEwjdw-Hz153-AhWlBk8IHSjFDdE=",
+                    "horizontalScrollable": true
+                }
+            },
+            "trackingParams": "CAEQ4HIiEwjdw-Hz153-AhWlBk8IHSjFDdE="
+        }
+    }
+}

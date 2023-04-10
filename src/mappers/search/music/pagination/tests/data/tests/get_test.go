@@ -1,19 +1,19 @@
 package tests
 
 import (
-	"katze/src/mappers/search/music/tests/data"
+	"katze/src/mappers/search/music/pagination/tests/data"
 	"testing"
 )
 
 func TestGet(t *testing.T) {
 
 	// test case 1 - get the data from the file path valid
-	result, err := data.Get("../json/music_data_valid.json")
+	result, err := data.Get("../json/pagination_data_valid.json")
 	if err != nil {
 		t.Errorf("test 1 failed, error: %v", err)
 	}
 	// test case 1.1 - check if the data is empty
-	if result.Contents == nil {
+	if result.ContinuationContents == nil {
 		t.Errorf("test 1.1 failed, error: contents is empty")
 	}
 	// test case 1.2 - check if the response context is nil
@@ -23,7 +23,9 @@ func TestGet(t *testing.T) {
 
 	// test case 2 - get the data from the file path valid but the data
 	// contains an error
-	result, err = data.Get("../json/music_data_error_invalid.json")
+	result, err = data.Get(
+		"../json/pagination_data_error_invalid.json",
+	)
 	if err != nil {
 		t.Errorf("test 2 failed, error: %v", err)
 	}
@@ -47,7 +49,9 @@ func TestGet(t *testing.T) {
 	}
 
 	// test case 4 - get the data from the file path no results
-	result, err = data.Get("../json/music_data_no_results_valid.json")
+	result, err = data.Get(
+		"../json/pagination_data_no_songs_valid.json",
+	)
 	if err != nil {
 		t.Errorf("test 4 failed, error: %v", err)
 	}

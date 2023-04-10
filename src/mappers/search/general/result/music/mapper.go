@@ -6,7 +6,6 @@ import (
 	"katze/src/models"
 	"katze/src/models/external"
 	"katze/src/models/lists"
-	"katze/src/models/music"
 )
 
 func Mapper(musicShelfRenderer external.FluffyMusicShelfRenderer) (
@@ -25,16 +24,10 @@ func Mapper(musicShelfRenderer external.FluffyMusicShelfRenderer) (
 	}
 
 	// Loop through the musicShelfRenderer contents and get the songs
-	songs := []music.Song{}
-	for _, item := range musicShelfRenderer.Contents {
-
-		song, err := mappers.Song(item)
-		if err != nil {
-			return lists.Music{}, err
-		}
-		songs = append(songs, song)
+	songs, err := mappers.Songs(musicShelfRenderer.Contents)
+	if err != nil {
+		return lists.Music{}, err
 	}
-
 	searchEndpoint := musicShelfRenderer.BottomEndpoint.SearchEndpoint
 	continuation := models.Continuation(searchEndpoint)
 

@@ -52,8 +52,8 @@ func TestGetAlbums(t *testing.T) {
 	if err != nil {
 		t.Errorf("Test 2 failed, error: %s", err)
 	}
-	// Test case 2.1: Test with empty data, length of albums is equal to 0
-	if leng := len(albums); leng != 0 {
+	// Test case 2.1: Test with empty data, length of albums is equal to 1
+	if leng := len(albums); leng != 1 {
 		t.Errorf(
 			"Test 2 failed, expected: %d, got: %d",
 			0, len(albums),
@@ -87,9 +87,20 @@ func TestGetAlbums(t *testing.T) {
 	if err != nil {
 		t.Errorf("Test 6 failed, error: %s", err)
 	}
-	// Test case 6.1: Test with no albums, length of albums is equal to 0
-	if leng := len(albums); leng != 0 {
+	// Test case 6.1: Test with no albums, length of albums is equal to 1
+	if leng := len(albums); leng != 1 {
 		t.Errorf("Test 6.1 failed, expected: %d, got: %d", 0, leng)
+	}
+	// Test case 6.2: Test with no albums, title Unknown
+	if title := albums[0].Title; title != "Unknown" {
+		t.Errorf(
+			"Test 6.2 failed, expected: %s, got: %s",
+			"Unknown", title,
+		)
+	}
+	// Test case 6.3: Test with no albums, ID Unknown
+	if id := albums[0].ID; id != "Unknown" {
+		t.Errorf("Test 6.3 failed, expected: %s, got: %s", "Unknown", id)
 	}
 
 }

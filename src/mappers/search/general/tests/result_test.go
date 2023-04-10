@@ -14,7 +14,7 @@ func TestMap(t *testing.T) {
 		t.Errorf("test 1 failed, error: %v", err)
 	}
 	// test case 1.1 - check if the best match exists
-	result, err := general.Mapper(generalData)
+	result, err := general.Result(generalData)
 	if err != nil {
 		t.Errorf("test 1.1 failed, error: %v", err)
 	}
@@ -42,7 +42,7 @@ func TestMap(t *testing.T) {
 		t.Errorf("test 2 failed, error: %v", err)
 	}
 	// check if the error exists
-	result, err = general.Mapper(generalData)
+	result, err = general.Result(generalData)
 	if err == nil {
 		t.Errorf("test 2.1 failed, error: %v", err)
 	}
@@ -55,7 +55,7 @@ func TestMap(t *testing.T) {
 		t.Errorf("test 3 failed, error: %v", err)
 	}
 	// test case 3.1 check if the error exists
-	result, err = general.Mapper(generalData)
+	result, err = general.Result(generalData)
 	if err != nil {
 		t.Errorf("test 3.1 failed, error: %v", err)
 	}
@@ -70,7 +70,7 @@ func TestMap(t *testing.T) {
 		t.Errorf("test 4 failed, error: %v", err)
 	}
 	// test case 4.1 check if the error exists
-	result, err = general.Mapper(generalData)
+	result, err = general.Result(generalData)
 	if err != nil {
 		t.Errorf("test 4.1 failed, error: %v", err)
 	}
@@ -87,7 +87,7 @@ func TestMap(t *testing.T) {
 		t.Errorf("test 5 failed, error: %v", err)
 	}
 	// test case 5.1 check if the error exists
-	result, err = general.Mapper(generalData)
+	result, err = general.Result(generalData)
 	if err != nil {
 		t.Errorf("test 5.1 failed, error: %v", err)
 	}
@@ -104,7 +104,7 @@ func TestMap(t *testing.T) {
 		t.Errorf("test 6 failed, error: %v", err)
 	}
 	// test case 6.1 check if the error exists
-	result, err = general.Mapper(generalData)
+	result, err = general.Result(generalData)
 	if err != nil {
 		t.Errorf("test 6.1 failed, error: %v", err)
 	}

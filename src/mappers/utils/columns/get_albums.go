@@ -44,7 +44,12 @@ func GetAlbums(flexcolumns []models.FlexColumn) (
 	}
 
 	if len(albums) == 0 {
-		return []music.Album{}, nil
+		return []music.Album{
+			{
+				Title: "Unknown",
+				ID:    "Unknown",
+			},
+		}, nil
 	}
 
 	return albums, nil

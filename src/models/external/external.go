@@ -504,11 +504,11 @@ type IndigoContent struct {
 }
 
 type PurpleMusicShelfRenderer struct {
-	Title          TitleElement                    `json:"title"`
+	Title          TitleElement         `json:"title"`
 	Contents       []MischievousContent `json:"contents"`
-	TrackingParams string                          `json:"trackingParams"`
-	Continuations  []Continuation                  `json:"continuations"`
-	ShelfDivider   ShelfDivider                    `json:"shelfDivider"`
+	TrackingParams string               `json:"trackingParams"`
+	Continuations  []Continuation       `json:"continuations"`
+	ShelfDivider   ShelfDivider         `json:"shelfDivider"`
 }
 
 type FluffyFlexColumn struct {
@@ -670,14 +670,7 @@ type TracksPaginationContinuationContents struct {
 	MusicShelfContinuation MusicShelf `json:"musicShelfContinuation"`
 }
 
-type MusicShelf struct {
-	Contents            []MischievousContent `json:"contents"`
-	TrackingParams      string                          `json:"trackingParams"`
-	Continuations       []Continuation                  `json:"continuations"`
-	ShelfDivider        ShelfDivider                    `json:"shelfDivider"`
-	AutoReloadWhenEmpty *bool                           `json:"autoReloadWhenEmpty,omitempty"`
-	Title               *TitleElement                   `json:"title,omitempty"`
-}
+type MusicShelf FluffyMusicShelfRenderer
 
 type TracksPaginationHeader struct {
 	MusicHeaderRenderer MusicHeaderRenderer `json:"musicHeaderRenderer"`
@@ -694,6 +687,8 @@ type TracksPaginationResponseContext struct {
 	MaxAgeSeconds         int64                  `json:"maxAgeSeconds"`
 }
 
+type ArtistList MusicList
+type AlbumList MusicList
 type MusicList struct {
 	ResponseContext *TracksPaginationResponseContext `json:"responseContext,omitempty"`
 	Contents        *TracklistContents               `json:"contents,omitempty"`
@@ -904,12 +899,15 @@ type TentacledRun struct {
 }
 
 type FluffyMusicShelfRenderer struct {
-	Title          TitleElement                            `json:"title"`
-	Contents       []MischievousContent                    `json:"contents"`
-	TrackingParams string                                  `json:"trackingParams"`
+	Title               TitleElement         `json:"title"`
+	Contents            []MischievousContent `json:"contents"`
+	TrackingParams      string               `json:"trackingParams"`
+	ShelfDivider        ShelfDivider         `json:"shelfDivider"`
+	Continuations       []Continuation       `json:"continuations"`
+	AutoReloadWhenEmpty *bool                `json:"autoReloadWhenEmpty,omitempty"`
+
 	BottomText     TitleElement                            `json:"bottomText"`
 	BottomEndpoint ChipCloudChipRendererNavigationEndpoint `json:"bottomEndpoint"`
-	ShelfDivider   ShelfDivider                            `json:"shelfDivider"`
 }
 
 type MischievousContent struct {
@@ -926,7 +924,7 @@ type StickyMusicResponsiveListItemRenderer struct {
 	FlexColumnDisplayStyle string                                             `json:"flexColumnDisplayStyle"`
 	ItemHeight             string                                             `json:"itemHeight"`
 	NavigationEndpoint     *MusicResponsiveListItemRendererNavigationEndpoint `json:"navigationEndpoint,omitempty"`
-	Badges                 *[]Badge                                            `json:"badges,omitempty"`
+	Badges                 *[]Badge                                           `json:"badges,omitempty"`
 }
 
 type TentacledOverlay struct {

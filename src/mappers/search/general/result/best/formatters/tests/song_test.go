@@ -114,10 +114,10 @@ func TestSong(t *testing.T) {
 	if err != nil {
 		t.Errorf("test 4 failed error, got %v", err)
 	}
-	if song.AlbumTitle != "" {
+	if song.AlbumTitle != "Unknown" {
 		t.Errorf("test 4 failed: albumTitle expected %v, got %v", nil, song.AlbumTitle)
 	}
-	if song.AlbumID != "" {
+	if song.AlbumID != "Unknown" {
 		t.Errorf("test 4 failed: albumID expected %v, got %v", nil, song.AlbumID)
 	}
 

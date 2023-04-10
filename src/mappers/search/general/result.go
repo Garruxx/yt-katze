@@ -13,7 +13,7 @@ import (
 	"katze/src/models/shelves"
 )
 
-func Mapper(searchResult external.General) (
+func Result(searchResult external.General) (
 	shelves.General, error,
 ) {
 
