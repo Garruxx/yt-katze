@@ -1,3 +1,4 @@
 response.json
 *.log
 **/error/
+.vscode/
