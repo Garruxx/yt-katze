@@ -2,24 +2,29 @@ package tests
 
 import (
 	"katze/src/mappers/search/music/list"
-	"katze/src/mappers/search/music/list/tests/data"
+	"katze/src/models/external"
+	"katze/src/utils"
 	"testing"
 )
 
 func TestMapper(t *testing.T) {
 
-	// test case 1 - get the data from the file path valid
-	musicData, err := data.Get("./data/json/music_data_valid.json")
+	// test case 1 - get the data
+	var musicData external.MusicList
+	err := utils.GetStructFromJson(
+		"./data/json/music_data_valid.json", &musicData,
+	)
 	if err != nil {
 		t.Errorf("test 1 failed, error: %v", err)
 	}
+
 	// test case 1.1 - check if the data has an error
 	result, err := list.Map(musicData)
 	if err != nil {
 		t.Errorf("test 1.1 failed, error: %v", err)
 	}
 	// test case 1.2 - check if the result has a
-	if leng := len(result.Tracks); leng != 20 {
+	if leng := len(result.Songs); leng != 20 {
 		t.Errorf("test 1.2 failed, expected 20 tracks, got %v", leng)
 	}
 	// test case 1.3 - check if the result has a continuationID
@@ -33,7 +38,10 @@ func TestMapper(t *testing.T) {
 
 	// test case 2 - get the data from the file path valid but the data
 	// has an error
-	musicData, err = data.Get("./data/json/music_data_error_invalid.json")
+	musicData = external.MusicList{}
+	err = utils.GetStructFromJson(
+		"./data/json/music_data_error_invalid.json", &musicData,
+	)
 	if err != nil {
 		t.Errorf("test 2 failed, error: %v", err)
 	}
@@ -43,8 +51,11 @@ func TestMapper(t *testing.T) {
 		t.Errorf("test 2.1 failed, error: %v", err)
 	}
 
-	// test case 3 - get the data from the file path valid, no results
-	musicData, err = data.Get("./data/json/music_data_no_results_valid.json")
+	musicData = external.MusicList{}
+	// test case 3 - get the data no results
+	err = utils.GetStructFromJson(
+		"./data/json/music_data_no_results_valid.json", &musicData,
+	)
 	if err != nil {
 		t.Errorf("test 3 failed, error: %v", err)
 	}
@@ -62,7 +73,7 @@ func TestMapper(t *testing.T) {
 		t.Errorf("test 3.3 failed, expected a visitorID empty")
 	}
 	// test case 3.4 - check if the result has a tracks length 0
-	if leng := len(result.Tracks); leng != 0 {
+	if leng := len(result.Songs); leng != 0 {
 		t.Errorf("test 3.4 failed, expected 0 tracks, got %v", leng)
 	}
 

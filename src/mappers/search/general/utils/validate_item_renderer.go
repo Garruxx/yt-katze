@@ -2,9 +2,10 @@ package utils
 
 import (
 	"fmt"
-	"katze/src/mappers/search/models"
+	"katze/src/mappers/models"
 )
 
+// ValidateItemRenderer validates the itemRenderer
 func ValidateItemRenderer(
 	itemRenderer models.MusicResponsiveListItemRenderer,
 	pageTypeExpected string,

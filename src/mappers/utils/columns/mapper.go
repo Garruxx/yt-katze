@@ -25,8 +25,7 @@ func Mapper(flexColumns []external.FluffyFlexColumn) (
 		items := models.MultiColumn{}
 
 		if len(column) < 1 {
-			err := fmt.Errorf("error: column is empty")
-			return []models.ColumnsItems{}, err
+			continue
 		}
 
 		for _, item := range column {

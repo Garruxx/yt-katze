@@ -8,8 +8,9 @@ import (
 	"katze/src/services/utils"
 )
 
-func MusicPagination(continuationID string, visitorID string) (
-	external.MusicPagination, error,
+// ItemsPagination returns a list of items from a continuationID
+func ItemsPagination(continuationID string, visitorID string) (
+	external.ItemsPagination, error,
 ) {
 
 	req := models.Request{
@@ -20,21 +21,21 @@ func MusicPagination(continuationID string, visitorID string) (
 	body, err := utils.Request(req)
 	if err != nil {
 		err := fmt.Errorf("error sending continuation request: %v", err)
-		return external.MusicPagination{}, err
+		return external.ItemsPagination{}, err
 	}
 
-	//Decode the response body into a trackpagination struct
-	var trackPagination external.MusicPagination
-	err = json.Unmarshal(body, &trackPagination)
+	//Decode the response body into a item pagination struct
+	var itemsPagination external.ItemsPagination
+	err = json.Unmarshal(body, &itemsPagination)
 	if err != nil {
 		err := fmt.Errorf("error unmarshalling response body: %v", err)
-		return external.MusicPagination{}, err
+		return external.ItemsPagination{}, err
 	}
 
-	if _error := trackPagination.Error; _error != nil {
+	if _error := itemsPagination.Error; _error != nil {
 		err := fmt.Errorf("error getting continuation: %v", _error.Status)
-		return external.MusicPagination{}, err
+		return external.ItemsPagination{}, err
 	}
 
-	return trackPagination, nil
+	return itemsPagination, nil
 }

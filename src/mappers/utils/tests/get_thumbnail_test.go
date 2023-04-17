@@ -3,7 +3,7 @@ package test
 import (
 	"katze/src/mappers/utils"
 	"katze/src/mappers/utils/tests/data"
-	"katze/src/models"
+	"katze/src/models/external"
 	"testing"
 )
 
@@ -11,7 +11,7 @@ func TestGetThumbnail(t *testing.T) {
 
 	// Test case 1: ThumbnailRendererClass is valid
 	thumbnailRenderer := data.THUMBNAIL_RENDERER
-	expected := []models.Thumbnail{
+	expected := []external.ThumbnailElement{
 		{
 			URL:    "https://example.com/image1.jpg",
 			Width:  100,

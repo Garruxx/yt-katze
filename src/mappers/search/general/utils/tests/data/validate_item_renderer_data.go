@@ -1,19 +1,19 @@
 package data
 
 import (
-	mappersModels "katze/src/mappers/models"
-	searchModels "katze/src/mappers/search/models"
+	"katze/src/mappers/models"
 )
 
-var VALIDATE_ITEM_RENDERER_VALID_A_FLEX_COLUMN = searchModels.MusicResponsiveListItemRenderer{
+var browseID = "browseId"
+var VALIDATE_ITEM_RENDERER_VALID_A_FLEX_COLUMN = models.MusicResponsiveListItemRenderer{
 
 	PageType: "MUSIC_PAGE_TYPE_ARTIST",
-	FlexColumns: []mappersModels.ColumnsItems{
+	FlexColumns: []models.ColumnsItems{
 		{
-			Items: mappersModels.MultiColumn{
+			Items: models.MultiColumn{
 				{
 					Text:     "ArtisNametest",
-					BrowseID: "browseId",
+					BrowseID: &browseID,
 				},
 			},
 		},
@@ -21,23 +21,23 @@ var VALIDATE_ITEM_RENDERER_VALID_A_FLEX_COLUMN = searchModels.MusicResponsiveLis
 	ID: "id",
 }
 
-var VALIDATE_ITEM_RENDERER_VALID_TWO_FLEX_COLUMN = searchModels.MusicResponsiveListItemRenderer{
+var VALIDATE_ITEM_RENDERER_VALID_TWO_FLEX_COLUMN = models.MusicResponsiveListItemRenderer{
 
 	PageType: "MUSIC_PAGE_TYPE_ARTIST",
-	FlexColumns: []mappersModels.ColumnsItems{
+	FlexColumns: []models.ColumnsItems{
 		{
-			Items: mappersModels.MultiColumn{
+			Items: models.MultiColumn{
 				{
 					Text:     "ArtisNametest",
-					BrowseID: "browseId",
+					BrowseID: &browseID,
 				},
 			},
 		},
 		{
-			Items: mappersModels.MultiColumn{
+			Items: models.MultiColumn{
 				{
 					Text:     "ArtisNametest",
-					BrowseID: "browseId",
+					BrowseID: &browseID,
 				},
 			},
 		},
@@ -45,23 +45,23 @@ var VALIDATE_ITEM_RENDERER_VALID_TWO_FLEX_COLUMN = searchModels.MusicResponsiveL
 	ID: "id",
 }
 
-var VALIDATE_ITEM_RENDERER_INVALID_PAGE_TYPE = searchModels.MusicResponsiveListItemRenderer{
+var VALIDATE_ITEM_RENDERER_INVALID_PAGE_TYPE = models.MusicResponsiveListItemRenderer{
 
 	PageType: "ERROR",
-	FlexColumns: []mappersModels.ColumnsItems{
+	FlexColumns: []models.ColumnsItems{
 		{
-			Items: mappersModels.MultiColumn{
+			Items: models.MultiColumn{
 				{
 					Text:     "ArtisNametest",
-					BrowseID: "browseId",
+					BrowseID: &browseID,
 				},
 			},
 		},
 		{
-			Items: mappersModels.MultiColumn{
+			Items: models.MultiColumn{
 				{
 					Text:     "ArtisNametest",
-					BrowseID: "browseId",
+					BrowseID: &browseID,
 				},
 			},
 		},
@@ -69,30 +69,30 @@ var VALIDATE_ITEM_RENDERER_INVALID_PAGE_TYPE = searchModels.MusicResponsiveListI
 	ID: "id",
 }
 
-var VALIDATE_ITEM_RENDERER_INVALID_NO_FLEX_COLUMN = searchModels.MusicResponsiveListItemRenderer{
+var VALIDATE_ITEM_RENDERER_INVALID_NO_FLEX_COLUMN = models.MusicResponsiveListItemRenderer{
 
 	PageType:    "MUSIC_PAGE_TYPE_ARTIST",
-	FlexColumns: []mappersModels.ColumnsItems{},
+	FlexColumns: []models.ColumnsItems{},
 	ID:          "id",
 }
 
-var VALIDATE_ITEM_RENDERER_INVALID_NO_ID = searchModels.MusicResponsiveListItemRenderer{
+var VALIDATE_ITEM_RENDERER_INVALID_NO_ID = models.MusicResponsiveListItemRenderer{
 
 	PageType: "MUSIC_PAGE_TYPE_ARTIST",
-	FlexColumns: []mappersModels.ColumnsItems{
+	FlexColumns: []models.ColumnsItems{
 		{
-			Items: mappersModels.MultiColumn{
+			Items: models.MultiColumn{
 				{
 					Text:     "ArtisNametest",
-					BrowseID: "browseId",
+					BrowseID: &browseID,
 				},
 			},
 		},
 		{
-			Items: mappersModels.MultiColumn{
+			Items: models.MultiColumn{
 				{
 					Text:     "ArtisNametest",
-					BrowseID: "browseId",
+					BrowseID: &browseID,
 				},
 			},
 		},

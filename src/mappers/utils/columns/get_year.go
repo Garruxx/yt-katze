@@ -7,6 +7,7 @@ import (
 	"strconv"
 )
 
+// GetYear gets the year from the flexColumns
 func GetYear(flexColumns []models.FlexColumn) (int, error) {
 
 	if len(flexColumns) == 0 {

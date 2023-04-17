@@ -19,11 +19,11 @@ func TestMapper(t *testing.T) {
 		t.Errorf("Test 1.1 failed: expected %s, got %v", text, err)
 	}
 	// Test case 1.2: result browseID is equal to expected "testBrowseID"
-	if id := result[0].Items[0].BrowseID; id != "testBrowseID" {
+	if id := *result[0].Items[0].BrowseID; id != "testBrowseID" {
 		t.Errorf("Test 1.2 failed: expected testBrowseID, got %v", id)
 	}
 	// Test case 1.3: result pageType is equal to expected "testPageType"
-	if pageType := result[0].Items[0].PageType; pageType != "testPageType" {
+	if pageType := *result[0].Items[0].PageType; pageType != "testPageType" {
 		t.Errorf("Test 1.3 failed: expected testPageType, got %v", pageType)
 	}
 	// Test case 1.4: result text is equal to expected "test1"

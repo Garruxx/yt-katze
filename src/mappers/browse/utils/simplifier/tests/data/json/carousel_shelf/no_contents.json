@@ -1,0 +1,23 @@
+{
+    "header": {
+        "musicCarouselShelfBasicHeaderRenderer": {
+            "title": {
+                "runs": [
+                    {
+                        "text": "Sencillos"
+                    }
+                ]
+            },
+            "accessibilityData": {
+                "accessibilityData": {
+                    "label": "Sencillos"
+                }
+            },
+            "headerStyle": "MUSIC_CAROUSEL_SHELF_BASIC_HEADER_STYLE_DISPLAY_TWO",
+            "trackingParams": "CPQDEIi8BCITCKf8tc_Kpf4CFfsKTwgdDrQHFg=="
+        }
+    },
+    "contents": [],
+    "trackingParams": "CIoDEKGzAhgCIhMIp_y1z8ql_gIV-wpPCB0OtAcW",
+    "itemSize": "COLLECTION_STYLE_ITEM_SIZE_MEDIUM"
+}

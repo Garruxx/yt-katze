@@ -9,12 +9,17 @@ import (
 	"strings"
 )
 
+// Artist maps an external.MusicCardShelfRenderer to a music.BestMatch
 func Artist(bestMatch external.MusicCardShelfRenderer) (
 	music.BestMatch, error,
 ) {
 
 	bestMatchType, err := bestUtils.ShelfTypeValidator(bestMatch)
 	if err != nil {
+		return music.BestMatch{}, err
+	}
+	if len(bestMatch.Title.Runs) == 0 {
+		err := fmt.Errorf("the best result does not have a title")
 		return music.BestMatch{}, err
 	}
 	titleData := bestMatch.Title.Runs[0]

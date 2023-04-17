@@ -1,0 +1,417 @@
+{
+    "musicTwoRowItemRenderer": {
+        "thumbnailRenderer": {
+            "musicThumbnailRenderer": {
+                "thumbnail": {
+                    "thumbnails": [
+                        {
+                            "url": "https://lh3.googleusercontent.com/FXS-l-JIL-yYd0AY7qVkOUmQQhgcARQgYTXYLf4VyumT3dDMrTi5wp6vNIj1fweEwrGRXfZM3EOVdsV9=w226-h226-l90-rj",
+                            "width": 226,
+                            "height": 226
+                        },
+                        {
+                            "url": "https://lh3.googleusercontent.com/FXS-l-JIL-yYd0AY7qVkOUmQQhgcARQgYTXYLf4VyumT3dDMrTi5wp6vNIj1fweEwrGRXfZM3EOVdsV9=w544-h544-l90-rj",
+                            "width": 544,
+                            "height": 544
+                        }
+                    ]
+                },
+                "thumbnailCrop": "MUSIC_THUMBNAIL_CROP_UNSPECIFIED",
+                "thumbnailScale": "MUSIC_THUMBNAIL_SCALE_ASPECT_FILL",
+                "trackingParams": "CN0CEIS_AiITCIDQnavJp_4CFejAcgkdkVUILA=="
+            }
+        },
+        "aspectRatio": "MUSIC_TWO_ROW_ITEM_THUMBNAIL_ASPECT_RATIO_SQUARE",
+        "title": {
+            "runs": [
+                {
+                    "text": "Sakura",
+                    "navigationEndpoint": {
+                        "clickTrackingParams": "CM4CEKCzAhgEIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                        "browseEndpoint": {
+                            "browseId": "MPREb_2sLNV4y2cjn",
+                            "params": "ggMrGilPTEFLNXV5X213Wm9od0MyMGNxVXZnR2JHdkJnSy1LdW9NX244eFB2Yw%3D%3D",
+                            "browseEndpointContextSupportedConfigs": {
+                                "browseEndpointContextMusicConfig": {
+                                    "pageType": "MUSIC_PAGE_TYPE_ALBUM"
+                                }
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "subtitle": {
+            "runs": [
+                {
+                    "text": "2020"
+                }
+            ]
+        },
+        "navigationEndpoint": {
+            "clickTrackingParams": "CM4CEKCzAhgEIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+            "browseEndpoint": {
+                "browseId": "MPREb_2sLNV4y2cjn",
+                "params": "ggMrGilPTEFLNXV5X213Wm9od0MyMGNxVXZnR2JHdkJnSy1LdW9NX244eFB2Yw%3D%3D",
+                "browseEndpointContextSupportedConfigs": {
+                    "browseEndpointContextMusicConfig": {
+                        "pageType": "MUSIC_PAGE_TYPE_ALBUM"
+                    }
+                }
+            }
+        },
+        "trackingParams": "CM4CEKCzAhgEIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+        "menu": {
+            "menuRenderer": {
+                "items": [
+                    {
+                        "menuNavigationItemRenderer": {
+                            "text": {
+                                "runs": [
+                                    {
+                                        "text": "Reproducir aleatoriamente"
+                                    }
+                                ]
+                            },
+                            "icon": {
+                                "iconType": "MUSIC_SHUFFLE"
+                            },
+                            "navigationEndpoint": {
+                                "clickTrackingParams": "CNwCEJrzBRgAIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                                "watchPlaylistEndpoint": {
+                                    "playlistId": "OLAK5uy_mwZohwC20cqUvgGbGvBgK-KuoM_n8xPvc",
+                                    "params": "wAEB8gECKAE%3D"
+                                }
+                            },
+                            "trackingParams": "CNwCEJrzBRgAIhMIgNCdq8mn_gIV6MByCR2RVQgs"
+                        }
+                    },
+                    {
+                        "menuNavigationItemRenderer": {
+                            "text": {
+                                "runs": [
+                                    {
+                                        "text": "Iniciar radio"
+                                    }
+                                ]
+                            },
+                            "icon": {
+                                "iconType": "MIX"
+                            },
+                            "navigationEndpoint": {
+                                "clickTrackingParams": "CNsCEJvzBRgBIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                                "watchPlaylistEndpoint": {
+                                    "playlistId": "RDAMPLOLAK5uy_mwZohwC20cqUvgGbGvBgK-KuoM_n8xPvc",
+                                    "params": "wAEB"
+                                }
+                            },
+                            "trackingParams": "CNsCEJvzBRgBIhMIgNCdq8mn_gIV6MByCR2RVQgs"
+                        }
+                    },
+                    {
+                        "menuServiceItemRenderer": {
+                            "text": {
+                                "runs": [
+                                    {
+                                        "text": "Reproducir a continuación"
+                                    }
+                                ]
+                            },
+                            "icon": {
+                                "iconType": "QUEUE_PLAY_NEXT"
+                            },
+                            "serviceEndpoint": {
+                                "clickTrackingParams": "CNkCEL7uBRgCIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                                "queueAddEndpoint": {
+                                    "queueTarget": {
+                                        "playlistId": "OLAK5uy_mwZohwC20cqUvgGbGvBgK-KuoM_n8xPvc"
+                                    },
+                                    "queueInsertPosition": "INSERT_AFTER_CURRENT_VIDEO",
+                                    "commands": [
+                                        {
+                                            "clickTrackingParams": "CNkCEL7uBRgCIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                                            "addToToastAction": {
+                                                "item": {
+                                                    "notificationTextRenderer": {
+                                                        "successResponseText": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "El álbum se reproducirá a continuación"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "trackingParams": "CNoCEMrHAyITCIDQnavJp_4CFejAcgkdkVUILA=="
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "trackingParams": "CNkCEL7uBRgCIhMIgNCdq8mn_gIV6MByCR2RVQgs"
+                        }
+                    },
+                    {
+                        "menuServiceItemRenderer": {
+                            "text": {
+                                "runs": [
+                                    {
+                                        "text": "Agregar a la fila"
+                                    }
+                                ]
+                            },
+                            "icon": {
+                                "iconType": "ADD_TO_REMOTE_QUEUE"
+                            },
+                            "serviceEndpoint": {
+                                "clickTrackingParams": "CNcCEPvvBRgDIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                                "queueAddEndpoint": {
+                                    "queueTarget": {
+                                        "playlistId": "OLAK5uy_mwZohwC20cqUvgGbGvBgK-KuoM_n8xPvc"
+                                    },
+                                    "queueInsertPosition": "INSERT_AT_END",
+                                    "commands": [
+                                        {
+                                            "clickTrackingParams": "CNcCEPvvBRgDIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                                            "addToToastAction": {
+                                                "item": {
+                                                    "notificationTextRenderer": {
+                                                        "successResponseText": {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "Se agregó el álbum a la fila"
+                                                                }
+                                                            ]
+                                                        },
+                                                        "trackingParams": "CNgCEMrHAyITCIDQnavJp_4CFejAcgkdkVUILA=="
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "trackingParams": "CNcCEPvvBRgDIhMIgNCdq8mn_gIV6MByCR2RVQgs"
+                        }
+                    },
+                    {
+                        "toggleMenuServiceItemRenderer": {
+                            "defaultText": {
+                                "runs": [
+                                    {
+                                        "text": "Agregar álbum a la biblioteca"
+                                    }
+                                ]
+                            },
+                            "defaultIcon": {
+                                "iconType": "LIBRARY_ADD"
+                            },
+                            "defaultServiceEndpoint": {
+                                "clickTrackingParams": "CNUCEIT_BRgEIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                                "modalEndpoint": {
+                                    "modal": {
+                                        "modalWithTitleAndButtonRenderer": {
+                                            "title": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Guarda esto para después"
+                                                    }
+                                                ]
+                                            },
+                                            "content": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Accede para agregar favoritos a tu biblioteca."
+                                                    }
+                                                ]
+                                            },
+                                            "button": {
+                                                "buttonRenderer": {
+                                                    "style": "STYLE_BLUE_TEXT",
+                                                    "isDisabled": false,
+                                                    "text": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Acceder"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "navigationEndpoint": {
+                                                        "clickTrackingParams": "CNYCEPBbIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                                                        "signInEndpoint": {
+                                                            "hack": true
+                                                        }
+                                                    },
+                                                    "trackingParams": "CNYCEPBbIhMIgNCdq8mn_gIV6MByCR2RVQgs"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "toggledText": {
+                                "runs": [
+                                    {
+                                        "text": "Quitar álbum de la biblioteca"
+                                    }
+                                ]
+                            },
+                            "toggledIcon": {
+                                "iconType": "LIBRARY_SAVED"
+                            },
+                            "toggledServiceEndpoint": {
+                                "clickTrackingParams": "CNUCEIT_BRgEIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                                "likeEndpoint": {
+                                    "status": "INDIFFERENT",
+                                    "target": {
+                                        "playlistId": "OLAK5uy_mwZohwC20cqUvgGbGvBgK-KuoM_n8xPvc"
+                                    }
+                                }
+                            },
+                            "trackingParams": "CNUCEIT_BRgEIhMIgNCdq8mn_gIV6MByCR2RVQgs"
+                        }
+                    },
+                    {
+                        "menuNavigationItemRenderer": {
+                            "text": {
+                                "runs": [
+                                    {
+                                        "text": "Agregar a lista de reproducción"
+                                    }
+                                ]
+                            },
+                            "icon": {
+                                "iconType": "ADD_TO_PLAYLIST"
+                            },
+                            "navigationEndpoint": {
+                                "clickTrackingParams": "CNMCEMOUBhgFIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                                "modalEndpoint": {
+                                    "modal": {
+                                        "modalWithTitleAndButtonRenderer": {
+                                            "title": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Guarda esto para después"
+                                                    }
+                                                ]
+                                            },
+                                            "content": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Accede para crear listas de reproducción y compartirlas."
+                                                    }
+                                                ]
+                                            },
+                                            "button": {
+                                                "buttonRenderer": {
+                                                    "style": "STYLE_BLUE_TEXT",
+                                                    "isDisabled": false,
+                                                    "text": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Acceder"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "navigationEndpoint": {
+                                                        "clickTrackingParams": "CNQCEPBbIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                                                        "signInEndpoint": {
+                                                            "hack": true
+                                                        }
+                                                    },
+                                                    "trackingParams": "CNQCEPBbIhMIgNCdq8mn_gIV6MByCR2RVQgs"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "trackingParams": "CNMCEMOUBhgFIhMIgNCdq8mn_gIV6MByCR2RVQgs"
+                        }
+                    },
+                    {
+                        "menuNavigationItemRenderer": {
+                            "text": {
+                                "runs": [
+                                    {
+                                        "text": "Compartir"
+                                    }
+                                ]
+                            },
+                            "icon": {
+                                "iconType": "SHARE"
+                            },
+                            "navigationEndpoint": {
+                                "clickTrackingParams": "CNICEJH7BRgGIhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                                "shareEntityEndpoint": {
+                                    "serializedShareEntity": "EilPTEFLNXV5X213Wm9od0MyMGNxVXZnR2JHdkJnSy1LdW9NX244eFB2Yw%3D%3D",
+                                    "sharePanelType": "SHARE_PANEL_TYPE_UNIFIED_SHARE_PANEL"
+                                }
+                            },
+                            "trackingParams": "CNICEJH7BRgGIhMIgNCdq8mn_gIV6MByCR2RVQgs"
+                        }
+                    }
+                ],
+                "trackingParams": "CNECEKc7IhMIgNCdq8mn_gIV6MByCR2RVQgs",
+                "accessibility": {
+                    "accessibilityData": {
+                        "label": "Menú de acciones"
+                    }
+                }
+            }
+        },
+        "thumbnailOverlay": {
+            "musicItemThumbnailOverlayRenderer": {
+                "background": {
+                    "verticalGradient": {
+                        "gradientLayerColors": [
+                            "2147483648",
+                            "0",
+                            "0"
+                        ]
+                    }
+                },
+                "content": {
+                    "musicPlayButtonRenderer": {
+                        "playNavigationEndpoint": {
+                            "clickTrackingParams": "CNACEMjeAiITCIDQnavJp_4CFejAcgkdkVUILA==",
+                            "watchPlaylistEndpoint": {
+                                "playlistId": "OLAK5uy_mwZohwC20cqUvgGbGvBgK-KuoM_n8xPvc"
+                            }
+                        },
+                        "trackingParams": "CNACEMjeAiITCIDQnavJp_4CFejAcgkdkVUILA==",
+                        "playIcon": {
+                            "iconType": "PLAY_ARROW"
+                        },
+                        "pauseIcon": {
+                            "iconType": "PAUSE"
+                        },
+                        "iconColor": 4294967295,
+                        "backgroundColor": 2566914048,
+                        "activeBackgroundColor": 4278190080,
+                        "loadingIndicatorColor": 4294901760,
+                        "playingIcon": {
+                            "iconType": "VOLUME_UP"
+                        },
+                        "iconLoadingColor": 1308622847,
+                        "activeScaleFactor": 1.2,
+                        "buttonSize": "MUSIC_PLAY_BUTTON_SIZE_MEDIUM",
+                        "rippleTarget": "MUSIC_PLAY_BUTTON_RIPPLE_TARGET_SELF",
+                        "accessibilityPlayData": {
+                            "accessibilityData": {
+                                "label": "Reproducir Sakura"
+                            }
+                        },
+                        "accessibilityPauseData": {
+                            "accessibilityData": {
+                                "label": "Pausar Sakura"
+                            }
+                        }
+                    }
+                },
+                "contentPosition": "MUSIC_ITEM_THUMBNAIL_OVERLAY_CONTENT_POSITION_BOTTOM_RIGHT",
+                "displayStyle": "MUSIC_ITEM_THUMBNAIL_OVERLAY_DISPLAY_STYLE_HOVER"
+            }
+        }
+    }
+}

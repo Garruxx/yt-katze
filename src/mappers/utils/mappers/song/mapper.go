@@ -1,19 +1,21 @@
 package song
 
 import (
+	"fmt"
 	"katze/src/mappers/search/general/utils"
-	"katze/src/mappers/search/utils/simplify"
 	"katze/src/mappers/utils/columns"
+	"katze/src/mappers/utils/simplifier"
 	"katze/src/models/external"
 	"katze/src/models/music"
 )
 
+// Mapper maps an external.MischievousContent to a music.Song
 func Mapper(listItemRenderer external.MischievousContent) (
 	music.Song, error,
 ) {
 
 	//simplifyData
-	itemRenderer, err := simplify.MusicResponsiveListItemRenderer(
+	itemRenderer, err := simplifier.MusicResponsiveListItemRenderer(
 		listItemRenderer,
 	)
 	if err != nil {
@@ -25,6 +27,12 @@ func Mapper(listItemRenderer external.MischievousContent) (
 		return music.Song{}, err
 	}
 
+	if len(itemRenderer.FlexColumns) != 2 {
+		err := fmt.Errorf(
+			"error invalid data, the flex columns should have 2 items",
+		)
+		return music.Song{}, err
+	}
 	titleColumn := itemRenderer.FlexColumns[0]
 	infoColumn := itemRenderer.FlexColumns[1]
 

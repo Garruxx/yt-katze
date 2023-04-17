@@ -1,0 +1,476 @@
+{
+    "responseContext": {
+        "visitorData": "Cgt4V2htNnRaR0pxZyjG8OGhBg%3D%3D",
+        "serviceTrackingParams": [
+            {
+                "service": "GFEEDBACK",
+                "params": [
+                    {
+                        "key": "context",
+                        "value": "channel_creator"
+                    },
+                    {
+                        "key": "has_unlimited_entitlement",
+                        "value": "False"
+                    },
+                    {
+                        "key": "browse_id",
+                        "value": "UCvBE7uVhxuKRLL1vy71NRRA"
+                    },
+                    {
+                        "key": "browse_id_prefix",
+                        "value": ""
+                    },
+                    {
+                        "key": "logged_in",
+                        "value": "0"
+                    },
+                    {
+                        "key": "e",
+                        "value": "1714251,23804281,23918597,23946420,23966208,23983296,23998056,24004644,24007246,24034168,24036947,24077241,24080738,24120820,24135310,24140247,24162919,24169501,24181174,24186126,24187043,24187377,24197450,24211178,24219713,24241378,24255165,24255543,24255545,24262346,24268142,24288664,24290971,24390675,24396565,24404640,24407191,24409417,24415864,24415866,24429092,24439361,24439483,24450367,24451319,24452578,24453129,24455284,24456681,24458317,24458324,24458329,24458839,24465011,24466371,24468691,24468724,24471752,24474986,24475364,24477227,24477512,24482081,24483504,24485239,24485421,24488188,24491070,24495060,24499792,24514271,24515366,24515423,24516017,24516157,24518452,24519102,24519143,24519223,24530042,24530194,24530296,24530334,24530572,24530947,24532855,24532937,24534336,24537160,39323074"
+                    }
+                ]
+            },
+            {
+                "service": "CSI",
+                "params": [
+                    {
+                        "key": "c",
+                        "value": "WEB_REMIX"
+                    },
+                    {
+                        "key": "cver",
+                        "value": "1.20230306.01.00"
+                    },
+                    {
+                        "key": "yt_li",
+                        "value": "0"
+                    },
+                    {
+                        "key": "GetBrowseArtistDetailPage_rid",
+                        "value": "0xde53bc357a294633"
+                    }
+                ]
+            },
+            {
+                "service": "ECATCHER",
+                "params": [
+                    {
+                        "key": "client.version",
+                        "value": "1.20000101"
+                    },
+                    {
+                        "key": "client.name",
+                        "value": "WEB_REMIX"
+                    },
+                    {
+                        "key": "client.fexp",
+                        "value": "24439483,24396565,24429092,23918597,23946420,24255543,24471752,24518452,24034168,24219713,24452578,39323074,23966208,24169501,24407191,24530947,24120820,24290971,24181174,24519102,24474986,24077241,24288664,23804281,24530296,24532937,24036947,24409417,24477512,24519143,24268142,24439361,24187043,24530194,24456681,24415864,24080738,1714251,24390675,24140247,24458324,24491070,24186126,23983296,24477227,24255545,24450367,24458317,24135310,24211178,24519223,23998056,24458329,24530042,24485421,24404640,24516157,24451319,24468691,24532855,24488188,24007246,24255165,24455284,24482081,24004644,24162919,24187377,24495060,24516017,24530334,24465011,24499792,24468724,24262346,24197450,24458839,24241378,24537160,24515366,24415866,24534336,24515423,24453129,24475364,24485239,24514271,24466371,24530572,24483504"
+                    }
+                ]
+            }
+        ],
+        "maxAgeSeconds": 300
+    },
+    "contents": {
+        "singleColumnBrowseResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [],
+                                "trackingParams": "CA4Qui8iEwiKu4zK6qf-AhWLeJgKHfqYCic="
+                            }
+                        },
+                        "trackingParams": "CA0Q8JMBGAAiEwiKu4zK6qf-AhWLeJgKHfqYCic="
+                    }
+                }
+            ]
+        }
+    },
+    "header": {
+        "musicImmersiveHeaderRenderer": {
+            "title": {
+                "runs": [
+                    {
+                        "text": "Sous Sol"
+                    }
+                ]
+            },
+            "subscriptionButton": {
+                "subscribeButtonRenderer": {
+                    "subscriberCountText": {
+                        "runs": [
+                            {
+                                "text": "124,000"
+                            }
+                        ]
+                    },
+                    "subscribed": false,
+                    "enabled": true,
+                    "type": "FREE",
+                    "channelId": "UC7fqR1rVqfU9CkoyJg7utpQ",
+                    "showPreferences": false,
+                    "subscriberCountWithSubscribeText": {
+                        "runs": [
+                            {
+                                "text": "124,000"
+                            }
+                        ]
+                    },
+                    "subscribedButtonText": {
+                        "runs": [
+                            {
+                                "text": "Suscrito"
+                            }
+                        ]
+                    },
+                    "unsubscribedButtonText": {
+                        "runs": [
+                            {
+                                "text": "Suscribirse"
+                            }
+                        ]
+                    },
+                    "trackingParams": "CAgQmysiEwiKu4zK6qf-AhWLeJgKHfqYCic=",
+                    "unsubscribeButtonText": {
+                        "runs": [
+                            {
+                                "text": "Anular"
+                            }
+                        ]
+                    },
+                    "serviceEndpoints": [
+                        {
+                            "clickTrackingParams": "CAgQmysiEwiKu4zK6qf-AhWLeJgKHfqYCic=",
+                            "subscribeEndpoint": {
+                                "channelIds": [
+                                    "UC7fqR1rVqfU9CkoyJg7utpQ"
+                                ],
+                                "params": "GAA%3D"
+                            }
+                        },
+                        {
+                            "clickTrackingParams": "CAgQmysiEwiKu4zK6qf-AhWLeJgKHfqYCic=",
+                            "signalServiceEndpoint": {
+                                "signal": "CLIENT_SIGNAL",
+                                "actions": [
+                                    {
+                                        "clickTrackingParams": "CAgQmysiEwiKu4zK6qf-AhWLeJgKHfqYCic=",
+                                        "openPopupAction": {
+                                            "popup": {
+                                                "confirmDialogRenderer": {
+                                                    "trackingParams": "CAoQxjgiEwiKu4zK6qf-AhWLeJgKHfqYCic=",
+                                                    "dialogMessages": [
+                                                        {
+                                                            "runs": [
+                                                                {
+                                                                    "text": "¿Deseas anular tu suscripción a "
+                                                                },
+                                                                {
+                                                                    "text": "Sous Sol"
+                                                                },
+                                                                {
+                                                                    "text": "?"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "confirmButton": {
+                                                        "buttonRenderer": {
+                                                            "style": "STYLE_BRAND",
+                                                            "size": "SIZE_DEFAULT",
+                                                            "text": {
+                                                                "runs": [
+                                                                    {
+                                                                        "text": "Anular suscripción"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "serviceEndpoint": {
+                                                                "clickTrackingParams": "CAwQ8FsiEwiKu4zK6qf-AhWLeJgKHfqYCic=",
+                                                                "unsubscribeEndpoint": {
+                                                                    "channelIds": [
+                                                                        "UC7fqR1rVqfU9CkoyJg7utpQ"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "trackingParams": "CAwQ8FsiEwiKu4zK6qf-AhWLeJgKHfqYCic="
+                                                        }
+                                                    },
+                                                    "cancelButton": {
+                                                        "buttonRenderer": {
+                                                            "style": "STYLE_TEXT",
+                                                            "size": "SIZE_DEFAULT",
+                                                            "text": {
+                                                                "runs": [
+                                                                    {
+                                                                        "text": "Cancelar"
+                                                                    }
+                                                                ]
+                                                            },
+                                                            "trackingParams": "CAsQ8FsiEwiKu4zK6qf-AhWLeJgKHfqYCic="
+                                                        }
+                                                    }
+                                                }
+                                            },
+                                            "popupType": "DIALOG"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "longSubscriberCountText": {
+                        "runs": [
+                            {
+                                "text": "124,000 suscriptores"
+                            }
+                        ],
+                        "accessibility": {
+                            "accessibilityData": {
+                                "label": "124,000 suscriptores"
+                            }
+                        }
+                    },
+                    "shortSubscriberCountText": {
+                        "runs": [
+                            {
+                                "text": "124,000"
+                            }
+                        ]
+                    },
+                    "subscribeAccessibility": {
+                        "accessibilityData": {
+                            "label": "Suscribirse a este canal"
+                        }
+                    },
+                    "unsubscribeAccessibility": {
+                        "accessibilityData": {
+                            "label": "Anular suscripción a este canal"
+                        }
+                    },
+                    "signInEndpoint": {
+                        "clickTrackingParams": "CAgQmysiEwiKu4zK6qf-AhWLeJgKHfqYCic=",
+                        "modalEndpoint": {
+                            "modal": {
+                                "modalWithTitleAndButtonRenderer": {
+                                    "title": {
+                                        "runs": [
+                                            {
+                                                "text": "Suscríbete a este artista"
+                                            }
+                                        ]
+                                    },
+                                    "content": {
+                                        "runs": [
+                                            {
+                                                "text": "Accede para suscribirte a este artista y no te pierdas ninguna novedad."
+                                            }
+                                        ]
+                                    },
+                                    "button": {
+                                        "buttonRenderer": {
+                                            "style": "STYLE_BLUE_TEXT",
+                                            "isDisabled": false,
+                                            "text": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Acceder"
+                                                    }
+                                                ]
+                                            },
+                                            "navigationEndpoint": {
+                                                "clickTrackingParams": "CAkQ8FsiEwiKu4zK6qf-AhWLeJgKHfqYCic=",
+                                                "signInEndpoint": {
+                                                    "hack": true
+                                                }
+                                            },
+                                            "trackingParams": "CAkQ8FsiEwiKu4zK6qf-AhWLeJgKHfqYCic="
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "moreButton": {
+                "toggleButtonRenderer": {
+                    "isToggled": false,
+                    "isDisabled": false,
+                    "defaultIcon": {
+                        "iconType": "EXPAND"
+                    },
+                    "defaultText": {
+                        "runs": [
+                            {
+                                "text": "Más"
+                            }
+                        ]
+                    },
+                    "toggledIcon": {
+                        "iconType": "COLLAPSE"
+                    },
+                    "toggledText": {
+                        "runs": [
+                            {
+                                "text": "Menos"
+                            }
+                        ]
+                    },
+                    "trackingParams": "CAcQmE0iEwiKu4zK6qf-AhWLeJgKHfqYCic="
+                }
+            },
+            "menu": {
+                "menuRenderer": {
+                    "items": [
+                        {
+                            "menuNavigationItemRenderer": {
+                                "text": {
+                                    "runs": [
+                                        {
+                                            "text": "Compartir"
+                                        }
+                                    ]
+                                },
+                                "icon": {
+                                    "iconType": "SHARE"
+                                },
+                                "navigationEndpoint": {
+                                    "clickTrackingParams": "CAYQkfsFGAAiEwiKu4zK6qf-AhWLeJgKHfqYCic=",
+                                    "shareEntityEndpoint": {
+                                        "serializedShareEntity": "GhhVQ3ZCRTd1Vmh4dUtSTEwxdnk3MU5SUkE%3D",
+                                        "sharePanelType": "SHARE_PANEL_TYPE_UNIFIED_SHARE_PANEL"
+                                    }
+                                },
+                                "trackingParams": "CAYQkfsFGAAiEwiKu4zK6qf-AhWLeJgKHfqYCic="
+                            }
+                        }
+                    ],
+                    "trackingParams": "CAUQpzsiEwiKu4zK6qf-AhWLeJgKHfqYCic=",
+                    "accessibility": {
+                        "accessibilityData": {
+                            "label": "Menú de acciones"
+                        }
+                    }
+                }
+            },
+            "thumbnail": {
+                "musicThumbnailRenderer": {
+                    "thumbnail": {
+                        "thumbnails": [
+                            {
+                                "url": "https://lh3.googleusercontent.com/f2Bl71wKZtZ8mGon0Z83nvZ0tEiOV-L2GESrG15E74tKTyrVhi8Jvy3kZZnSMNK-w2yegM1g9kHP6rMm=w540-h225-p-l90-rj",
+                                "width": 540,
+                                "height": 225
+                            },
+                            {
+                                "url": "https://lh3.googleusercontent.com/f2Bl71wKZtZ8mGon0Z83nvZ0tEiOV-L2GESrG15E74tKTyrVhi8Jvy3kZZnSMNK-w2yegM1g9kHP6rMm=w816-h340-p-l90-rj",
+                                "width": 816,
+                                "height": 340
+                            },
+                            {
+                                "url": "https://lh3.googleusercontent.com/f2Bl71wKZtZ8mGon0Z83nvZ0tEiOV-L2GESrG15E74tKTyrVhi8Jvy3kZZnSMNK-w2yegM1g9kHP6rMm=w1440-h600-p-l90-rj",
+                                "width": 1440,
+                                "height": 600
+                            },
+                            {
+                                "url": "https://lh3.googleusercontent.com/f2Bl71wKZtZ8mGon0Z83nvZ0tEiOV-L2GESrG15E74tKTyrVhi8Jvy3kZZnSMNK-w2yegM1g9kHP6rMm=w1920-h800-p-l90-rj",
+                                "width": 1920,
+                                "height": 800
+                            },
+                            {
+                                "url": "https://lh3.googleusercontent.com/f2Bl71wKZtZ8mGon0Z83nvZ0tEiOV-L2GESrG15E74tKTyrVhi8Jvy3kZZnSMNK-w2yegM1g9kHP6rMm=w2880-h1200-p-l90-rj",
+                                "width": 2880,
+                                "height": 1200
+                            }
+                        ]
+                    },
+                    "thumbnailCrop": "MUSIC_THUMBNAIL_CROP_UNSPECIFIED",
+                    "thumbnailScale": "MUSIC_THUMBNAIL_SCALE_ASPECT_FILL",
+                    "trackingParams": "CAQQhL8CIhMIiruMyuqn_gIVi3iYCh36mAon"
+                }
+            },
+            "trackingParams": "CAEQ-NwCIhMIiruMyuqn_gIVi3iYCh36mAon",
+            "playButton": {
+                "buttonRenderer": {
+                    "style": "STYLE_DARK_ON_WHITE",
+                    "size": "SIZE_DEFAULT",
+                    "text": {
+                        "runs": [
+                            {
+                                "text": "Aleatorio"
+                            }
+                        ]
+                    },
+                    "icon": {
+                        "iconType": "MUSIC_SHUFFLE"
+                    },
+                    "navigationEndpoint": {
+                        "clickTrackingParams": "CAMQ6YQEIhMIiruMyuqn_gIVi3iYCh36mAon",
+                        "watchEndpoint": {
+                            "videoId": "c-TGVL-r6yM",
+                            "playlistId": "RDAOiZsvLaWTQ5paXztzy3WJ2Q",
+                            "params": "wAEB8gECGAE%3D",
+                            "loggingContext": {
+                                "vssLoggingContext": {
+                                    "serializedContextData": "GhpSREFPaVpzdkxhV1RRNXBhWHp0enkzV0oyUQ%3D%3D"
+                                }
+                            }
+                        }
+                    },
+                    "accessibility": {
+                        "label": "Aleatorio"
+                    },
+                    "trackingParams": "CAMQ6YQEIhMIiruMyuqn_gIVi3iYCh36mAon",
+                    "accessibilityData": {
+                        "accessibilityData": {
+                            "label": "Aleatorio"
+                        }
+                    }
+                }
+            },
+            "startRadioButton": {
+                "buttonRenderer": {
+                    "text": {
+                        "runs": [
+                            {
+                                "text": "Radio"
+                            }
+                        ]
+                    },
+                    "icon": {
+                        "iconType": "MIX"
+                    },
+                    "navigationEndpoint": {
+                        "clickTrackingParams": "CAIQ84QEIhMIiruMyuqn_gIVi3iYCh36mAon",
+                        "watchEndpoint": {
+                            "videoId": "mJU-s-ol5MQ",
+                            "playlistId": "RDEMiZsvLaWTQ5paXztzy3WJ2Q",
+                            "params": "wAEB",
+                            "loggingContext": {
+                                "vssLoggingContext": {
+                                    "serializedContextData": "GhpSREVNaVpzdkxhV1RRNXBhWHp0enkzV0oyUQ%3D%3D"
+                                }
+                            }
+                        }
+                    },
+                    "accessibility": {
+                        "label": "Radio"
+                    },
+                    "trackingParams": "CAIQ84QEIhMIiruMyuqn_gIVi3iYCh36mAon"
+                }
+            },
+            "shareEndpoint": {
+                "clickTrackingParams": "CAEQ-NwCIhMIiruMyuqn_gIVi3iYCh36mAon",
+                "shareEntityEndpoint": {
+                    "serializedShareEntity": "GhhVQ3ZCRTd1Vmh4dUtSTEwxdnk3MU5SUkE%3D",
+                    "sharePanelType": "SHARE_PANEL_TYPE_UNIFIED_SHARE_PANEL"
+                }
+            }
+        }
+    },
+    "trackingParams": "CAAQhGciEwiKu4zK6qf-AhWLeJgKHfqYCic="
+}

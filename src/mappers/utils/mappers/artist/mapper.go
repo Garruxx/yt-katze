@@ -2,16 +2,17 @@ package artist
 
 import (
 	"katze/src/mappers/search/general/utils"
-	"katze/src/mappers/search/utils/simplify"
+	"katze/src/mappers/utils/simplifier"
 	"katze/src/models/external"
 	"katze/src/models/music"
 )
 
+// Mapper maps an external.MischievousContent to a music.Artist
 func Mapper(itemRenderer external.MischievousContent) (
 	music.Artist, error,
 ) {
 
-	artistItemRenderer, err := simplify.MusicResponsiveListItemRenderer(
+	artistItemRenderer, err := simplifier.MusicResponsiveListItemRenderer(
 		itemRenderer,
 	)
 

@@ -8,6 +8,7 @@ import (
 	"strings"
 )
 
+// Mapper maps an external.MusicCardShelfRenderer to a music.BestMatch
 func Mapper(bestMatch external.MusicCardShelfRenderer) (
 	music.BestMatch, error,
 ) {

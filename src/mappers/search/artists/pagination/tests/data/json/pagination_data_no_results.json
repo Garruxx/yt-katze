@@ -1,0 +1,262 @@
+{
+    "responseContext": {
+        "visitorData": "visitorIDTest",
+        "serviceTrackingParams": [
+            {
+                "service": "CSI",
+                "params": [
+                    {
+                        "key": "c",
+                        "value": "WEB_REMIX"
+                    },
+                    {
+                        "key": "cver",
+                        "value": "1.20230306.01.00"
+                    },
+                    {
+                        "key": "yt_li",
+                        "value": "0"
+                    },
+                    {
+                        "key": "GetSearch_rid",
+                        "value": "0xf95894cda99c8de9"
+                    }
+                ]
+            },
+            {
+                "service": "GFEEDBACK",
+                "params": [
+                    {
+                        "key": "logged_in",
+                        "value": "0"
+                    },
+                    {
+                        "key": "e",
+                        "value": "1714246,9405961,9407157,23804281,23918597,23946420,23966208,23983296,23998056,24004644,24007246,24034168,24036947,24077241,24080738,24120820,24135310,24140247,24162920,24169501,24181174,24187043,24187377,24197450,24211178,24219713,24235780,24236212,24241378,24255163,24255543,24255545,24262346,24263796,24268142,24288043,24288664,24290971,24390675,24391541,24396565,24401013,24404640,24405914,24407191,24409417,24415864,24415866,24425061,24426636,24428902,24429095,24439361,24439483,24440517,24449915,24450367,24451319,24453129,24456681,24458317,24458324,24458329,24458839,24465011,24465097,24466371,24466460,24468614,24468691,24468724,24469241,24469651,24471752,24473426,24476836,24477227,24477512,24477599,24482081,24483504,24484079,24485239,24485421,24486582,24487015,24487288,24487521,24488188,24490488,24490493,24491070,24494079,24494164,24494198,24494986,24495060,24495958,24495967,24496968,24498091,24499291,24499298,24499462,24499568,24499573,24499792,24513409,24513455,24514428,24515366,24515423,24515572,24516016,24516157,24517703,24518452,24519102,24519143,24519158,24519169,24519223,24519257,24530042,24530194,24530296,24530334,24531220,24532164,24535692,24535857,24538766,39323074"
+                    }
+                ]
+            },
+            {
+                "service": "ECATCHER",
+                "params": [
+                    {
+                        "key": "client.version",
+                        "value": "1.20000101"
+                    },
+                    {
+                        "key": "client.name",
+                        "value": "WEB_REMIX"
+                    },
+                    {
+                        "key": "client.fexp",
+                        "value": "24514428,24469651,24516016,24468724,24535857,24236212,24476836,24499792,24262346,24490493,24458839,24162920,24499462,24405914,24535692,24263796,24453129,24494198,24241378,24391541,24429095,24515366,24473426,24519257,24485239,9405961,24494079,24515423,24458329,24428902,24483504,24235780,24466371,24211178,24499568,23998056,24530334,24495958,24519223,24135310,24485421,24451319,24404640,24487521,24516157,24491070,24415866,24468691,24487015,24499291,24426636,24499298,24494164,24449915,24488188,24530042,24007246,24187377,24484079,24465011,24468614,24036947,24494986,24482081,24004644,24519143,24495060,24255163,24120820,24477512,9407157,24409417,24439361,24517703,24456681,39323074,24490488,24187043,24531220,24440517,24513409,24532164,24487288,24498091,24530194,24140247,24080738,23983296,24477227,24515572,24486582,24401013,24538766,24499573,24390675,24530296,24288043,24255545,24458317,24458324,24450367,24469241,24396565,23946420,24513455,24255543,24519158,24477599,23918597,24471752,1714246,24466460,24415864,24496968,24425061,24034168,24219713,24495967,24518452,24439483,24169501,24407191,24181174,24288664,24519169,24290971,24465097,23966208,24268142,24197450,24077241,24519102,23804281"
+                    }
+                ]
+            }
+        ],
+        "maxAgeSeconds": 120
+    },
+    "continuationContents": {
+        "musicShelfContinuation": {
+            "contents": [],
+            "trackingParams": "CAkQ-V4iEwiwyIeUjKH-AhV4Ck8IHVNjDyY=",
+            "continuations": [
+                {
+                    "nextContinuationData": {
+                        "continuation": "continuationIDTest",
+                        "clickTrackingParams": "CAoQybcCIhMIsMiHlIyh_gIVeApPCB1TYw8m"
+                    }
+                }
+            ],
+            "shelfDivider": {
+                "musicShelfDividerRenderer": {
+                    "hidden": true
+                }
+            },
+            "autoReloadWhenEmpty": false
+        }
+    },
+    "trackingParams": "CAAQvGkiEwiwyIeUjKH-AhV4Ck8IHVNjDyY=",
+    "header": {
+        "musicHeaderRenderer": {
+            "header": {
+                "chipCloudRenderer": {
+                    "chips": [
+                        {
+                            "chipCloudChipRenderer": {
+                                "style": {
+                                    "styleType": "STYLE_SECONDARY"
+                                },
+                                "navigationEndpoint": {
+                                    "clickTrackingParams": "CAgQ_V0YACITCLDIh5SMof4CFXgKTwgdU2MPJg==",
+                                    "searchEndpoint": {
+                                        "query": "she"
+                                    }
+                                },
+                                "trackingParams": "CAgQ_V0YACITCLDIh5SMof4CFXgKTwgdU2MPJg==",
+                                "icon": {
+                                    "iconType": "CLOSE"
+                                },
+                                "accessibilityData": {
+                                    "accessibilityData": {
+                                        "label": "Borrar filtros"
+                                    }
+                                },
+                                "isSelected": false
+                            }
+                        },
+                        {
+                            "chipCloudChipRenderer": {
+                                "style": {
+                                    "styleType": "STYLE_DEFAULT"
+                                },
+                                "text": {
+                                    "runs": [
+                                        {
+                                            "text": "Canciones"
+                                        }
+                                    ]
+                                },
+                                "navigationEndpoint": {
+                                    "clickTrackingParams": "CAcQ_V0YASITCLDIh5SMof4CFXgKTwgdU2MPJg==",
+                                    "searchEndpoint": {
+                                        "query": "she",
+                                        "params": "EgWKAQIIAWoKEAMQBBAJEAoQBQ%3D%3D"
+                                    }
+                                },
+                                "trackingParams": "CAcQ_V0YASITCLDIh5SMof4CFXgKTwgdU2MPJg==",
+                                "accessibilityData": {
+                                    "accessibilityData": {
+                                        "label": "Mostrar resultados de canciones"
+                                    }
+                                },
+                                "isSelected": false,
+                                "uniqueId": "Canciones"
+                            }
+                        },
+                        {
+                            "chipCloudChipRenderer": {
+                                "style": {
+                                    "styleType": "STYLE_DEFAULT"
+                                },
+                                "text": {
+                                    "runs": [
+                                        {
+                                            "text": "Videos"
+                                        }
+                                    ]
+                                },
+                                "navigationEndpoint": {
+                                    "clickTrackingParams": "CAYQ_V0YAiITCLDIh5SMof4CFXgKTwgdU2MPJg==",
+                                    "searchEndpoint": {
+                                        "query": "she",
+                                        "params": "EgWKAQIQAWoKEAMQBBAJEAoQBQ%3D%3D"
+                                    }
+                                },
+                                "trackingParams": "CAYQ_V0YAiITCLDIh5SMof4CFXgKTwgdU2MPJg==",
+                                "accessibilityData": {
+                                    "accessibilityData": {
+                                        "label": "Mostrar resultados de videos"
+                                    }
+                                },
+                                "isSelected": false,
+                                "uniqueId": "Videos"
+                            }
+                        },
+                        {
+                            "chipCloudChipRenderer": {
+                                "style": {
+                                    "styleType": "STYLE_DEFAULT"
+                                },
+                                "text": {
+                                    "runs": [
+                                        {
+                                            "text": "Álbumes"
+                                        }
+                                    ]
+                                },
+                                "navigationEndpoint": {
+                                    "clickTrackingParams": "CAUQ_V0YAyITCLDIh5SMof4CFXgKTwgdU2MPJg==",
+                                    "searchEndpoint": {
+                                        "query": "she",
+                                        "params": "EgWKAQIYAWoKEAMQBBAJEAoQBQ%3D%3D"
+                                    }
+                                },
+                                "trackingParams": "CAUQ_V0YAyITCLDIh5SMof4CFXgKTwgdU2MPJg==",
+                                "accessibilityData": {
+                                    "accessibilityData": {
+                                        "label": "Mostrar resultados de álbumes"
+                                    }
+                                },
+                                "isSelected": false,
+                                "uniqueId": "Álbumes"
+                            }
+                        },
+                        {
+                            "chipCloudChipRenderer": {
+                                "style": {
+                                    "styleType": "STYLE_DEFAULT"
+                                },
+                                "text": {
+                                    "runs": [
+                                        {
+                                            "text": "Listas de reproducción de la comunidad"
+                                        }
+                                    ]
+                                },
+                                "navigationEndpoint": {
+                                    "clickTrackingParams": "CAQQ_V0YBCITCLDIh5SMof4CFXgKTwgdU2MPJg==",
+                                    "searchEndpoint": {
+                                        "query": "she",
+                                        "params": "EgeKAQQoAEABagoQAxAEEAkQChAF"
+                                    }
+                                },
+                                "trackingParams": "CAQQ_V0YBCITCLDIh5SMof4CFXgKTwgdU2MPJg==",
+                                "accessibilityData": {
+                                    "accessibilityData": {
+                                        "label": "Mostrar resultados de las listas de reproducción de la comunidad"
+                                    }
+                                },
+                                "isSelected": false,
+                                "uniqueId": "Listas de reproducción de la comunidad"
+                            }
+                        },
+                        {
+                            "chipCloudChipRenderer": {
+                                "style": {
+                                    "styleType": "STYLE_PRIMARY"
+                                },
+                                "text": {
+                                    "runs": [
+                                        {
+                                            "text": "Artistas"
+                                        }
+                                    ]
+                                },
+                                "navigationEndpoint": {
+                                    "clickTrackingParams": "CAMQ_V0YBSITCLDIh5SMof4CFXgKTwgdU2MPJg==",
+                                    "searchEndpoint": {
+                                        "query": "she",
+                                        "params": "EgWKAQIgAWoKEAMQBBAJEAoQBQ%3D%3D"
+                                    }
+                                },
+                                "trackingParams": "CAMQ_V0YBSITCLDIh5SMof4CFXgKTwgdU2MPJg==",
+                                "accessibilityData": {
+                                    "accessibilityData": {
+                                        "label": "Se seleccionó Mostrar los resultados de búsqueda de artistas"
+                                    }
+                                },
+                                "isSelected": true,
+                                "uniqueId": "Artistas"
+                            }
+                        }
+                    ],
+                    "collapsedRowCount": 1,
+                    "trackingParams": "CAIQ_F0iEwiwyIeUjKH-AhV4Ck8IHVNjDyY=",
+                    "horizontalScrollable": true
+                }
+            },
+            "trackingParams": "CAEQ4HIiEwiwyIeUjKH-AhV4Ck8IHVNjDyY="
+        }
+    }
+}

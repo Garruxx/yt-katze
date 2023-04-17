@@ -3,9 +3,9 @@ package formatters
 import (
 	"fmt"
 	bestUtils "katze/src/mappers/search/general/result/best/utils"
-	"katze/src/mappers/search/general/result/best/utils/subtitle"
 	"katze/src/mappers/utils"
 	"katze/src/mappers/utils/columns"
+	"katze/src/mappers/utils/subtitle"
 	"katze/src/models/external"
 	"katze/src/models/music"
 	"regexp"
@@ -57,6 +57,11 @@ func Song(bestMatch external.MusicCardShelfRenderer) (
 	if len(albums) > 0 {
 		albumTitle = albums[0].Title
 		albumID = albums[0].ID
+	}
+
+	if len(bestMatch.Title.Runs) == 0 {
+		err := fmt.Errorf("Could not find runs in title")
+		return music.BestMatch{}, err
 	}
 
 	titleData := bestMatch.Title.Runs[0]

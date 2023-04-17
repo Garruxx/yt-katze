@@ -3,7 +3,7 @@ package formatters
 import (
 	"fmt"
 	bestUtils "katze/src/mappers/search/general/result/best/utils"
-	"katze/src/mappers/search/general/result/best/utils/subtitle"
+	"katze/src/mappers/utils/subtitle"
 	"katze/src/mappers/utils"
 	"katze/src/mappers/utils/columns"
 	"katze/src/models/external"
@@ -11,6 +11,7 @@ import (
 	"strings"
 )
 
+// Album maps an external.MusicCardShelfRenderer to a music.BestMatch
 func Album(bestMatch external.MusicCardShelfRenderer) (
 	music.BestMatch, error,
 ) {
@@ -19,6 +20,11 @@ func Album(bestMatch external.MusicCardShelfRenderer) (
 	if err != nil {
 		return music.BestMatch{}, err
 	}
+	if len(bestMatch.Title.Runs) == 0 {
+		err := fmt.Errorf("the best result does not have a title")
+		return music.BestMatch{}, err
+	}
+
 	titleData := bestMatch.Title.Runs[0]
 
 	if !strings.Contains(bestMatchType, "MUSIC_PAGE_TYPE_ALBUM") {

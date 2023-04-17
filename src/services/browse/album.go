@@ -8,7 +8,7 @@ import (
 	"katze/src/services/utils"
 )
 
-func Album(BrowseID string, visitorID *string) (external.Album, error) {
+func Album(BrowseID string, visitorID *string) (external.Tracklist, error) {
 
 	req := models.Request{
 		GoogVisitorID: visitorID,
@@ -17,20 +17,20 @@ func Album(BrowseID string, visitorID *string) (external.Album, error) {
 	}
 	body, err := utils.Request(req)
 	if err != nil {
-		err := fmt.Errorf("Error sending request: %v", err)
-		return external.Album{}, err
+		err := fmt.Errorf("error sending request: %v", err)
+		return external.Tracklist{}, err
 	}
 
 	//Decode the response body into a trackpagination struct
-	var album external.Album
+	var album external.Tracklist
 	err = json.Unmarshal(body, &album)
 	if err != nil {
-		err := fmt.Errorf("Error unmarshalling response body: %v", err)
-		return external.Album{}, err
+		err := fmt.Errorf("error unmarshalling response body: %v", err)
+		return external.Tracklist{}, err
 	}
 	if album.Error != nil {
-		err := fmt.Errorf("Error getting album: %v", album.Error.Status)
-		return external.Album{}, err
+		err := fmt.Errorf("error getting album: %v", album.Error.Status)
+		return external.Tracklist{}, err
 	}
 	return album, nil
 }

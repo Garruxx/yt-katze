@@ -1,7 +1,5 @@
 package models
 
-type Thumbnail struct {
-	URL    string `json:"thumbnails"`
-	Width  int    `json:"width"`
-	Height int    `json:"height"`
-}
+import "katze/src/models/external"
+
+type pThumbnail external.ThumbnailElement

@@ -1,0 +1,276 @@
+{
+    "responseContext": {
+        "visitorData": "CgsxdXNyVzNTVW1Xdyi18tKhBg%3D%3D",
+        "serviceTrackingParams": [
+            {
+                "service": "CSI",
+                "params": [
+                    {
+                        "key": "c",
+                        "value": "WEB_REMIX"
+                    },
+                    {
+                        "key": "cver",
+                        "value": "1.20230327.01.00"
+                    },
+                    {
+                        "key": "yt_li",
+                        "value": "0"
+                    },
+                    {
+                        "key": "GetSearch_rid",
+                        "value": "0x8b3bae69c3fc020e"
+                    }
+                ]
+            },
+            {
+                "service": "GFEEDBACK",
+                "params": [
+                    {
+                        "key": "logged_in",
+                        "value": "0"
+                    },
+                    {
+                        "key": "e",
+                        "value": "1714245,9405964,9419625,23804281,23918597,23946420,23966208,23983296,23998056,24004644,24007246,24034168,24036948,24077241,24080738,24120820,24135310,24140247,24162919,24169501,24181174,24187043,24187377,24197450,24211178,24219713,24235780,24241378,24255165,24255543,24255545,24262346,24263796,24268142,24287603,24288047,24288664,24290971,24296352,24299875,24390675,24391543,24396565,24401012,24404640,24406084,24407191,24409417,24415864,24415866,24426636,24427227,24428900,24429093,24439361,24439483,24440517,24450367,24451319,24453129,24456681,24458317,24458324,24458329,24458839,24465011,24465101,24466371,24466458,24468691,24468724,24471752,24474986,24475359,24477227,24477512,24482081,24483503,24484079,24485239,24485421,24486578,24488188,24490508,24491070,24494079,24494198,24494984,24495060,24495958,24495971,24495990,24496968,24497783,24499285,24499302,24499570,24499575,24499792,24499947,24510062,24511557,24513456,24515366,24515389,24516012,24516016,24516157,24517538,24518452,24519081,24519102,24519142,24519223,24519257,24530043,24530194,24530296,24530334,24530494,24534542,24535857,24536116,24538817,24591038,39323074"
+                    }
+                ]
+            },
+            {
+                "service": "ECATCHER",
+                "params": [
+                    {
+                        "key": "client.version",
+                        "value": "1.20000101"
+                    },
+                    {
+                        "key": "client.name",
+                        "value": "WEB_REMIX"
+                    },
+                    {
+                        "key": "client.fexp",
+                        "value": "24135310,24490508,24288047,24465011,24516157,24404640,24296352,24211178,24519142,24485421,24451319,23998056,24499285,24511557,24427227,24519223,24484079,24488188,24187377,24162919,24004644,24401012,24482081,24468691,24530334,24466458,24255165,24499302,9405964,24495060,24007246,24495971,24197450,24299875,24515366,24497783,1714245,24538817,24468724,24519257,24235780,24426636,24494984,24458329,24415866,24262346,24263796,24513456,24516016,24499570,24496968,24485239,24241378,24453129,24036948,24458839,9419625,24466371,24535857,24499947,24439483,23983296,23918597,24471752,24034168,24219713,24396565,24518452,24287603,24255543,24169501,24391543,24494079,24486578,24465101,24530494,24428900,24494198,24077241,24519102,39323074,24519081,23804281,24288664,23946420,24407191,24290971,24474986,24181174,23966208,24499792,24120820,24516012,24458317,24458324,24429093,24536116,24268142,24517538,24187043,24530296,24439361,24390675,24530043,24530194,24477512,24515389,24510062,24483503,24409417,24080738,24534542,24255545,24415864,24495990,24491070,24591038,24477227,24456681,24450367,24475359,24499575,24495958,24406084,24140247,24440517"
+                    }
+                ]
+            }
+        ],
+        "maxAgeSeconds": 120
+    },
+    "contents": {
+        "tabbedSearchResultsRenderer": {
+            "tabs": [
+                {
+                    "tabRenderer": {
+                        "title": "yt music",
+                        "selected": true,
+                        "content": {
+                            "sectionListRenderer": {
+                                "contents": [
+                                    {
+                                        "musicShelfRenderer": {
+                                            "title": {
+                                                "runs": [
+                                                    {
+                                                        "text": "Artists"
+                                                    }
+                                                ]
+                                            },
+                                            "contents": [  ],
+                                            "trackingParams": "CAoQ-V4YACITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                            "shelfDivider": {
+                                                "musicShelfDividerRenderer": {
+                                                    "hidden": true
+                                                }
+                                            }
+                                        }
+                                    }
+                                ],
+                                "trackingParams": "CAIQui8iEwiboc3416D-AhUSX5gKHfCuALU=",
+                                "header": {
+                                    "chipCloudRenderer": {
+                                        "chips": [
+                                            {
+                                                "chipCloudChipRenderer": {
+                                                    "style": {
+                                                        "styleType": "STYLE_SECONDARY"
+                                                    },
+                                                    "navigationEndpoint": {
+                                                        "clickTrackingParams": "CAkQ_V0YACITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                                        "searchEndpoint": {
+                                                            "query": "agua con chia sous sol"
+                                                        }
+                                                    },
+                                                    "trackingParams": "CAkQ_V0YACITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                                    "icon": {
+                                                        "iconType": "CLOSE"
+                                                    },
+                                                    "accessibilityData": {
+                                                        "accessibilityData": {
+                                                            "label": "Clear filters"
+                                                        }
+                                                    },
+                                                    "isSelected": false
+                                                }
+                                            },
+                                            {
+                                                "chipCloudChipRenderer": {
+                                                    "style": {
+                                                        "styleType": "STYLE_DEFAULT"
+                                                    },
+                                                    "text": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Songs"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "navigationEndpoint": {
+                                                        "clickTrackingParams": "CAgQ_V0YASITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                                        "searchEndpoint": {
+                                                            "query": "agua con chia sous sol",
+                                                            "params": "EgWKAQIIAWoKEAMQBBAJEAoQBQ%3D%3D"
+                                                        }
+                                                    },
+                                                    "trackingParams": "CAgQ_V0YASITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                                    "accessibilityData": {
+                                                        "accessibilityData": {
+                                                            "label": "Show song results"
+                                                        }
+                                                    },
+                                                    "isSelected": false,
+                                                    "uniqueId": "Songs"
+                                                }
+                                            },
+                                            {
+                                                "chipCloudChipRenderer": {
+                                                    "style": {
+                                                        "styleType": "STYLE_DEFAULT"
+                                                    },
+                                                    "text": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Videos"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "navigationEndpoint": {
+                                                        "clickTrackingParams": "CAcQ_V0YAiITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                                        "searchEndpoint": {
+                                                            "query": "agua con chia sous sol",
+                                                            "params": "EgWKAQIQAWoKEAMQBBAJEAoQBQ%3D%3D"
+                                                        }
+                                                    },
+                                                    "trackingParams": "CAcQ_V0YAiITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                                    "accessibilityData": {
+                                                        "accessibilityData": {
+                                                            "label": "Show video results"
+                                                        }
+                                                    },
+                                                    "isSelected": false,
+                                                    "uniqueId": "Videos"
+                                                }
+                                            },
+                                            {
+                                                "chipCloudChipRenderer": {
+                                                    "style": {
+                                                        "styleType": "STYLE_DEFAULT"
+                                                    },
+                                                    "text": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Albums"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "navigationEndpoint": {
+                                                        "clickTrackingParams": "CAYQ_V0YAyITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                                        "searchEndpoint": {
+                                                            "query": "agua con chia sous sol",
+                                                            "params": "EgWKAQIYAWoKEAMQBBAJEAoQBQ%3D%3D"
+                                                        }
+                                                    },
+                                                    "trackingParams": "CAYQ_V0YAyITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                                    "accessibilityData": {
+                                                        "accessibilityData": {
+                                                            "label": "Show album results"
+                                                        }
+                                                    },
+                                                    "isSelected": false,
+                                                    "uniqueId": "Albums"
+                                                }
+                                            },
+                                            {
+                                                "chipCloudChipRenderer": {
+                                                    "style": {
+                                                        "styleType": "STYLE_DEFAULT"
+                                                    },
+                                                    "text": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Community playlists"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "navigationEndpoint": {
+                                                        "clickTrackingParams": "CAUQ_V0YBCITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                                        "searchEndpoint": {
+                                                            "query": "agua con chia sous sol",
+                                                            "params": "EgeKAQQoAEABagoQAxAEEAkQChAF"
+                                                        }
+                                                    },
+                                                    "trackingParams": "CAUQ_V0YBCITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                                    "accessibilityData": {
+                                                        "accessibilityData": {
+                                                            "label": "Show community playlist results"
+                                                        }
+                                                    },
+                                                    "isSelected": false,
+                                                    "uniqueId": "Community playlists"
+                                                }
+                                            },
+                                            {
+                                                "chipCloudChipRenderer": {
+                                                    "style": {
+                                                        "styleType": "STYLE_PRIMARY"
+                                                    },
+                                                    "text": {
+                                                        "runs": [
+                                                            {
+                                                                "text": "Artists"
+                                                            }
+                                                        ]
+                                                    },
+                                                    "navigationEndpoint": {
+                                                        "clickTrackingParams": "CAQQ_V0YBSITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                                        "searchEndpoint": {
+                                                            "query": "agua con chia sous sol",
+                                                            "params": "EgWKAQIgAWoKEAMQBBAJEAoQBQ%3D%3D"
+                                                        }
+                                                    },
+                                                    "trackingParams": "CAQQ_V0YBSITCJuhzfjXoP4CFRJfmAod8K4AtQ==",
+                                                    "accessibilityData": {
+                                                        "accessibilityData": {
+                                                            "label": "Show artist results selected"
+                                                        }
+                                                    },
+                                                    "isSelected": true,
+                                                    "uniqueId": "Artists"
+                                                }
+                                            }
+                                        ],
+                                        "collapsedRowCount": 1,
+                                        "trackingParams": "CAMQ_F0iEwiboc3416D-AhUSX5gKHfCuALU=",
+                                        "horizontalScrollable": true
+                                    }
+                                }
+                            }
+                        },
+                        "tabIdentifier": "music_search_catalog",
+                        "trackingParams": "CAEQ8JMBGAAiEwiboc3416D-AhUSX5gKHfCuALU="
+                    }
+                }
+            ]
+        }
+    },
+    "trackingParams": "CAAQvGkiEwiboc3416D-AhUSX5gKHfCuALU="
+}

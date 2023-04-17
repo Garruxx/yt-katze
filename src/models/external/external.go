@@ -18,8 +18,11 @@ type ArtistTracklistPaginationContinuationContents struct {
 }
 
 type MusicPlaylistShelfContinuation struct {
-	Contents       []MusicPlaylistShelfContinuationContent `json:"contents"`
-	TrackingParams string                                  `json:"trackingParams"`
+	Contents                []MusicPlaylistShelfContinuationContent `json:"contents"`
+	ShelfDivider            ShelfDivider                            `json:"shelfDivider"`
+	TrackingParams          string                                  `json:"trackingParams"`
+	Continuations           []Continuation                          `json:"continuations,omitempty"`
+	ContentsMultiSelectable bool                                    `json:"contentsMultiSelectable"`
 }
 
 type MusicPlaylistShelfContinuationContent struct {
@@ -30,12 +33,14 @@ type PurpleMusicResponsiveListItemRenderer struct {
 	TrackingParams      string                 `json:"trackingParams"`
 	Thumbnail           ThumbnailRendererClass `json:"thumbnail"`
 	Overlay             PurpleOverlay          `json:"overlay"`
-	FlexColumns         []PurpleFlexColumn     `json:"flexColumns"`
+	FlexColumns         []FluffyFlexColumn     `json:"flexColumns"`
 	FixedColumns        []FixedColumn          `json:"fixedColumns"`
 	Menu                PurpleMenu             `json:"menu"`
 	PlaylistItemData    PurplePlaylistItemData `json:"playlistItemData"`
 	MultiSelectCheckbox MultiSelectCheckbox    `json:"multiSelectCheckbox"`
-	Badges              []Badge                `json:"badges,omitempty"`
+	ItemHeight          string                 `json:"itemHeight"`
+	Index               TitleElement           `json:"index"`
+	Badges              *[]Badge               `json:"badges,omitempty"`
 }
 
 type Badge struct {
@@ -61,13 +66,7 @@ type Icon struct {
 }
 
 type FixedColumn struct {
-	MusicResponsiveListItemFixedColumnRenderer MusicResponsiveListItemFixedColumnRenderer `json:"musicResponsiveListItemFixedColumnRenderer"`
-}
-
-type MusicResponsiveListItemFixedColumnRenderer struct {
-	Text            TitleElement `json:"text"`
-	DisplayPriority string       `json:"displayPriority"`
-	Size            string       `json:"size"`
+	MusicResponsiveListItemFixedColumnRenderer FluffyMusicResponsiveListItemFlexColumnRenderer `json:"musicResponsiveListItemFixedColumnRenderer"`
 }
 
 type TitleElement struct {
@@ -76,19 +75,6 @@ type TitleElement struct {
 
 type DescriptionRun struct {
 	Text string `json:"text"`
-}
-
-type PurpleFlexColumn struct {
-	MusicResponsiveListItemFlexColumnRenderer PurpleMusicResponsiveListItemFlexColumnRenderer `json:"musicResponsiveListItemFlexColumnRenderer"`
-}
-
-type PurpleMusicResponsiveListItemFlexColumnRenderer struct {
-	Text            PurpleText `json:"text"`
-	DisplayPriority string     `json:"displayPriority"`
-}
-
-type PurpleText struct {
-	Runs []PurpleRun `json:"runs"`
 }
 
 type PurpleRun struct {
@@ -460,7 +446,10 @@ type MusicRenderer struct {
 	TrackingParams string       `json:"trackingParams"`
 }
 
-type MusicPagination struct {
+type MusicPagination ItemsPagination
+type ArtistPagination ItemsPagination
+type AlbumsPagination ItemsPagination
+type ItemsPagination struct {
 	ResponseContext      *TracksPaginationResponseContext      `json:"responseContext,omitempty"`
 	ContinuationContents *TracksPaginationContinuationContents `json:"continuationContents,omitempty"`
 	TrackingParams       *string                               `json:"trackingParams,omitempty"`
@@ -518,6 +507,7 @@ type FluffyFlexColumn struct {
 type FluffyMusicResponsiveListItemFlexColumnRenderer struct {
 	Text            TitleClass `json:"text"`
 	DisplayPriority string     `json:"displayPriority"`
+	Size            string     `json:"size"`
 }
 
 type TitleClass struct {
@@ -689,7 +679,8 @@ type TracksPaginationResponseContext struct {
 
 type ArtistList MusicList
 type AlbumList MusicList
-type MusicList struct {
+type MusicList ItemsList
+type ItemsList struct {
 	ResponseContext *TracksPaginationResponseContext `json:"responseContext,omitempty"`
 	Contents        *TracklistContents               `json:"contents,omitempty"`
 	TrackingParams  *string                          `json:"trackingParams,omitempty"`
@@ -1051,7 +1042,7 @@ type ContentMusicTwoRowItemRenderer struct {
 	TrackingParams     string                                     `json:"trackingParams"`
 	Menu               MusicCardShelfRendererMenu                 `json:"menu"`
 	ThumbnailOverlay   *PurpleThumbnailOverlay                    `json:"thumbnailOverlay,omitempty"`
-	SubtitleBadges     []Badge                                    `json:"subtitleBadges,omitempty"`
+	SubtitleBadges     *[]Badge                                   `json:"subtitleBadges,omitempty"`
 }
 
 type MusicTwoRowItemRendererNavigationEndpoint struct {
@@ -1167,24 +1158,11 @@ type MoreButtonToggleButtonRenderer struct {
 
 type TentacledMusicShelfRenderer struct {
 	Title          MusicCarouselShelfBasicHeaderRendererTitle `json:"title"`
-	Contents       []Content4                                 `json:"contents"`
+	Contents       []MischievousContent                       `json:"contents"`
 	TrackingParams string                                     `json:"trackingParams"`
 	BottomText     TitleElement                               `json:"bottomText"`
 	BottomEndpoint RunBottomEndpoint                          `json:"bottomEndpoint"`
 	ShelfDivider   ShelfDivider                               `json:"shelfDivider"`
-}
-
-type Content4 struct {
-	MusicResponsiveListItemRenderer IndigoMusicResponsiveListItemRenderer `json:"musicResponsiveListItemRenderer"`
-}
-
-type IndigoMusicResponsiveListItemRenderer struct {
-	TrackingParams   string                 `json:"trackingParams"`
-	Thumbnail        ThumbnailRendererClass `json:"thumbnail"`
-	Overlay          PurpleOverlay          `json:"overlay"`
-	FlexColumns      []PurpleFlexColumn     `json:"flexColumns"`
-	Menu             PurpleMenu             `json:"menu"`
-	PlaylistItemData PlaylistItemData       `json:"playlistItemData"`
 }
 
 type ArtistHeader struct {
@@ -1322,7 +1300,7 @@ type SubscribeEndpoint struct {
 	Params     string   `json:"params"`
 }
 
-type Album struct {
+type Tracklist struct {
 	ResponseContext *ArtistTracklistPaginationResponseContext `json:"responseContext,omitempty"`
 	Contents        *AlbumContents                            `json:"contents,omitempty"`
 	Header          *AlbumHeader                              `json:"header,omitempty"`
@@ -1362,36 +1340,36 @@ type Content6 struct {
 }
 
 type StickyMusicShelfRenderer struct {
-	Contents                []Content7   `json:"contents"`
-	TrackingParams          string       `json:"trackingParams"`
-	ShelfDivider            ShelfDivider `json:"shelfDivider"`
-	ContentsMultiSelectable bool         `json:"contentsMultiSelectable"`
+	Contents                []MusicPlaylistShelfContinuationContent `json:"contents"`
+	TrackingParams          string                                  `json:"trackingParams"`
+	ShelfDivider            ShelfDivider                            `json:"shelfDivider"`
+	ContentsMultiSelectable bool                                    `json:"contentsMultiSelectable"`
 }
 
-type Content7 struct {
-	MusicResponsiveListItemRenderer IndecentMusicResponsiveListItemRenderer `json:"musicResponsiveListItemRenderer"`
-}
+// type Content7 struct {
+// 	MusicResponsiveListItemRenderer IndecentMusicResponsiveListItemRenderer `json:"musicResponsiveListItemRenderer"`
+// }
 
-type IndecentMusicResponsiveListItemRenderer struct {
-	TrackingParams      string                 `json:"trackingParams"`
-	Overlay             PurpleOverlay          `json:"overlay"`
-	FlexColumns         []TentacledFlexColumn  `json:"flexColumns"`
-	FixedColumns        []FixedColumn          `json:"fixedColumns"`
-	Menu                PurpleMenu             `json:"menu"`
-	PlaylistItemData    PurplePlaylistItemData `json:"playlistItemData"`
-	ItemHeight          string                 `json:"itemHeight"`
-	Index               TitleElement           `json:"index"`
-	MultiSelectCheckbox MultiSelectCheckbox    `json:"multiSelectCheckbox"`
-}
+// type IndecentMusicResponsiveListItemRenderer struct {
+// 	TrackingParams      string                 `json:"trackingParams"`
+// 	Overlay             PurpleOverlay          `json:"overlay"`
+// 	FlexColumns         []TentacledFlexColumn  `json:"flexColumns"`
+// 	FixedColumns        []FixedColumn          `json:"fixedColumns"`
+// 	Menu                PurpleMenu             `json:"menu"`
+// 	PlaylistItemData    PurplePlaylistItemData `json:"playlistItemData"`
+// 	ItemHeight          string                 `json:"itemHeight"`
+// 	Index               TitleElement           `json:"index"`
+// 	MultiSelectCheckbox MultiSelectCheckbox    `json:"multiSelectCheckbox"`
+// }
 
-type TentacledFlexColumn struct {
-	MusicResponsiveListItemFlexColumnRenderer TentacledMusicResponsiveListItemFlexColumnRenderer `json:"musicResponsiveListItemFlexColumnRenderer"`
-}
+// type TentacledFlexColumn struct {
+// 	MusicResponsiveListItemFlexColumnRenderer TentacledMusicResponsiveListItemFlexColumnRenderer `json:"musicResponsiveListItemFlexColumnRenderer"`
+// }
 
-type TentacledMusicResponsiveListItemFlexColumnRenderer struct {
-	Text            FluffyText `json:"text"`
-	DisplayPriority string     `json:"displayPriority"`
-}
+// type TentacledMusicResponsiveListItemFlexColumnRenderer struct {
+// 	Text            FluffyText `json:"text"`
+// 	DisplayPriority string     `json:"displayPriority"`
+// }
 
 type FluffyText struct {
 	Runs []IndigoRun `json:"runs,omitempty"`
@@ -1413,7 +1391,7 @@ type MusicDetailHeaderRenderer struct {
 	Thumbnail      MusicDetailHeaderRendererThumbnail `json:"thumbnail"`
 	TrackingParams string                             `json:"trackingParams"`
 	MoreButton     MoreButton                         `json:"moreButton"`
-	SecondSubtitle TitleElement                       `json:"secondSubtitle"`
+	SecondSubtitle Subtitle                           `json:"secondSubtitle"`
 }
 
 type MusicDetailHeaderRendererMenu struct {
@@ -1460,7 +1438,9 @@ type MicroformatDataRenderer struct {
 	URLCanonical string `json:"urlCanonical"`
 }
 
-type ArtistAlbums struct {
+type ArtistAlbums ArtistTwoRowItem
+type ArtistSingles ArtistTwoRowItem
+type ArtistTwoRowItem struct {
 	ResponseContext *ArtistAlbumsResponseContext    `json:"responseContext,omitempty"`
 	Contents        *ArtistAlbumsContents           `json:"contents,omitempty"`
 	Header          *ArtistTracklistHeader          `json:"header,omitempty"`
@@ -1499,9 +1479,9 @@ type Content9 struct {
 }
 
 type GridRenderer struct {
-	Items          []GridRendererItem `json:"items"`
-	TrackingParams string             `json:"trackingParams"`
-	Header         GridRendererHeader `json:"header"`
+	Items          []MusicCarouselShelfRendererContent `json:"items"`
+	TrackingParams string                              `json:"trackingParams"`
+	Header         GridRendererHeader                  `json:"header"`
 }
 
 type GridRendererHeader struct {
@@ -1510,22 +1490,6 @@ type GridRendererHeader struct {
 
 type GridHeaderRenderer struct {
 	Title TitleElement `json:"title"`
-}
-
-type GridRendererItem struct {
-	MusicTwoRowItemRenderer ItemMusicTwoRowItemRenderer `json:"musicTwoRowItemRenderer"`
-}
-
-type ItemMusicTwoRowItemRenderer struct {
-	ThumbnailRenderer  ThumbnailRendererClass                     `json:"thumbnailRenderer"`
-	AspectRatio        string                                     `json:"aspectRatio"`
-	Title              MusicCarouselShelfBasicHeaderRendererTitle `json:"title"`
-	Subtitle           TitleElement                               `json:"subtitle"`
-	NavigationEndpoint RunBottomEndpoint                          `json:"navigationEndpoint"`
-	TrackingParams     string                                     `json:"trackingParams"`
-	Menu               MusicCardShelfRendererMenu                 `json:"menu"`
-	ThumbnailOverlay   FluffyThumbnailOverlay                     `json:"thumbnailOverlay"`
-	SubtitleBadges     []Badge                                    `json:"subtitleBadges,omitempty"`
 }
 
 type FluffyThumbnailOverlay struct {
@@ -1569,4 +1533,5 @@ type IndigoPlayNavigationEndpoint struct {
 type ArtistAlbumsResponseContext struct {
 	ServiceTrackingParams []ServiceTrackingParam `json:"serviceTrackingParams"`
 	MaxAgeSeconds         int64                  `json:"maxAgeSeconds"`
+	VisitorData           string                 `json:"visitorData"`
 }

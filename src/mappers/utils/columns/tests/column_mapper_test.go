@@ -20,12 +20,12 @@ func TestColumnMapper(t *testing.T) {
 	}
 	// Test case 1.2: Test with valid data,
 	//browse id is equal to expected "TestID"
-	if id := flexColumn.BrowseID; id != "TestID" {
+	if id := *flexColumn.BrowseID; id != "TestID" {
 		t.Errorf("Test 1.2 failed, expected: %s, got: %s", "TestID", id)
 	}
 	// Test case 1.3: Test with valid data,
 	//pageType is equal to expected "PageTypeTest"
-	if pageType := flexColumn.PageType; pageType != "PageTypeTest" {
+	if pageType := *flexColumn.PageType; pageType != "PageTypeTest" {
 		t.Errorf(
 			"Test 1.3 failed, expected: %s, got: %s",
 			"PageTypeTest", pageType,
@@ -78,7 +78,7 @@ func TestColumnMapper(t *testing.T) {
 		t.Errorf("Test 7 failed, error:%v", err)
 	}
 	// Test case 7.1: Test with music id, text is equal to expected "test"
-	if id := flexColumn.WatchID; id != "test" {
+	if id := *flexColumn.WatchID; id != "test" {
 		t.Errorf("Test 7.1 failed, expected test, got %s", id)
 	}
 	// Test case 7.2: Test with music id, pageType is equal to expected "test"
@@ -86,11 +86,11 @@ func TestColumnMapper(t *testing.T) {
 		t.Errorf("Test 7.2 failed, expected test, got %s", text)
 	}
 	// Test case 7.3: Test with music id, browseId is not empty
-	if id := flexColumn.BrowseID; id != "" {
-		t.Errorf("Test 7.3 failed, WatchId was not expected, got: %s", id)
+	if id := flexColumn.BrowseID; id != nil {
+		t.Errorf("Test 7.3 failed, WatchId was not expected, got: %v", id)
 	}
 	// Test case 7.4: Test with music id, pageType is equal to expected "Music"
-	if pageType := flexColumn.PageType; pageType != "Music" {
+	if pageType := *flexColumn.PageType; pageType != "Music" {
 		t.Errorf(
 			"Test 7.4 failed, pagetype music was expected, got: %s",
 			pageType,

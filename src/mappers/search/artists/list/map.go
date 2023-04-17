@@ -1,44 +1,31 @@
 package list
 
 import (
-	"fmt"
 	"katze/src/mappers/utils/mappers"
+	"katze/src/mappers/utils/simplifier"
 	"katze/src/models/external"
 	"katze/src/models/lists"
+	"katze/src/utils"
 )
 
-func Map(artistResult external.ArtistList) (lists.Artists, error) {
+// Map maps an external.ArtistList to a lists.Artists
+func Map(artistListResult external.ArtistList) (lists.Artists, error) {
 
-	// Check if the artistResult is empty
-	results := artistResult.Contents
-	if results == nil {
-		err := fmt.Errorf("error: artistResult.Contents is empty")
-		return lists.Artists{}, err
-	}
-
-	// Check if the artistResult.ResponseContext is empty
-	if artistResult.ResponseContext == nil {
-		err := fmt.Errorf("error: artistResult.ResponseContext is empty")
-		return lists.Artists{}, err
-	}
-
-	// Get the artistShelf
-	artistShelfRenderer := results.TabbedSearchResultsRenderer.Tabs[0].
-		TabRenderer.Content.SectionListRenderer.Contents[0].MusicShelfRenderer
-	artistsShelf := artistShelfRenderer.Contents
-
-	artistList, err := mappers.Artists(artistsShelf)
+	artistsList, err := simplifier.ItemsList(
+		external.ItemsList(artistListResult),
+	)
 	if err != nil {
 		return lists.Artists{}, err
 	}
 
-	// Get the visitorID is it exists
-	visitorID := artistResult.ResponseContext.VisitorData
-	continuation := artistShelfRenderer.Continuations[0].NextContinuationData.Continuation
+	artists, err := utils.ArrayMap(artistsList.Contents, mappers.Artist)
+	if err != nil {
+		return lists.Artists{}, err
+	}
 
 	return lists.Artists{
-		Artists:        artistList,
-		ContinuationID: continuation,
-		VisitorID:      visitorID,
+		Artists:        artists,
+		ContinuationID: artistsList.NextPage,
+		VisitorID:      artistsList.VisitorID,
 	}, nil
 }

@@ -6,6 +6,7 @@ import (
 	"regexp"
 )
 
+// GetDuration gets the duration from the flexColumns
 func GetDuration(flexColumns []models.FlexColumn) (string, error) {
 	if len(flexColumns) <= 0 {
 		err := fmt.Errorf("error: flexcolumns is empty")

@@ -6,23 +6,25 @@ import (
 	"katze/src/models/music"
 )
 
+// GetAlbums gets the albums from the flexcolumns
 func GetAlbums(flexcolumns []models.FlexColumn) (
 	[]music.Album, error,
 ) {
 	var albums []music.Album
 	for _, column := range flexcolumns {
-		if column.PageType != "MUSIC_PAGE_TYPE_ALBUM" {
+		if column.PageType == nil ||
+			*column.PageType != "MUSIC_PAGE_TYPE_ALBUM" {
 			continue
 		}
 
-		if column.WatchID != "" {
+		if column.WatchID != nil {
 			err := fmt.Errorf(
 				"error invalid data, the watch id should be empty",
 			)
 			return []music.Album{}, err
 		}
 
-		if column.BrowseID == "" {
+		if column.BrowseID == nil {
 			err := fmt.Errorf(
 				"error invalid data, the browse id should not be empty",
 			)
@@ -35,9 +37,10 @@ func GetAlbums(flexcolumns []models.FlexColumn) (
 			)
 			return []music.Album{}, err
 		}
+
 		album := music.Album{
 			Title: column.Text,
-			ID:    column.BrowseID,
+			ID:    *column.BrowseID,
 		}
 		albums = append(albums, album)
 

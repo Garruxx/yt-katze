@@ -2,14 +2,18 @@ package tests
 
 import (
 	"katze/src/mappers/search/general"
-	"katze/src/mappers/search/general/tests/data"
+	"katze/src/models/external"
+	"katze/src/utils"
 	"testing"
 )
 
 func TestMap(t *testing.T) {
 
 	// test case 1 - get the data from the file path valid
-	generalData, err := data.Get("./data/json/general_data_valid.json")
+	var generalData external.General
+	err := utils.GetStructFromJson(
+		"./data/json/general_data_valid.json", &generalData,
+	)
 	if err != nil {
 		t.Errorf("test 1 failed, error: %v", err)
 	}
@@ -37,7 +41,10 @@ func TestMap(t *testing.T) {
 
 	// test case 2 - get the data from the file path valid but the data
 	// contains an error
-	generalData, err = data.Get("./data/json/general_data_error_invalid.json")
+	generalData = external.General{}
+	err = utils.GetStructFromJson(
+		"./data/json/general_data_error_invalid.json", &generalData,
+	)
 	if err != nil {
 		t.Errorf("test 2 failed, error: %v", err)
 	}
@@ -48,8 +55,9 @@ func TestMap(t *testing.T) {
 	}
 
 	// test case 3 - get the data from the file path valid, no artists
-	generalData, err = data.Get(
-		"./data/json/general_data_valid_no_artists.json",
+	generalData = external.General{}
+	err = utils.GetStructFromJson(
+		"./data/json/general_data_valid_no_artists.json", &generalData,
 	)
 	if err != nil {
 		t.Errorf("test 3 failed, error: %v", err)
@@ -65,7 +73,10 @@ func TestMap(t *testing.T) {
 	}
 
 	// test case 4 - get the data from the file path valid, no songs
-	generalData, err = data.Get("./data/json/general_data_valid_no_songs.json")
+	generalData = external.General{}
+	err = utils.GetStructFromJson(
+		"./data/json/general_data_valid_no_songs.json", &generalData,
+	)
 	if err != nil {
 		t.Errorf("test 4 failed, error: %v", err)
 	}
@@ -80,8 +91,9 @@ func TestMap(t *testing.T) {
 	}
 
 	// test case 5 - get the data from the file path valid, no albums
-	generalData, err = data.Get(
-		"./data/json/general_data_valid_no_albums.json",
+	generalData = external.General{}
+	err = utils.GetStructFromJson(
+		"./data/json/general_data_valid_no_albums.json", &generalData,
 	)
 	if err != nil {
 		t.Errorf("test 5 failed, error: %v", err)
@@ -97,8 +109,9 @@ func TestMap(t *testing.T) {
 	}
 
 	// test case 6 - get the data from the file path valid, no best match
-	generalData, err = data.Get(
-		"./data/json/general_data_valid_no_best_match.json",
+	generalData = external.General{}
+	err = utils.GetStructFromJson(
+		"./data/json/general_data_valid_no_best_match.json", &generalData,
 	)
 	if err != nil {
 		t.Errorf("test 6 failed, error: %v", err)
