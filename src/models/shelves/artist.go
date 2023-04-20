@@ -8,8 +8,8 @@ import (
 type Artist struct {
 	Name        string                      `json:"name"`
 	Thumbnails  []external.ThumbnailElement `json:"thumbnails"`
-	MusicList   artist.MusicList            `json:"musicList"`
-	AlbumsList  artist.AlbumList            `json:"albumsList"`
-	SinglesList artist.SingleList           `json:"singlesList"`
-	VisitorID   string                      `json:"visitorID,omitempty"`
+	MusicsList  artist.MusicsList           `json:"musicsList"`
+	AlbumsList  artist.AlbumsList           `json:"albumsList"`
+	SinglesList artist.SinglesList          `json:"singlesList"`
+	VisitorID   string                      `json:"visitorId,omitempty"`
 }

@@ -73,7 +73,7 @@ func Song(bestMatch external.MusicCardShelfRenderer) (
 	return music.BestMatch{
 		Type:       "song",
 		Title:      title,
-		WatchID:    ID,
+		ID:         ID,
 		Artists:    artists,
 		AlbumTitle: albumTitle,
 		AlbumID:    albumID,

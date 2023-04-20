@@ -55,20 +55,20 @@ func Map(artist external.Artist) (
 	}
 
 	// Map albums and singles
-	albums := artistModels.AlbumList{
+	albums := artistModels.AlbumsList{
 		Albums:             albumsData.Items,
 		ContinuationID:     albumsData.ContinuationID,
 		ContinuationParams: albumsData.ContinuationParams,
 	}
 
-	singles := artistModels.SingleList{
+	singles := artistModels.SinglesList{
 		Singles:            singlesData.Items,
 		ContinuationID:     singlesData.ContinuationID,
 		ContinuationParams: singlesData.ContinuationParams,
 	}
 
 	//artist music list
-	musicList, err := artistMappers.MusicList(
+	musicsList, err := artistMappers.MusicsList(
 		artistSimplified.MusicShelfRenderer,
 	)
 	if err != nil && err.Error() != "no music found" {
@@ -77,7 +77,7 @@ func Map(artist external.Artist) (
 	shelf = shelves.Artist{
 		Name:        artistSimplified.Name,
 		Thumbnails:  artistSimplified.Thumbnails,
-		MusicList:   musicList,
+		MusicsList:   musicsList,
 		AlbumsList:  albums,
 		SinglesList: singles,
 		VisitorID:   artistSimplified.VisitorID,

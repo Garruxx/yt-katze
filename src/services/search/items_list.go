@@ -9,6 +9,7 @@ import (
 )
 
 // ItemsList returns a list of items from a search query
+// Get a musiclist, artistlist and albumlist
 func ItemsList(query string, param string, visitorID string) (
 	external.ItemsList, error,
 ) {

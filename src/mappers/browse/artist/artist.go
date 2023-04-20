@@ -3,7 +3,7 @@ package artist
 import (
 	"katze/src/mappers/browse/artist/card"
 	"katze/src/mappers/browse/artist/profile"
-	"katze/src/mappers/search/music"
+	"katze/src/mappers/browse/artist/music"
 )
 
 var Profile = profile.Map

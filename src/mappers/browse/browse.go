@@ -13,4 +13,4 @@ var ArtistAlbums = artist.Albums
 var ArtistSingles = artist.Singles
 
 var Album = tracklist.Map
-var Singles = tracklist.Map
+var Single = tracklist.Map

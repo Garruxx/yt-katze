@@ -8,36 +8,39 @@ import (
 	"katze/src/services/utils"
 )
 
-func ArtistTracklist(browseID string, params string, visitorID *string) (
-	external.ArtistTracklist, error,
+func ArtistTracklist(browseID string, params string, visitorID string) (
+	external.ArtistTwoRowItem, error,
 ) {
+
+	if visitorID == "" {
+		err := fmt.Errorf("VisitorID is required")
+		return external.ArtistTwoRowItem{}, err
+	}
 
 	req := models.Request{
 		Params:        params,
-		GoogVisitorID: visitorID,
+		GoogVisitorID: &visitorID,
 		UrlPath:       "/youtubei/v1/browse",
 		BrowseID:      browseID,
 	}
 	body, err := utils.Request(req)
-
 	if err != nil {
-		err := fmt.Errorf("Error sending request: %v", err)
-		return external.ArtistTracklist{}, err
+		err := fmt.Errorf("error sending request: %v", err)
+		return external.ArtistTwoRowItem{}, err
 	}
 
 	//Decode the response body into a artistTracklist struct
-	var artistTracklist external.ArtistTracklist
+	var artistTracklist external.ArtistTwoRowItem
 	err = json.Unmarshal(body, &artistTracklist)
 	if err != nil {
-		err := fmt.Errorf("Error unmarshalling response body: %v", err)
-		return external.ArtistTracklist{}, err
+		err := fmt.Errorf("error unmarshalling response body: %v", err)
+		return external.ArtistTwoRowItem{}, err
 	}
 	if artistTracklist.Error != nil {
 		err := fmt.Errorf(
-			"Error getting artistTracklist: %v",
-			artistTracklist.Error.Status,
+			"error getting artistTracklist: %v", artistTracklist.Error.Status,
 		)
-		return external.ArtistTracklist{}, err
+		return external.ArtistTwoRowItem{}, err
 	}
 	return artistTracklist, nil
 }

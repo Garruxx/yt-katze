@@ -8,7 +8,7 @@ import (
 	"katze/src/utils"
 )
 
-func TwoRowItem(albumsData external.ArtistAlbums) (
+func TwoRowItem(albumsData external.ArtistTwoRowItem) (
 	albums []artist.CardItem, err error,
 ) {
 

@@ -17,7 +17,7 @@ func TestMusicList(t *testing.T) {
 		t.Errorf("test 1 failed, error: %v", err)
 	}
 	// test case 1.1, check if the data has an error
-	result, err := mappers.MusicList(musicListData)
+	result, err := mappers.MusicsList(musicListData)
 	if err != nil {
 		t.Errorf("test 1.1 failed, error: %v", err)
 	}

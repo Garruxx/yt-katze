@@ -55,13 +55,6 @@ func Song(
 	var albumId string
 	artists := []music.Artist{}
 	if len(flexColumns) == 3 {
-
-		// Get artists
-		artists, err = columns.GetArtists(flexColumns[1].Items)
-		if err != nil {
-			return music.Song{}, err
-		}
-
 		// Get albums
 		albums, err := columns.GetAlbums(flexColumns[2].Items)
 		if err != nil {
@@ -69,6 +62,14 @@ func Song(
 		}
 		albumTitle = albums[0].Title
 		albumId = albums[0].ID
+	}
+
+	if len(flexColumns) >= 2 {
+		// Get artists
+		artists, err = columns.GetArtists(flexColumns[1].Items)
+		if err != nil {
+			return music.Song{}, err
+		}
 	}
 
 	// Get track number (if exists)

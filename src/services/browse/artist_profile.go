@@ -8,14 +8,14 @@ import (
 	"katze/src/services/utils"
 )
 
-func ArtistProfile(browseID string, visitorID *string) (
+func ArtistProfile(artistID string, visitorID *string) (
 	external.Artist, error,
 ) {
 
 	req := models.Request{
 		GoogVisitorID: visitorID,
 		UrlPath:       "/youtubei/v1/browse",
-		BrowseID:      browseID,
+		BrowseID:      artistID,
 	}
 	body, err := utils.Request(req)
 	if err != nil {

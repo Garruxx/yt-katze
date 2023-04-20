@@ -10,7 +10,7 @@ import (
 func TestMap(t *testing.T) {
 
 	// Test case 1 - valid albums artist data
-	albumsData := external.ArtistAlbums{}
+	albumsData := external.ArtistTwoRowItem{}
 	err := utils.GetStructFromJson(
 		"./data/json/valid_albums_artist.json",
 		&albumsData,
@@ -58,7 +58,7 @@ func TestMap(t *testing.T) {
 	}
 
 	// Test case 2 - invalid albums artist data bad visitor ID
-	albumsData = external.ArtistAlbums{}
+	albumsData = external.ArtistTwoRowItem{}
 	err = utils.GetStructFromJson(
 		"./data/json/invalid_visitor_id.json",
 		&albumsData,
@@ -81,7 +81,7 @@ func TestMap(t *testing.T) {
 	}
 
 	// Test case 3 - invalid albums artist data error
-	albumsData = external.ArtistAlbums{}
+	albumsData = external.ArtistTwoRowItem{}
 	err = utils.GetStructFromJson(
 		"./data/json/invalid_error.json",
 		&albumsData,

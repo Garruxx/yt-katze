@@ -6,9 +6,9 @@ import (
 )
 
 type General struct {
-	BestMatch music.BestMatch `json:"best_match,omitempty"`
+	BestMatch music.BestMatch `json:"bestMatch,omitempty"`
 	Tracks    lists.Music     `json:"tracks,omitempty"`
 	Albums    lists.Albums    `json:"albums,omitempty"`
 	Artists   lists.Artists   `json:"artists,omitempty"`
-	VisitorID string          `json:"visitor_id,omitempty"`
+	VisitorID string          `json:"visitorId,omitempty"`
 }

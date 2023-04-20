@@ -686,6 +686,13 @@ type ItemsList struct {
 	TrackingParams  *string                          `json:"trackingParams,omitempty"`
 	Error           *ArtistTracklistPaginationError  `json:"error,omitempty"`
 }
+type ArtistTcracklist struct {
+	ResponseContext *ArtistTracklistPaginationResponseContext `json:"responseContext,omitempty"`
+	Contents        *ArtistTracklistContents                  `json:"contents,omitempty"`
+	Header          *ArtistTracklistHeader                    `json:"header,omitempty"`
+	TrackingParams  *string                                   `json:"trackingParams,omitempty"`
+	Error           *ArtistTracklistPaginationError           `json:"error,omitempty"`
+}
 
 type TracklistContents struct {
 	TabbedSearchResultsRenderer FluffyTabbedSearchResultsRenderer `json:"tabbedSearchResultsRenderer"`

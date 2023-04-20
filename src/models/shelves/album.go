@@ -7,7 +7,7 @@ import (
 
 type Album struct {
 	Title      string                      `json:"title"`
-	Artists    []music.Artist              `json:"artist"`
+	Artists    []music.Artist              `json:"artists"`
 	Thumbnails []external.ThumbnailElement `json:"thumbnails"`
 	Tracks     []music.Song                `json:"tracks"`
 	Duration   string                      `json:"duration"`

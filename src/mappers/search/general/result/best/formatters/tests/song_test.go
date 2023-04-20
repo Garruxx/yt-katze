@@ -25,7 +25,7 @@ func TestSong(t *testing.T) {
 	}
 
 	// ID is "testVideoID"
-	if song.WatchID != "testVideoID" {
+	if song.ID != "testVideoID" {
 		t.Errorf("test 1 failed: videoID expected %v, got %v", "testVideoID", song.ID)
 	}
 

@@ -23,7 +23,7 @@ func TestMap(t *testing.T) {
 		t.Errorf("test 1.1 failed, error: %v", err)
 	}
 	// test case 1.2 - check if the best match exists
-	if result.BestMatch.WatchID == "" {
+	if result.BestMatch.ID == "" {
 		t.Errorf("test 1.2 failed, error: best match is empty")
 	}
 	// test case 1.3 - check if the music exists 3 songs

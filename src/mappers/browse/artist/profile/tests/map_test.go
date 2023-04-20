@@ -36,7 +36,7 @@ func TestMap(t *testing.T) {
 		t.Errorf("test 1.4 failed expected 2 albums, got %v", albumsLength)
 	}
 	// Test case 1.5 - check if the result has a valid songs length
-	if songsLength := len(result.MusicList.Songs); songsLength != 4 {
+	if songsLength := len(result.MusicsList.Songs); songsLength != 4 {
 		t.Errorf("test 1.5 failed expected 2 songs, got %v", songsLength)
 	}
 	// Test case 1.6 - check if the result has a valid singles length
@@ -85,7 +85,7 @@ func TestMap(t *testing.T) {
 		t.Errorf("test 3.2 failed expected 0 albums, got %v", albumsLength)
 	}
 	// Test case 3.3 - check if the result has a valid songs length
-	if songsLength := len(result.MusicList.Songs); songsLength != 4 {
+	if songsLength := len(result.MusicsList.Songs); songsLength != 4 {
 		t.Errorf("test 3.3 failed expected 4 songs, got %v", songsLength)
 	}
 	// Test case 3.4 - check if the result has a valid singles length
@@ -112,7 +112,7 @@ func TestMap(t *testing.T) {
 		t.Errorf("test 4.2 failed expected 4 albums, got %v", albumsLength)
 	}
 	// Test case 4.3 - check if the result has a valid songs length
-	if songsLength := len(result.MusicList.Songs); songsLength != 0 {
+	if songsLength := len(result.MusicsList.Songs); songsLength != 0 {
 		t.Errorf("test 4.3 failed expected 0 songs, got %v", songsLength)
 	}
 }

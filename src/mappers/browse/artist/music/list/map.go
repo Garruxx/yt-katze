@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"katze/src/mappers/browse/utils/mappers"
 	"katze/src/models/external"
-	"katze/src/models/shelves"
+	"katze/src/models/lists"
 	"katze/src/utils"
 )
 
 func Map(artistMusicList external.ArtistTracklist) (
-	music shelves.Music, err error,
+	music lists.Music, err error,
 ) {
 	if artistMusicList.Error != nil {
 		return music, fmt.Errorf("error: %v", artistMusicList.Error)
@@ -47,7 +47,7 @@ func Map(artistMusicList external.ArtistTracklist) (
 		return music, err
 	}
 
-	return shelves.Music{
+	return lists.Music{
 		Songs:          songs,
 		ContinuationID: continuationID,
 		VisitorID:      artistMusicList.ResponseContext.VisitorData,

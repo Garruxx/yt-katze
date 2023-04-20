@@ -1,4 +1,4 @@
-package songs
+package music
 
 import (
 	"katze/src/mappers/browse/artist/music/list"
