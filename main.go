@@ -21,11 +21,7 @@ func main() {
 	if err != nil {
 		logger.Errorf("Error creating graphql handler: %v", err)
 	}
-	http.HandleFunc("/graphql", func(w http.ResponseWriter, r *http.Request) {
-		go func() {
-			handler.ServeHTTP(w, r)
-		}()
-	})
+	go http.Handle("/graphql", handler)
 
 	// Start server
 	fmt.Println("Server started on port 80")
