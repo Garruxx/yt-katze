@@ -2,6 +2,7 @@ package browse
 
 import (
 	"fmt"
+	"katze/logger"
 	"katze/src/mappers"
 	"katze/src/models/lists"
 	"katze/src/services"
@@ -30,12 +31,12 @@ func ArtistMusicsListPagination(
 		continuationID, &visitorID,
 	)
 	if err != nil {
-		return lists.Music{}, err
+		return lists.Music{}, logger.Errorf("error %v", err)
 	}
 
 	result, err := mappers.BrowseArtistMusicPagination(resultData)
 	if err != nil {
-		return lists.Music{}, err
+		return lists.Music{}, logger.Errorf("error %v", err)
 	}
 
 	return result, nil

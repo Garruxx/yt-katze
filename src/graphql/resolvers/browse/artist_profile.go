@@ -2,6 +2,7 @@ package browse
 
 import (
 	"fmt"
+	"katze/logger"
 	"katze/src/mappers"
 	"katze/src/models/shelves"
 	"katze/src/services"
@@ -26,12 +27,12 @@ func ArtistProfile(agqlParams graphql.ResolveParams) (
 
 	resultData, err := services.BrowseArtistProfile(artistID, &visitorID)
 	if err != nil {
-		return shelves.Artist{}, err
+		return shelves.Artist{}, logger.Errorf("error %v", err)
 	}
 
 	result, err := mappers.BrowseArtistProfile(resultData)
 	if err != nil {
-		return shelves.Artist{}, err
+		return shelves.Artist{}, logger.Errorf("error %v", err)
 	}
 
 	return result, nil

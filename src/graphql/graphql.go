@@ -38,7 +38,7 @@ func GraphqlHandler() (*handler.Handler, error) {
 		logger.Errorf("Error creating schema: %v", err)
 	}
 
-	// Crear el controlador de GraphQL
+	// Crate GraphQL controler
 	graphqlHandler := handler.New(&handler.Config{
 		Schema:     &Schema,
 		Playground: true,

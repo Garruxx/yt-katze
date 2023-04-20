@@ -2,6 +2,7 @@ package browse
 
 import (
 	"fmt"
+	"katze/logger"
 	"katze/src/mappers"
 	"katze/src/models/artist"
 	"katze/src/services"
@@ -28,12 +29,12 @@ func ArtistSingles(
 
 	resultData, err := services.BrowseArtistSingles(artistId, params, visitorID)
 	if err != nil {
-		return []artist.CardItem{}, err
+		return []artist.CardItem{}, logger.Errorf("error %v", err)
 	}
 
 	result, err := mappers.BrowseArtistSingles(resultData)
 	if err != nil {
-		return []artist.CardItem{}, err
+		return []artist.CardItem{}, logger.Errorf("error %v", err)
 	}
 
 	return result, nil

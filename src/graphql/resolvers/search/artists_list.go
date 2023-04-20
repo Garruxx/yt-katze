@@ -2,6 +2,7 @@ package search
 
 import (
 	"fmt"
+	"katze/logger"
 	"katze/src/mappers"
 	"katze/src/models/external"
 	"katze/src/models/lists"
@@ -30,12 +31,12 @@ func ArtistsList(gqlParams graphql.ResolveParams) (
 	}
 	resultData, err := services.SearchArtistList(query, params, visitorID)
 	if err != nil {
-		return lists.Artists{}, err
+		return lists.Artists{}, logger.Errorf("error %v", err)
 	}
 
 	result, err := mappers.SearchArtistList(external.ArtistList(resultData))
 	if err != nil {
-		return lists.Artists{}, err
+		return lists.Artists{}, logger.Errorf("error %v", err)
 	}
 
 	return result, nil

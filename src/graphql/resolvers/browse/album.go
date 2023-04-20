@@ -2,6 +2,7 @@ package browse
 
 import (
 	"fmt"
+	"katze/logger"
 	"katze/src/mappers"
 	"katze/src/models/shelves"
 	"katze/src/services"
@@ -24,12 +25,12 @@ func Album(
 
 	resultData, err := services.BrowseAlbum(albumID, &visitorID)
 	if err != nil {
-		return shelves.Album{}, err
+		return shelves.Album{}, logger.Errorf("error %v", err)
 	}
 
 	result, err := mappers.BrowseAlbum(resultData)
 	if err != nil {
-		return shelves.Album{}, err
+		return shelves.Album{}, logger.Errorf("error %v", err)
 	}
 
 	return result, nil

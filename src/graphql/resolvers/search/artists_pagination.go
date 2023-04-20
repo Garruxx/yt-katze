@@ -2,6 +2,7 @@ package search
 
 import (
 	"fmt"
+	"katze/logger"
 	"katze/src/mappers"
 	"katze/src/models/external"
 	"katze/src/models/lists"
@@ -31,14 +32,14 @@ func ArtistsPagination(gqlParams graphql.ResolveParams) (
 		continuationID, visitorID,
 	)
 	if err != nil {
-		return lists.Artists{}, err
+		return lists.Artists{}, logger.Errorf("error %v", err)
 	}
 
 	result, err := mappers.SearchArtistPagination(
 		external.ArtistPagination(resultData),
 	)
 	if err != nil {
-		return lists.Artists{}, err
+		return lists.Artists{}, logger.Errorf("error %v", err)
 	}
 
 	return result, nil

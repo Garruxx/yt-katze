@@ -2,6 +2,7 @@ package browse
 
 import (
 	"fmt"
+	"katze/logger"
 	"katze/src/mappers"
 	"katze/src/models/shelves"
 	"katze/src/services"
@@ -26,12 +27,12 @@ func Single(gqlParams graphql.ResolveParams) (
 
 	resultData, err := services.BrowseSingle(singleID, &visitorID)
 	if err != nil {
-		return shelves.Single{}, err
+		return shelves.Single{}, logger.Errorf("error %v", err)
 	}
 
 	result, err := mappers.BrowseSingle(resultData)
 	if err != nil {
-		return shelves.Single{}, err
+		return shelves.Single{}, logger.Errorf("error %v", err)
 	}
 
 	return shelves.Single(result), nil

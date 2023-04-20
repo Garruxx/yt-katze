@@ -2,6 +2,7 @@ package search
 
 import (
 	"fmt"
+	"katze/logger"
 	"katze/src/mappers"
 	"katze/src/models/shelves"
 	"katze/src/services"
@@ -24,12 +25,12 @@ func General(params graphql.ResolveParams) (any, error) {
 
 	resultData, err := services.SearchGeneral(query, visitorID)
 	if err != nil {
-		return shelves.General{}, err
+		return shelves.General{}, logger.Errorf("error %v", err)
 	}
 
 	result, err := mappers.SearchGeneral(resultData)
 	if err != nil {
-		return shelves.General{}, err
+		return shelves.General{}, logger.Errorf("error %v", err)
 	}
 
 	return result, nil

@@ -2,3 +2,4 @@ response.json
 *.log
 **/error/
 .vscode/
+*.exe
