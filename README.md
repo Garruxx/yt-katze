@@ -11,7 +11,7 @@ Una API de [GraphQL](https://graphql.org) hecha en [Go](https://go.dev) para acc
 
 **_No requiere autenticación_**
 
-## Uso [YouTube Music](https://music.youtube.com)
+## Uso
 
 - [Resultado de busqueda general](#busqueda-general)
 - [Busqueda de canciones](#busqueda-de-canciones)
