@@ -2,36 +2,37 @@
 
 ![YT-KATZE logo](./assets/logo.png)
 
-A [GraphQL](https://graphql.org) API made in [Go](https://go.dev) for clean access to the [YouTube Music](https://music.youtube.com) API.
-**Technologies used**
+Una API de [GraphQL](https://graphql.org) hecha en [Go](https://go.dev) para acceder de manera limpia a la API de [YouTube Music](https://music.youtube.com)
+
+**Tecnologías usadas**
 
 - [![Golang logo](./assets/go.png)Golang](https://go.dev)
 - [![GraphQL logo](./assets/graphql.png)GraphQL](https://graphql.org)
 
-**_No authentication required_**
+**_No requiere autenticación_**
 
-## Usage [YouTube Music](https://music.youtube.com)
+## Uso [YouTube Music](https://music.youtube.com)
 
-- [General search result](#general-search)
-- [Songs search](#search-for-songs)
-- [Songs-pagination](#songs-pagination)
-- [Albums-search](#search-for-albums)
-- [Pagination of albums](#albums-pagination)
-- [Search for artists](#artist-search)
-- [Pagination of artists](#artist-pagination)
-- [Artist-profile](#artist-singles)
-- [Artist's songs](#songs-of-the-artist)
-- [Artist's song pagination](#artist-song-pagination).
-- [Artist albums](#artists-albums)
-- [Artist's singles](#artist-singles)
-- [Album-content](#album-content)
-- [Single-content](#contents-of-the-single)
+- [Resultado de busqueda general](#busqueda-general)
+- [Busqueda de canciones](#busqueda-de-canciones)
+- [Paginación de canciones](#paginación-de-canciones)
+- [Busqueda de albumes](#busqueda-de-albumes)
+- [Pagination de albumes](#paginación-de-albumes)
+- [Busqueda de artistas](#busqueda-de-artistas)
+- [Paginación de artistas](#paginación-de-artistas)
+- [Perfil de artista](#perfil-de-artista)
+- [Canciones del artita](#canciones-del-artista)
+- [Paginación de canciones del artista](#paginación-de-canciones-del-artista)
+- [Albumes del artista](#albumes-del-artista)
+- [Sencillos del artista](#sencillos-del-artista)
+- [Contenido del album](#contenido-del-album)
+- [Contenido del sencillo](#contenido-del-sencillo)
 
-## Type sets:
+## Conjuntos de tipos:
 
 - [common](#common-types)
-  They are shared types, these are used by other more complex types such as those mentioned above.
-  They contain primitive types such as `album` or `song`.
+  Son tipos compartidos, estos los utilizan otros tipos más complejos como los anteriormente mencionados.
+  Contienen tipos primitivos como `album` o `song`
 
   - [thumbnails](#thumbnails)
   - [song](#song)
@@ -43,48 +44,47 @@ A [GraphQL](https://graphql.org) API made in [Go](https://go.dev) for clean acce
   - [cardItem](#carditem)
 
 - [Artist](#artist-types)
-  These are the types related to an artist, such as their track list, albums and singles, they contain:
-  an array of data of some other type, params and continuationId, params and continuationId.
-  of some other type, params and continuationId
+  Son los tipos relacionados a un artista, como su lista de canciones, de albumes y sencillos, estos contienen: un array de datos
+  de algún otro tipo, params y continuationId
 
   - [artistAlbumsList](#artistalbumslist)
   - [artistSinglesList](#artistsingleslist)
   - [artistMusicsList](#artistmusicslist)
 
 - [Lists](#lists-types)
-  They are lists of other types, but these include continuation, therefore they have an array of data of some other type
-  accompanied by a [continuation](#continuation) field, continuationId and a visitorId
+  Son listas de otros tipos, pero estás incluyen continuación, por lo tanto tienen un array de datos de algún otro tipo
+  acompañadas de un campo [continuation](#continuation), continuationId y un visitorId
 
   - [musicsList](#musicslist)
   - [albumsList](#albumslist)
   - [artistsList](#artistslist)
 
 - [Shelves](#shelves-types)
-  These are shelves, they include complex types, for example: An album with its songs, images and description,
-  an artist with its songs, albums, singles, and description, a single with its song, images and description,
-  the general search with its songs, albums and artists.
+  Son estanterías, estás incluyen tipos complejos, por ejemplo: Un album con sus canciones, imagenes y descripción,
+  un artista con sus canciones, albumes, sencillos, y descripción, un sencillo con su canción, imagenes y descipción,
+  la busqueda general con sus canciones, albumes y artistas.
 
   - [searchShelf](#searchshelf)
   - [artistShelf](#artistshelf)
   - [albumShelf](#albumshelf)
 
-## Usage
+## Uso
 
-### General search
+### Busqueda general
 
-In the query set the query and in visitorId the visitor id.
+En la query establesca la consulta y en visitorId el id del visitante.
 
-> **If the visitor id is not set, one will be generated automatically**.  
-> Remember to store it for future reference.  
-> You will not be able to get the albums of an artist, nor the singles of an artist without a valid visitor id that has been previously used to request the artist's profile.
-> that has been previously used to request the artist's profile.
+> **Si no se establece el id del visitante, se generará uno automáticamente.**  
+> !Recuerde almacenarlo para futuras consultas.  
+> no podrá obtener los albumes de un artista, ni los sencillos de un artista sin un id de visitante valido
+> que se haya usado previamente para solicitar el perfil del artista.
 
-> The bestMatch is the best result of the search, it can be `song`, `album` or `artist`.
+> El bestMatch es el mejor resultado de la busqueda, puede ser `song`, `album` o `artist`.
 >
-> - if it is a `song` **`Will not contain`** `albumType`.
-> - if `album` or `single` **`Will not contain`** `album` or `albumId` the album title will be `title` and the type will be specified in `albumType`.
-> - if it is a video it will return song in type, but **`will not contain`** `albumType`, `album` or `albumId`.
-> - if it is an artist **`Will not contain`** `albumType`, `album` or `albumId`.
+> - si es una `canción` **`No contendrá`** `albumType`
+> - Si es `album` o `single` **`No contendrá`** `album` ni `albumId` el titulo del album será `title` y se especificará el tipo en `albumType`
+> - si es un video devolvera song en type, pero **`No contendrá`** `albumType`, `album` ni `albumId`
+> - si es un artista **`No contendrá`** `albumType`, `album` ni `albumId`
 
 ```graphql
 {
@@ -184,12 +184,12 @@ In the query set the query and in visitorId the visitor id.
 }
 ```
 
-### Search for songs
+### Busqueda de canciones
 
-> **If the visitor id is not set, one will be generated automatically.** ** **Remember to store it for future reference.
-> Remember to store it for future queries.
-> `params` is very important, this is who really indicates what we are looking for.
-> it is obtained in the `general` query in the `tracks.continuation.params` field > `query` can be changed or obtained from the `tracks.continuation.query` field.
+> **Si no se establece el id del visitante, se generará uno automáticamente.**
+> !Recuerde almacenarlo para futuras consultas.
+> `params` es muy importante, este es quién realmente indica lo que buscamos.
+> se obtiene en la query `general` en el campo `tracks.continuation.params` > `query` puede cambiarse u obtenerse del campo `tracks.continuation.query`
 
 ```graphql
 {
@@ -217,12 +217,12 @@ In the query set the query and in visitorId the visitor id.
 }
 ```
 
-### Songs pagination
+### Paginación de canciones
 
-> **If the visitor id is not set, one will be generated automatically.** ** **If the visitor id is not set, one will be generated automatically.  
-> Remember to store it for future queries.  
-> `continuationId` is very important, this is who really indicates what we are looking for.  
-> is obtained in the query `musicsList` in the `continuationId` field.
+> **Si no se establece el id del visitante, se generará uno automáticamente.**  
+> !Recuerde almacenarlo para futuras consultas.  
+> `continuationId` es muy importante, este es quién realmente indica lo que buscamos.  
+> se obtiene en la query `musicsList` en el campo `continuationId`
 
 ```graphql
 {
@@ -250,12 +250,12 @@ In the query set the query and in visitorId the visitor id.
 }
 ```
 
-### Search for albums
+### Busqueda de albumes
 
-> **If the visitor id is not set, one will be generated automatically**.  
-> Remember to store it for future queries.  
-> `params` is very important, this is who really indicates what we are looking for.
-> it is obtained in the `general` query in the `albums.continuation.params` field > `query` can be changed or obtained from the `albums.continuation.query` field.
+> **Si no se establece el id del visitante, se generará uno automáticamente.**  
+> !Recuerde almacenarlo para futuras consultas.  
+> `params` es muy importante, este es quién realmente indica lo que buscamos.
+> se obtiene en la query `general` en el campo `albums.continuation.params` > `query` puede cambiarse u obtenerse del campo `albums.continuation.query`
 
 ```graphql
 {
@@ -283,12 +283,12 @@ In the query set the query and in visitorId the visitor id.
 }
 ```
 
-### Albums pagination
+### Paginación de albumes
 
-> **If the visitor id is not set, one will be generated automatically.** ** **If the visitor id is not set, one will be generated automatically.
-> Remember to store it for future queries.  
-> `continuationId` is very important, this is who really indicates what we are looking for.
-> is obtained in the query `albumsList` in the `continuationId` field.
+> **Si no se establece el id del visitante, se generará uno automáticamente.**
+> !Recuerde almacenarlo para futuras consultas.  
+> `continuationId` es muy importante, este es quién realmente indica lo que buscamos.
+> se obtiene en la query `albumsList` en el campo `continuationId`
 
 ```graphql
 {
@@ -316,13 +316,13 @@ In the query set the query and in visitorId the visitor id.
 }
 ```
 
-### Artist search
+### Busqueda de artistas
 
-> **If the visitor id is not set, one will be generated automatically.** ** **If the visitor id is not set, one will be generated automatically.
-> Remember to store it for future queries.  
-> `params` is very important, this is who really indicates what we are looking for.
-> `params` is obtained in the `general` query in the `artists.continuation.params` field.
-> and the query can be changed or obtained from there.
+> **Si no se establece el id del visitante, se generará uno automáticamente.**
+> !Recuerde almacenarlo para futuras consultas.  
+> `params` es muy importante, este es quién realmente indica lo que buscamos.
+> `params` se obtiene en la query `general` en el campo `artists.continuation.params`
+> y la query puede cambiarse u obtenerla de allí mismo.
 
 ```graphql
 {
@@ -342,12 +342,12 @@ In the query set the query and in visitorId the visitor id.
 }
 ```
 
-### Artist pagination
+### Paginación de artistas
 
-> **If the visitor id is not set, one will be generated automatically.** ** **If the visitor id is not set, one will be generated automatically.  
-> Remember to store it for future queries.  
-> `continuationId` is very important, this is who really indicates what we are looking for.
-> `continuationId` is obtained in the query `artistsList` in the `continuationId` field.
+> **Si no se establece el id del visitante, se generará uno automáticamente.**  
+> !Recuerde almacenarlo para futuras consultas.  
+> `continuationId` es muy importante, este es quién realmente indica lo que buscamos.
+> `continuationId` se obtiene en la query `artistsList` en el campo `continuationId`
 
 ```graphql
 {
@@ -367,12 +367,12 @@ In the query set the query and in visitorId the visitor id.
 }
 ```
 
-### Artist profile
+### Perfil de artista
 
-> **If the visitor id is not set, one will be generated automatically**.  
-> Remember to store it for future queries.
-> `artistId` is found in all results containing an artist card.
-> for example in the query `musicsList` in the `songs.artists.id` field.
+> **Si no se establece el id del visitante, se generará uno automáticamente.**  
+> !Recuerde almacenarlo para futuras consultas.
+> `artistId` se encuentra en todos los resultados que contengan una tarjeta de artista.
+> por ejemplo en la query `musicsList` en el campo `songs.artists.id`
 
 ```graphql
 {
@@ -441,11 +441,11 @@ In the query set the query and in visitorId the visitor id.
 }
 ```
 
-### Songs of the artist
+### Canciones del artista
 
-> The visitorId is optional, it allows you to customize the search results.  
-> In this case **no visitorId** is generated.
-> `params` and continuation id are found in the musicsList field of the [Artist-profile](#artist-profile)
+> El visitorId es opcional, permite personalizar los resultados de la búsqueda.  
+> En este caso **No se genera visitorId**.
+> `params` y continuation id se encuentran en el campo musicsList del [Perfil de artista](#perfil-de-artista)
 
 ```graphql
     artistMusicsList(visitorId: "", continuationId: "", params: "") {
@@ -472,11 +472,11 @@ In the query set the query and in visitorId the visitor id.
     }
 ```
 
-### Artist song pagination
+### Paginación de canciones del artista
 
-> The visitorId is optional, it allows you to customize the search results.  
-> In this case **no visitorId** is generated.
-> `continuationId` is found in [Artist's songs](#artist's-songs)
+> El visitorId es opcional, permite personalizar los resultados de la búsqueda.  
+> En este caso **No se genera visitorId**.
+> `continuationId` se encuentra en [Canciones del artista](#canciones-del-artista)
 
 ```graphql
     artistMusicsPagination(visitorId: "", continuationId: "") {
@@ -504,12 +504,11 @@ In the query set the query and in visitorId the visitor id.
     }
 ```
 
-### Artist's albums
+### Albumes del artista
 
-> The visitorId is mandatory, it allows you to customize the search results.  
-> **There will be NO RESULTS IF THE visitorId IS NOT SUBMITTED**     
-> `artistId` and `continuationId`
-> are in the albumsList field of [artistProfile](#artist-profile).
+> El visitorId es obligatorio, permite personalizar los resultados de la búsqueda.  
+> **NO HABRÁN RESULTADOS SI NO SE ENVÍA EL visitorId** > `artistId` y `continuationId`
+> se encuentran en el campo albumsList de [artistProfile](#perfil-de-artista).
 
 ```graphql
     artistAlbumsList(visitorId: "", continuationId: "", params: "") {
@@ -528,11 +527,11 @@ In the query set the query and in visitorId the visitor id.
     }
 ```
 
-### Artist singles
+### Sencillos del artista
 
-> The visitorId is mandatory, it allows you to customize the search results.  
-> **There will be NO RESULTS IF THE visitorId IS NOT SUBMITTED** > `artistId` and `continuationId`  
-> are in the siglesList field of [artistProfile](#artist-profile).
+> El visitorId es obligatorio, permite personalizar los resultados de la búsqueda.  
+> **NO HABRÁN RESULTADOS SI NO SE ENVÍA EL visitorId** > `artistId` y `continuationId`  
+> se encuentran en el campo siglesList de [artistProfile](#perfil-de-artista).
 
 ```graphql
     artistSinglesList(visitorId: "", artistId: "", continuationId: "") {
@@ -551,11 +550,11 @@ In the query set the query and in visitorId the visitor id.
     }
 ```
 
-### Album content
+### Contenido del album
 
-> **If the visitorId is not sent, one will be generated automatically**.
-> Remember to store it for future reference.  
-> `albumId` Found in all albums, it is the album id.
+> **Si no se envía el visitorId, se generará uno automáticamente.**
+> !Recuerde almacenarlo para futuras consultas.  
+> `albumId` Se encuentra en todos los albumes, es el id del album.
 
 ```graphql
     album(visitorId: "", albumId: "") {
@@ -589,11 +588,11 @@ In the query set the query and in visitorId the visitor id.
     }
 ```
 
-### Contents of the single
+### Contenido del sencillo
 
-> **If the visitorId is not sent, one will be generated automatically**.
-> Remember to store it for future queries.  
-> `singleId` Found in all singles, it is the id of the single.
+> **Si no se envía el visitorId, se generará uno automáticamente.**
+> !Recuerde almacenarlo para futuras consultas.  
+> `singleId` Se encuentra en todos los sencillos, es el id del sencillo.
 
 ```graphql
     single(visitorId: "", singleId: "") {
@@ -627,7 +626,7 @@ In the query set the query and in visitorId the visitor id.
     }
 ```
 
-## Types
+## Tipos
 
 ### Common types
 
