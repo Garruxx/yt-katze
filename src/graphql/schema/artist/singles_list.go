@@ -12,10 +12,10 @@ var SinglesListType = graphql.NewObject(graphql.ObjectConfig{
 		"singles": &graphql.Field{
 			Type: common.CardItemsType,
 		},
-		"params": &graphql.Field{
+		"continuationId": &graphql.Field{
 			Type: graphql.String,
 		},
-		"continuationId": &graphql.Field{
+		"artistId": &graphql.Field{
 			Type: graphql.String,
 		},
 	},

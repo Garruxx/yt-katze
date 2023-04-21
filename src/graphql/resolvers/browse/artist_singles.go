@@ -22,12 +22,14 @@ func ArtistSingles(
 	if !ok {
 		return []artist.CardItem{}, fmt.Errorf("visitorId is not a string")
 	}
-	params, ok := gqlParams.Args["params"].(string)
+	continuationID, ok := gqlParams.Args["continuationId"].(string)
 	if !ok {
-		return []artist.CardItem{}, fmt.Errorf("params is not a string")
+		return []artist.CardItem{}, fmt.Errorf("continuationId is not a string")
 	}
 
-	resultData, err := services.BrowseArtistSingles(artistId, params, visitorID)
+	resultData, err := services.BrowseArtistSingles(
+		artistId, continuationID, visitorID,
+	)
 	if err != nil {
 		return []artist.CardItem{}, logger.Errorf("error %v", err)
 	}

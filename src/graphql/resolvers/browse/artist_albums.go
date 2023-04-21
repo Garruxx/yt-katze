@@ -21,12 +21,14 @@ func ArtistAlbums(hqlParams graphql.ResolveParams) (any, error) {
 	if !ok {
 		return []artist.CardItem{}, fmt.Errorf("visitorId is not a string")
 	}
-	params, ok := hqlParams.Args["params"].(string)
+	continuationID, ok := hqlParams.Args["continuationId"].(string)
 	if !ok {
-		return []artist.CardItem{}, fmt.Errorf("params is not a string")
+		return []artist.CardItem{}, fmt.Errorf("continuationId is not a string")
 	}
 
-	resultData, err := services.BrowseArtistAlbums(artistID, params, visitorID)
+	resultData, err := services.BrowseArtistAlbums(
+		artistID, continuationID, visitorID,
+	)
 	if err != nil {
 		return []artist.CardItem{}, logger.Errorf("error %v", err)
 	}

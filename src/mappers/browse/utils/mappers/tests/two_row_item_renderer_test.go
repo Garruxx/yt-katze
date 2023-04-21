@@ -37,10 +37,10 @@ func TestTwoRowItemRenderer(t *testing.T) {
 		)
 	}
 	// Test case 1.4: Check if the result has a browseID "browseIDTest"
-	if result.BrowseID != "browseIDTest" {
+	if result.ID != "browseIDTest" {
 		t.Errorf(
 			"test 1.4 failed, expected browseID browseIDTest, got %v",
-			result.BrowseID,
+			result.ID,
 		)
 	}
 	// Test case 1.5: Check if the result has a params "paramsTest"

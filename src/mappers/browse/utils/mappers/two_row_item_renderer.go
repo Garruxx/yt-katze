@@ -53,7 +53,7 @@ func TwoRowItemRenderer(
 		Title:    title,
 		Year:     Year,
 		Explicit: explicit,
-		BrowseID: browseEndpoint.BrowseID,
+		ID: browseEndpoint.BrowseID,
 		Params:   *browseEndpoint.Params,
 		Thumbnails: utils.GetThumbnail(
 			twoRowItem.MusicTwoRowItemRenderer.ThumbnailRenderer,

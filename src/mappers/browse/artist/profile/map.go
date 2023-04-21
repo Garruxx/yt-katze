@@ -57,14 +57,14 @@ func Map(artist external.Artist) (
 	// Map albums and singles
 	albums := artistModels.AlbumsList{
 		Albums:             albumsData.Items,
-		ContinuationID:     albumsData.ContinuationID,
-		ContinuationParams: albumsData.ContinuationParams,
+		ArtistID:           albumsData.ArtistID,
+		ContinuationID: albumsData.ContinuationID,
 	}
 
 	singles := artistModels.SinglesList{
 		Singles:            singlesData.Items,
-		ContinuationID:     singlesData.ContinuationID,
-		ContinuationParams: singlesData.ContinuationParams,
+		ArtistID:           singlesData.ArtistID,
+		ContinuationID: singlesData.ContinuationID,
 	}
 
 	//artist music list
@@ -77,7 +77,7 @@ func Map(artist external.Artist) (
 	shelf = shelves.Artist{
 		Name:        artistSimplified.Name,
 		Thumbnails:  artistSimplified.Thumbnails,
-		MusicsList:   musicsList,
+		MusicsList:  musicsList,
 		AlbumsList:  albums,
 		SinglesList: singles,
 		VisitorID:   artistSimplified.VisitorID,

@@ -8,20 +8,20 @@ import (
 )
 
 /*
-* The params and visitorID must be obtained at the time of the artist
+* The continuationId and visitorID must be obtained at the time of the artist
 * profile, as they expire after some time.
 **/
 
 func TestArtistAlbums(t *testing.T) {
 
-	// test case 1 - valid artistId, params and visitorID
+	// test case 1 - valid artistId, continuationId and visitorID
 	visitorID := "CgtpR05yLVQyVVo2TSitpoGiBg%3D%3D"
 	artistId := "UCPC0L1d253x-KuMNwa05TpA"
-	params := "6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMUY2UW5SMVdUVnJhamRKWWpSRU9EaFFkVGR1YUZwMmVuQlZOakJsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOUVF6Qk1NV1F5TlRONExVdDFUVTUzWVRBMVZIQkJBQUh5MnJPcUNnWkFBVWdBVUNr"
+	continuationId := "6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMUY2UW5SMVdUVnJhamRKWWpSRU9EaFFkVGR1YUZwMmVuQlZOakJsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOUVF6Qk1NV1F5TlRONExVdDFUVTUzWVRBMVZIQkJBQUh5MnJPcUNnWkFBVWdBVUNr"
 	result, err := utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
 			"artistId":  artistId,
-			"params":    params,
+			"continuationId":    continuationId,
 			"visitorId": visitorID,
 		},
 		resolvers.ArtistAlbums,
@@ -34,14 +34,14 @@ func TestArtistAlbums(t *testing.T) {
 		t.Errorf("Test case 1 failed: expected non-empty list of albums")
 	}
 
-	// test case 2 - invalid params
+	// test case 2 - invalid continuationId
 	visitorID = "CgtpR05yLVQyVVo2TSitpoGiBg%3D%3D"
 	artistId = "UCPC0L1d253x-KuMNwa05TpA"
-	params = "Tirilil"
+	continuationId = "Tirilil"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
 			"artistId":  artistId,
-			"params":    params,
+			"continuationId":    continuationId,
 			"visitorId": visitorID,
 		},
 		resolvers.ArtistAlbums,
@@ -53,11 +53,11 @@ func TestArtistAlbums(t *testing.T) {
 	// test case 3 - invalid visitorID
 	visitorID = "Tirilil"
 	artistId = "UCPC0L1d253x-KuMNwa05TpA"
-	params = "6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMUY2UW5SMVdUVnJhamRKWWpSRU9EaFFkVGR1YUZwMmVuQlZOakJsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOUVF6Qk1NV1F5TlRONExVdDFUVTUzWVRBMVZIQkJBQUh5MnJPcUNnWkFBVWdBVUNr"
+	continuationId = "6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMUY2UW5SMVdUVnJhamRKWWpSRU9EaFFkVGR1YUZwMmVuQlZOakJsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOUVF6Qk1NV1F5TlRONExVdDFUVTUzWVRBMVZIQkJBQUh5MnJPcUNnWkFBVWdBVUNr"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
 			"artistId":  artistId,
-			"params":    params,
+			"continuationId":    continuationId,
 			"visitorId": visitorID,
 		},
 		resolvers.ArtistAlbums,
@@ -68,11 +68,11 @@ func TestArtistAlbums(t *testing.T) {
 
 	// test case 4 - invalid artistId type
 	visitorID = "CgtpR05yLVQyVVo2TSitpoGiBg%3D%3D"
-	params = ""
+	continuationId = ""
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
 			"artistId":  4444,
-			"params":    params,
+			"continuationId":    continuationId,
 			"visitorId": visitorID,
 		},
 		resolvers.ArtistAlbums,
@@ -81,13 +81,13 @@ func TestArtistAlbums(t *testing.T) {
 		t.Fatalf("Test case 4 failed error: %v", err)
 	}
 
-	// test case 5 - invalid params type
+	// test case 5 - invalid continuationId type
 	visitorID = "CgtpR05yLVQyVVo2TSitpoGiBg%3D%3D"
 	artistId = "UCPC0L1d253x-KuMNwa05TpA"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
 			"artistId":  artistId,
-			"params":    4444,
+			"continuationId":    4444,
 			"visitorId": visitorID,
 		},
 		resolvers.ArtistAlbums,
@@ -101,7 +101,7 @@ func TestArtistAlbums(t *testing.T) {
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
 			"artistId":  artistId,
-			"params":    params,
+			"continuationId":    continuationId,
 			"visitorId": 4444,
 		},
 		resolvers.ArtistAlbums,

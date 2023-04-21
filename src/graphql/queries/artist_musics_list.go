@@ -11,7 +11,7 @@ var ArtistMusicsList = &graphql.Field{
 	Type: schema.ArtistMusicList,
 	Name: "artistMusicsList",
 	Args: graphql.FieldConfigArgument{
-		"playlistId": &graphql.ArgumentConfig{
+		"continuationId": &graphql.ArgumentConfig{
 			Type: graphql.NewNonNull(graphql.String),
 		},
 		"visitorId": &graphql.ArgumentConfig{

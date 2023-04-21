@@ -8,7 +8,7 @@ import (
 	"katze/src/services/utils"
 )
 
-func ArtistMusicList(browseID string, params string, visitorID *string) (
+func ArtistMusicList(continuationID string, params string, visitorID *string) (
 	external.ArtistTracklist, error,
 ) {
 
@@ -16,7 +16,7 @@ func ArtistMusicList(browseID string, params string, visitorID *string) (
 		Params:        params,
 		GoogVisitorID: visitorID,
 		UrlPath:       "/youtubei/v1/browse",
-		BrowseID:      browseID,
+		BrowseID:      continuationID,
 	}
 	body, err := utils.Request(req)
 

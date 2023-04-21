@@ -8,7 +8,7 @@ import (
 	"katze/src/services/utils"
 )
 
-func ArtistTracklist(browseID string, params string, visitorID string) (
+func ArtistTracklist(browseID string, continuationID string, visitorID string) (
 	external.ArtistTwoRowItem, error,
 ) {
 
@@ -18,7 +18,7 @@ func ArtistTracklist(browseID string, params string, visitorID string) (
 	}
 
 	req := models.Request{
-		Params:        params,
+		Params:        continuationID,
 		GoogVisitorID: &visitorID,
 		UrlPath:       "/youtubei/v1/browse",
 		BrowseID:      browseID,

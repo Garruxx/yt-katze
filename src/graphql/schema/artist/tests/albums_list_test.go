@@ -22,27 +22,27 @@ func TestAlbumsList(t *testing.T) {
 		)
 	}
 
-	// Test case 2, params field
-	paramsField := artist.AlbumsListType.Fields()["params"]
-	if paramsField == nil {
-		t.Fatalf("Test case 2 failed, expected params field no be no-nil")
+	// Test case 2, continuationId field
+	continuationIdField := artist.AlbumsListType.Fields()["continuationId"]
+	if continuationIdField == nil {
+		t.Fatalf("Test case 2 failed, expected continuationId field no be no-nil")
 	}
-	// Test case 2.1 params field type
-	if paramsField.Type != graphql.String {
+	// Test case 2.1 continuationId field type
+	if continuationIdField.Type != graphql.String {
 		t.Fatalf(
-			"Test case 2.1 failed, extected params field type graphql.String",
+			"Test case 2.1 failed, extected continuationId field type graphql.String",
 		)
 	}
 
-	// Test case 3, continuation field
-	continuationField := artist.AlbumsListType.Fields()["continuationId"]
-	if continuationField == nil {
-		t.Fatalf("Test case 3 failed, expected continuation field no be no-nil")
+	// Test case 3, artistId field
+	artistIdField := artist.AlbumsListType.Fields()["artistId"]
+	if artistIdField == nil {
+		t.Fatalf("Test case 3 failed, expected artistId field no be no-nil")
 	}
-	// Test case 3.1 continuation field type
-	if continuationField.Type != graphql.String {
+	// Test case 3.1 artistId field type
+	if artistIdField.Type != graphql.String {
 		t.Fatalf(
-			"Test case 3.1 failed, extected continuation field type graphql.String",
+			"Test case 3.1 failed, extected artistId field type graphql.String",
 		)
 	}
 }

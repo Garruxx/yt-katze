@@ -17,8 +17,8 @@ func CarouselList(carouselShelf models.CarouselShelfRenderer) (
 	}
 
 	return models.CarouseList{
-		Items:              items,
-		ContinuationParams: carouselShelf.Params,
-		ContinuationID:     carouselShelf.BrowseID,
+		Items:          items,
+		ContinuationID: carouselShelf.Params,
+		ArtistID:       carouselShelf.BrowseID,
 	}, nil
 }

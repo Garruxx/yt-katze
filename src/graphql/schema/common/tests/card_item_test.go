@@ -43,17 +43,17 @@ func TestCardItem(t *testing.T) {
 		)
 	}
 
-	// Test case 4, browseId field
-	browseIdField := common.CardItemObjectType.Fields()["browseId"]
-	if browseIdField == nil {
-		t.Fatalf("Test case 4 failed: expected browseId field to be non-nil")
+	// Test case 4, Id field
+	IdField := common.CardItemObjectType.Fields()["id"]
+	if IdField == nil {
+		t.Fatalf("Test case 4 failed: expected Id field to be non-nil")
 	}
-	// Test case 4.1, browseId field type
-	if browseIdField.Type != graphql.String {
+	// Test case 4.1, Id field type
+	if IdField.Type != graphql.String {
 		t.Fatalf(
 			`
-			  Test case 4.1 failed: expected browseId field type to be
-		      BrowseIdType
+			  Test case 4.1 failed: expected Id field type to be
+		      IdType
 			`,
 		)
 	}

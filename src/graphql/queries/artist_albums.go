@@ -14,7 +14,7 @@ var ArtistAlbums = &graphql.Field{
 		"artistId": &graphql.ArgumentConfig{
 			Type: graphql.NewNonNull(graphql.String),
 		},
-		"params": &graphql.ArgumentConfig{
+		"continuationId": &graphql.ArgumentConfig{
 			Type: graphql.NewNonNull(graphql.String),
 		},
 		"visitorId": &graphql.ArgumentConfig{

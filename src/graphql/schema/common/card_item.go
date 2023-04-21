@@ -14,7 +14,7 @@ var CardItemObjectType = graphql.NewObject(graphql.ObjectConfig{
 		"year": &graphql.Field{
 			Type: graphql.Int,
 		},
-		"browseId": &graphql.Field{
+		"id": &graphql.Field{
 			Type: graphql.String,
 		},
 		"params": &graphql.Field{

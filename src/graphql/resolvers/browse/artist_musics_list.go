@@ -11,16 +11,16 @@ import (
 )
 
 // ArtistMusicList the ArtistMusicList query
-// need playlistId, visitorId and params params
+// need continuationId, visitorId and params params
 func ArtistMusicsList(
 	gqlParams graphql.ResolveParams,
 ) (
 	any, error,
 ) {
 
-	playlistID, ok := gqlParams.Args["playlistId"].(string)
+	continuationId, ok := gqlParams.Args["continuationId"].(string)
 	if !ok {
-		return lists.Music{}, fmt.Errorf("playlistId is not a string")
+		return lists.Music{}, fmt.Errorf("continuationId is not a string")
 	}
 	visitorID, ok := gqlParams.Args["visitorId"].(string)
 	if !ok {
@@ -32,7 +32,7 @@ func ArtistMusicsList(
 	}
 
 	resultData, err := services.BrowseArtistMusicList(
-		playlistID, params, &visitorID,
+		continuationId, params, &visitorID,
 	)
 	if err != nil {
 		return lists.Music{}, logger.Errorf("error %v", err)

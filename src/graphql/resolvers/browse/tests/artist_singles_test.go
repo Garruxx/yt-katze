@@ -8,20 +8,20 @@ import (
 )
 
 /*
-* The params and visitorID must be obtained at the time of the artist
+* The continuationId and visitorID must be obtained at the time of the artist
 * profile, as they expire after some time.
 **/
 
 func TestArtistSingles(t *testing.T) {
 
-	// test case 1 - valid artistId, params and visitorID
+	// test case 1 - valid artistId, continuationId and visitorID
 	visitorID := "CgtpR05yLVQyVVo2TSitpoGiBg%3D%3D"
-	artistId := "UCPC0L1d253x-KuMNwa05TpA"
-	params := "6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMUY2UW5SMVdUVnJhamRKWWpSRU9EaFFkVGR1YUZwMmVuQlZOakJsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOUVF6Qk1NV1F5TlRONExVdDFUVTUzWVRBMVZIQkJBQUh5MnJPcUNnWkFBa2dBVURr"
+	artistId := "UCvBE7uVhxuKRLL1vy71NRRA"
+	continuationId := "6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMWw0UVhSTFlYWlJWbmxyVkRSRU9EaFFkVGR1YUZwMmVtWkNWRXhsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOMlFrVTNkVlpvZUhWTFVreE1NWFo1TnpGT1VsSkJBQUh5MnJPcUNnWkFBa2dBVUFz"
 	result, err := utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
 			"artistId":  artistId,
-			"params":    params,
+			"continuationId":    continuationId,
 			"visitorId": visitorID,
 		},
 		resolvers.ArtistSingles,
@@ -34,14 +34,14 @@ func TestArtistSingles(t *testing.T) {
 		t.Errorf("Test case 1 failed: expected non-empty list of songs")
 	}
 
-	// test case 2 - invalid params
+	// test case 2 - invalid continuationId
 	visitorID = "CgtLT0txVmNPcFlnOCjMgvehBg%3D%3D"
 	artistId = "UCPC0L1d253x-KuMNwa05TpA"
-	params = "Tirilil"
+	continuationId = "Tirilil"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
 			"artistId":  artistId,
-			"params":    params,
+			"continuationId":    continuationId,
 			"visitorId": visitorID,
 		},
 		resolvers.ArtistSingles,
@@ -53,11 +53,11 @@ func TestArtistSingles(t *testing.T) {
 	// test case 3 - invalid visitorID
 	visitorID = "Tirilil"
 	artistId = "UCPC0L1d253x-KuMNwa05TpA"
-	params = "6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMUY1WjFNNWFubHFNMVpKWlRSRU9EaFFkVGR1YUZwemVqVm5SMEZsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOUVF6Qk1NV1F5TlRONExVdDFUVTUzWVRBMVZIQkJBQUh5MnJPcUNnWkFBa2dBVURn"
+	continuationId = "6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMUY1WjFNNWFubHFNMVpKWlRSRU9EaFFkVGR1YUZwemVqVm5SMEZsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOUVF6Qk1NV1F5TlRONExVdDFUVTUzWVRBMVZIQkJBQUh5MnJPcUNnWkFBa2dBVURn"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
 			"artistId":  artistId,
-			"params":    params,
+			"continuationId":    continuationId,
 			"visitorId": visitorID,
 		},
 		resolvers.ArtistSingles,
@@ -71,7 +71,7 @@ func TestArtistSingles(t *testing.T) {
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
 			"artistId":  123,
-			"params":    params,
+			"continuationId":    continuationId,
 			"visitorId": visitorID,
 		},
 		resolvers.ArtistSingles,
@@ -80,12 +80,12 @@ func TestArtistSingles(t *testing.T) {
 		t.Errorf("Test case 4 failed expected error but got nil: %v", err)
 	}
 
-	// test case 5 - invalid params type
+	// test case 5 - invalid continuationId type
 	visitorID = "CgtLT0txVmNPcFlnOCjMgvehBg%3D%3D"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
 			"artistId":  "UCPC0L1d253x-KuMNwa05TpA",
-			"params":    123,
+			"continuationId":    123,
 			"visitorId": visitorID,
 		},
 		resolvers.ArtistSingles,
@@ -99,7 +99,7 @@ func TestArtistSingles(t *testing.T) {
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
 			"artistId":  artistId,
-			"params":    params,
+			"continuationId":    continuationId,
 			"visitorId": 123,
 		},
 		resolvers.ArtistSingles,

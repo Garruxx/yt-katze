@@ -12,10 +12,10 @@ var AlbumsListType = graphql.NewObject(graphql.ObjectConfig{
 		"albums": &graphql.Field{
 			Type: common.CardItemsType,
 		},
-		"params": &graphql.Field{
+		"continuationId": &graphql.Field{
 			Type: graphql.String,
 		},
-		"continuationId": &graphql.Field{
+		"artistId": &graphql.Field{
 			Type: graphql.String,
 		},
 	},
