@@ -10,7 +10,11 @@ A [GraphQL](https://graphql.org) API made in [Go](https://go.dev) for clean acce
 
 **_No authentication required_**
 
+<<<<<<< HEAD
 ## Usage [YouTube Music](https://music.youtube.com)
+=======
+## Uso
+>>>>>>> aec7c35fa43a1eda5954b57f4e55425e38be48cb
 
 - [General search result](#general-search)
 - [Songs search](#search-for-songs)
