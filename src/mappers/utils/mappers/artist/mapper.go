@@ -24,7 +24,8 @@ func Mapper(itemRenderer external.MischievousContent) (
 	err = utils.ValidateItemRenderer(
 		artistItemRenderer, "MUSIC_PAGE_TYPE_ARTIST", 2,
 	)
-	if err != nil {
+	errorAcepted := "error: pageType is not MUSIC_PAGE_TYPE_ARTIST is MUSIC_PAGE_TYPE_USER_CHANNEL"
+	if err != nil && err.Error() != errorAcepted {
 		return music.Artist{}, err
 	}
 

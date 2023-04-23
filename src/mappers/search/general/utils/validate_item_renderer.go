@@ -12,7 +12,7 @@ func ValidateItemRenderer(
 	flexColumnLength int,
 ) error {
 	if itemRenderer.PageType != pageTypeExpected {
-		err := fmt.Errorf("error: pageType is not %s", pageTypeExpected)
+		err := fmt.Errorf("error: pageType is not %s is %s", pageTypeExpected, itemRenderer.PageType)
 		return err
 	}
 	if len(itemRenderer.FlexColumns) != flexColumnLength {
