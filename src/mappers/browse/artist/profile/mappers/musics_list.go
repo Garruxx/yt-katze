@@ -2,6 +2,7 @@ package mappers
 
 import (
 	"fmt"
+	"katze/src/mappers/browse/utils/mappers"
 	"katze/src/models/artist"
 	"katze/src/models/external"
 	"katze/src/utils"
@@ -16,7 +17,7 @@ func MusicsList(musicShelf external.TentacledMusicShelfRenderer) (
 		return artist.MusicsList{}, err
 	}
 
-	songs, err := utils.ArrayMap(musicShelf.Contents, Song)
+	songs, err := utils.ArrayMap(musicShelf.Contents, mappers.MischievousSong)
 	if err != nil {
 		return artist.MusicsList{}, err
 	}

@@ -2,6 +2,7 @@ package browse
 
 import (
 	"katze/src/mappers/browse/artist"
+	"katze/src/mappers/browse/recomendations"
 	"katze/src/mappers/browse/tracklist"
 )
 
@@ -14,3 +15,5 @@ var ArtistSingles = artist.Singles
 
 var Album = tracklist.Map
 var Single = tracklist.Map
+
+var Recomendations = recomendations.SongUpNext

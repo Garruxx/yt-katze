@@ -1,25 +1,25 @@
 package tests
 
 import (
-	"katze/src/mappers/browse/artist/profile/mappers"
+	"katze/src/mappers/browse/utils/mappers"
 	"katze/src/models/external"
 	"katze/src/utils"
 	"testing"
 )
 
-func TestSong(t *testing.T) {
+func TestMischievousSong(t *testing.T) {
 
 	// Test case 1 valid data
 	songData := external.MischievousContent{}
 	err := utils.GetStructFromJson(
-		"./data/json/song/valid.json",
+		"./data/json/mischievous_song/valid.json",
 		&songData,
 	)
 	if err != nil {
 		t.Errorf("test 1 failed error while parsing json: %v", err)
 	}
 	// Test case 1.1 - check if the data has an error
-	result, err := mappers.Song(songData)
+	result, err := mappers.MischievousSong(songData)
 	if err != nil {
 		t.Errorf("test 1.1 failed error while mapping: %v", err)
 	}
@@ -65,14 +65,14 @@ func TestSong(t *testing.T) {
 	// Test case 2 invalid data two flex columns
 	songData = external.MischievousContent{}
 	err = utils.GetStructFromJson(
-		"./data/json/song/invalid_two_flex_columns.json",
+		"./data/json/mischievous_song/invalid_two_flex_columns.json",
 		&songData,
 	)
 	if err != nil {
 		t.Errorf("test 2 failed error while parsing json: %v", err)
 	}
 	// Test case 2.1 - check if the data has an error
-	_, err = mappers.Song(songData)
+	_, err = mappers.MischievousSong(songData)
 	if err == nil {
 		t.Errorf("test 2.1 failed expected error, got nil")
 	}
@@ -80,14 +80,14 @@ func TestSong(t *testing.T) {
 	// Test case 3 valid no album
 	songData = external.MischievousContent{}
 	err = utils.GetStructFromJson(
-		"./data/json/song/valid_no_album.json",
+		"./data/json/mischievous_song/valid_no_album.json",
 		&songData,
 	)
 	if err != nil {
 		t.Errorf("test 3 failed error while parsing json: %v", err)
 	}
 	// Test case 3.1 - check if the data has an error
-	result, err = mappers.Song(songData)
+	result, err = mappers.MischievousSong(songData)
 	if err != nil {
 		t.Errorf("test 3,1 failed error while mapping: %v", err)
 	}
@@ -103,14 +103,14 @@ func TestSong(t *testing.T) {
 	// Test case 4 valid no artist
 	songData = external.MischievousContent{}
 	err = utils.GetStructFromJson(
-		"./data/json/song/valid_no_artist.json",
+		"./data/json/mischievous_song/valid_no_artist.json",
 		&songData,
 	)
 	if err != nil {
 		t.Errorf("test 4 failed error while parsing json: %v", err)
 	}
 	// Test case 4.1 - check if the data has an error
-	result, err = mappers.Song(songData)
+	result, err = mappers.MischievousSong(songData)
 	if err != nil {
 		t.Errorf("test 4.1 failed error while mapping: %v", err)
 	}
@@ -122,14 +122,14 @@ func TestSong(t *testing.T) {
 	// Test case 5 valid explicit
 	songData = external.MischievousContent{}
 	err = utils.GetStructFromJson(
-		"./data/json/song/valid_explicit.json",
+		"./data/json/mischievous_song/valid_explicit.json",
 		&songData,
 	)
 	if err != nil {
 		t.Errorf("test 5 failed error while parsing json: %v", err)
 	}
 	// Test case 5.1 - check if the data has an error
-	result, err = mappers.Song(songData)
+	result, err = mappers.MischievousSong(songData)
 	if err != nil {
 		t.Errorf("test 5.1 failed error while mapping: %v", err)
 	}

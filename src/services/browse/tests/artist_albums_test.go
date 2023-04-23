@@ -1,6 +1,7 @@
 package tests
 
 import (
+	"katze/src/services"
 	"katze/src/services/browse"
 	"testing"
 )
@@ -8,11 +9,13 @@ import (
 // ArtistAlbums requieres tTracklisteID, params and visitorID
 // nothing is optional
 
-func TestArtTracklistums(t *testing.T) {
+func TestArtTracklists(t *testing.T) {
 
 	// Test case 1: all is valid
-	browseID := "UCoIOOL7QKuBhQHVKL8y7BEQ"
 	visitorID := "CgtpQ1Q4NV9sUHhQNCiJjYKiBg%3D%3D"
+	//Use the visitorID and artistID before the test
+	services.BrowseArtistProfile("UCoIOOL7QKuBhQHVKL8y7BEQ", &visitorID)
+	browseID := "UCoIOOL7QKuBhQHVKL8y7BEQ"
 	params :=
 		"6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMWw0UVhSTFlYWlJWbmxyVkRSRU9EaFFkVGR1YUZwMWFrVXpZa2RsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOdlNVOVBURGRSUzNWQ2FGRklWa3RNT0hrM1FrVlJBQUh5MnJPcUNnWkFBVWdBVUNJ"
 

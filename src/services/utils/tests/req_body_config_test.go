@@ -12,8 +12,9 @@ func TestReqBodyConfig(t *testing.T) {
 		Params:   "params_value",
 		Query:    "query_value",
 		BrowseID: "browse_id_value",
+		VideoID:  "video_id_value",
 	}
-	expectedJSON := `{"context":{"client":{"clientName":"WEB_REMIX","clientVersion":"1.20230306.01.00","hl":"en"}},"params":"params_value","query":"query_value","browseId":"browse_id_value"}`
+	expectedJSON := `{"context":{"client":{"clientName":"WEB_REMIX","clientVersion":"1.20230306.01.00","hl":"en"}},"params":"params_value","query":"query_value","browseId":"browse_id_value","videoId":"video_id_value"}`
 	jsonConfig, err := utils.ReqBodyConfig(config)
 	if err != nil {
 		t.Errorf("Error producing JSON string: %v", err)
@@ -32,5 +33,5 @@ func TestReqBodyConfig(t *testing.T) {
 	if string(jsonConfig) != expectedJSON {
 		t.Errorf("Unexpected result. Expected: %s, Got: %s", expectedJSON, jsonConfig)
 	}
-	
+
 }

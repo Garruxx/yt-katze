@@ -30,7 +30,7 @@ func TestRequest(t *testing.T) {
 		if err != nil {
 			t.Fatalf("Error reading request body: %v", err)
 		}
-		assert.Equal(t, `{"context":{"client":{"clientName":"WEB_REMIX","clientVersion":"1.20230306.01.00"}},"params":"test-params","query":"test-query","browseId":"test-browse-id"}`, string(body))
+		assert.Equal(t, `{"context":{"client":{"clientName":"WEB_REMIX","clientVersion":"1.20230306.01.00"}},"params":"test-params","query":"test-query","browseId":"test-browse-id","videoId":"videoIdTest"}`, string(body))
 
 		// Send a response
 		rw.WriteHeader(http.StatusOK)
@@ -45,6 +45,7 @@ func TestRequest(t *testing.T) {
 		Params:        "test-params",
 		Query:         "test-query",
 		BrowseID:      "test-browse-id",
+		VideoID:       "videoIdTest",
 		GoogVisitorID: nil,
 	}
 

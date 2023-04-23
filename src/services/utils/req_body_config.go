@@ -22,6 +22,7 @@ type requestConfig struct {
 	Params   string  `json:"params,omitempty"`
 	Query    string  `json:"query,omitempty"`
 	BrowseID string  `json:"browseId,omitempty"`
+	VideoID  string  `json:"videoId,omitempty"`
 }
 
 func ReqBodyConfig(config models.BodyReqConfig) ([]byte, error) {
@@ -37,6 +38,7 @@ func ReqBodyConfig(config models.BodyReqConfig) ([]byte, error) {
 		Params:   config.Params,
 		Query:    config.Query,
 		BrowseID: config.BrowseID,
+		VideoID:  config.VideoID,
 	}
 
 	jsonConfig, err := json.Marshal(configuration)

@@ -2,6 +2,7 @@ package services
 
 import (
 	"katze/src/services/browse"
+	"katze/src/services/player"
 	"katze/src/services/search"
 )
 
@@ -31,6 +32,10 @@ var BrowseArtistMusicPagination = browse.ArtistMusicListPagination
 var BrowseArtistAlbums = browse.ArtistTracklist
 var BrowseArtistSingles = browse.ArtistTracklist
 
-// Album and Single
+// Recomendations, Album and Single
 var BrowseAlbum = browse.Tracklist
 var BrowseSingle = browse.Tracklist
+var BrowseRecomendations = browse.Recomendations
+
+// Player
+var PlayerInformation = player.Information

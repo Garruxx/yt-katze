@@ -25,6 +25,7 @@ var QueryType = graphql.NewObject(graphql.ObjectConfig{
 		"musicsList":             queries.MusicsList,
 		"musicsPagination":       queries.MusicsPagination,
 		"single":                 queries.Single,
+		"songsRecomendation":     queries.SongsRecomendation,
 	},
 	Description: "Query for the GraphQL API",
 })

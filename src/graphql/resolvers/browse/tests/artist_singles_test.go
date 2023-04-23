@@ -4,6 +4,7 @@ import (
 	"katze/src/graphql/resolvers"
 	"katze/src/graphql/resolvers/tests/utils"
 	"katze/src/models/artist"
+	"katze/src/services"
 	"testing"
 )
 
@@ -14,15 +15,18 @@ import (
 
 func TestArtistSingles(t *testing.T) {
 
-	// test case 1 - valid artistId, continuationId and visitorID
+
 	visitorID := "CgtpR05yLVQyVVo2TSitpoGiBg%3D%3D"
 	artistId := "UCvBE7uVhxuKRLL1vy71NRRA"
+	//Use the visitorID and artistID before the test
+	services.BrowseArtistProfile(artistId, &visitorID)
+	// test case 1 - valid artistId, continuationId and visitorID
 	continuationId := "6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMWw0UVhSTFlYWlJWbmxyVkRSRU9EaFFkVGR1YUZwMmVtWkNWRXhsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOMlFrVTNkVlpvZUhWTFVreE1NWFo1TnpGT1VsSkJBQUh5MnJPcUNnWkFBa2dBVUFz"
 	result, err := utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
-			"artistId":  artistId,
-			"continuationId":    continuationId,
-			"visitorId": visitorID,
+			"artistId":       artistId,
+			"continuationId": continuationId,
+			"visitorId":      visitorID,
 		},
 		resolvers.ArtistSingles,
 	)
@@ -40,9 +44,9 @@ func TestArtistSingles(t *testing.T) {
 	continuationId = "Tirilil"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
-			"artistId":  artistId,
-			"continuationId":    continuationId,
-			"visitorId": visitorID,
+			"artistId":       artistId,
+			"continuationId": continuationId,
+			"visitorId":      visitorID,
 		},
 		resolvers.ArtistSingles,
 	)
@@ -56,9 +60,9 @@ func TestArtistSingles(t *testing.T) {
 	continuationId = "6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMUY1WjFNNWFubHFNMVpKWlRSRU9EaFFkVGR1YUZwemVqVm5SMEZsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOUVF6Qk1NV1F5TlRONExVdDFUVTUzWVRBMVZIQkJBQUh5MnJPcUNnWkFBa2dBVURn"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
-			"artistId":  artistId,
-			"continuationId":    continuationId,
-			"visitorId": visitorID,
+			"artistId":       artistId,
+			"continuationId": continuationId,
+			"visitorId":      visitorID,
 		},
 		resolvers.ArtistSingles,
 	)
@@ -70,9 +74,9 @@ func TestArtistSingles(t *testing.T) {
 	visitorID = "CgtLT0txVmNPcFlnOCjMgvehBg%3D%3D"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
-			"artistId":  123,
-			"continuationId":    continuationId,
-			"visitorId": visitorID,
+			"artistId":       123,
+			"continuationId": continuationId,
+			"visitorId":      visitorID,
 		},
 		resolvers.ArtistSingles,
 	)
@@ -84,9 +88,9 @@ func TestArtistSingles(t *testing.T) {
 	visitorID = "CgtLT0txVmNPcFlnOCjMgvehBg%3D%3D"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
-			"artistId":  "UCPC0L1d253x-KuMNwa05TpA",
-			"continuationId":    123,
-			"visitorId": visitorID,
+			"artistId":       "UCPC0L1d253x-KuMNwa05TpA",
+			"continuationId": 123,
+			"visitorId":      visitorID,
 		},
 		resolvers.ArtistSingles,
 	)
@@ -98,9 +102,9 @@ func TestArtistSingles(t *testing.T) {
 	artistId = "UCPC0L1d253x-KuMNwa05TpA"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
-			"artistId":  artistId,
-			"continuationId":    continuationId,
-			"visitorId": 123,
+			"artistId":       artistId,
+			"continuationId": continuationId,
+			"visitorId":      123,
 		},
 		resolvers.ArtistSingles,
 	)

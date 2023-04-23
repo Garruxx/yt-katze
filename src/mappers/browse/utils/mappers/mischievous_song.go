@@ -8,7 +8,7 @@ import (
 	"katze/src/models/music"
 )
 
-func Song(
+func MischievousSong(
 	song external.MischievousContent,
 ) (
 	music.Song, error,

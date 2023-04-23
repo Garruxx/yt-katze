@@ -1542,3 +1542,59 @@ type ArtistAlbumsResponseContext struct {
 	MaxAgeSeconds         int64                  `json:"maxAgeSeconds"`
 	VisitorData           string                 `json:"visitorData"`
 }
+
+type PlayerInformation struct {
+	Error           *ErrorElement                `json:"error"`
+	ResponseContext *ArtistAlbumsResponseContext `json:"responseContext,omitempty"`
+	Contents        *PlayerContents              `json:"contents,omitempty"`
+}
+
+type PlayerContents struct {
+	SingleColumnMusicWatchNextResultsRenderer SingleColumnMusicWatchNextResultsRenderer `json:"singleColumnMusicWatchNextResultsRenderer"`
+}
+
+type SingleColumnMusicWatchNextResultsRenderer struct {
+	TabbedRenderer PlayerTabbedRenderer `json:"tabbedRenderer"`
+}
+type PlayerTabbedRenderer struct {
+	WatchNextTabbedResultsRenderer WatchNextTabbedResultsRenderer `json:"watchNextTabbedResultsRenderer"`
+}
+type WatchNextTabbedResultsRenderer struct {
+	Tabs []PlayerTabs `json:"tabs"`
+}
+
+type PlayerTabs struct {
+	TabRenderer PayerTabRenderer `json:"tabRenderer"`
+}
+
+type PayerTabRenderer struct {
+	Title    string `json:"title"`
+	Endpoint OnTap  `json:"endpoint"`
+}
+
+type MusicRecomendations struct {
+	ResponseContext *ArtistTracklistPaginationResponseContext `json:"responseContext,omitempty"`
+	Contents        *MusicRecomendationsContents              `json:"contents,omitempty"`
+	Error           *ErrorElement                             `json:"error,omitempty"`
+}
+
+type MusicRecomendationsContents struct {
+	SectionListRenderer MusicRecomendationsSectionListRenderer `json:"sectionListRenderer"`
+}
+
+type MusicRecomendationsSectionListRenderer struct {
+	Contents []MusicRecomendationsContent `json:"contents"`
+}
+
+type MusicRecomendationsContent struct {
+	MusicCarouselShelfRenderer MusicRecomendaionsCarouselShelfRenderer `json:"musicCarouselShelfRenderer"`
+}
+
+type MusicRecomendaionsCarouselShelfRenderer struct {
+	Header   MusicCarouselShelfRendererHeader `json:"header"`
+	Contents []MischievousContent             `json:"contents"`
+}
+
+type MusicRecomendationsContent2 struct {
+	MusicResponsiveListItemRenderer StickyMusicResponsiveListItemRenderer `json:"musicResponsiveListItemRenderer"`
+}

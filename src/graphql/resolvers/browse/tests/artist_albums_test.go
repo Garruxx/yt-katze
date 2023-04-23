@@ -4,6 +4,7 @@ import (
 	"katze/src/graphql/resolvers"
 	"katze/src/graphql/resolvers/tests/utils"
 	"katze/src/models/artist"
+	"katze/src/services"
 	"testing"
 )
 
@@ -17,12 +18,14 @@ func TestArtistAlbums(t *testing.T) {
 	// test case 1 - valid artistId, continuationId and visitorID
 	visitorID := "CgtpR05yLVQyVVo2TSitpoGiBg%3D%3D"
 	artistId := "UCPC0L1d253x-KuMNwa05TpA"
+	//Use the visitorID and artistID before the test
+	services.BrowseArtistProfile(artistId, &visitorID)
 	continuationId := "6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMUY2UW5SMVdUVnJhamRKWWpSRU9EaFFkVGR1YUZwMmVuQlZOakJsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOUVF6Qk1NV1F5TlRONExVdDFUVTUzWVRBMVZIQkJBQUh5MnJPcUNnWkFBVWdBVUNr"
 	result, err := utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
-			"artistId":  artistId,
-			"continuationId":    continuationId,
-			"visitorId": visitorID,
+			"artistId":       artistId,
+			"continuationId": continuationId,
+			"visitorId":      visitorID,
 		},
 		resolvers.ArtistAlbums,
 	)
@@ -40,9 +43,9 @@ func TestArtistAlbums(t *testing.T) {
 	continuationId = "Tirilil"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
-			"artistId":  artistId,
-			"continuationId":    continuationId,
-			"visitorId": visitorID,
+			"artistId":       artistId,
+			"continuationId": continuationId,
+			"visitorId":      visitorID,
 		},
 		resolvers.ArtistAlbums,
 	)
@@ -56,9 +59,9 @@ func TestArtistAlbums(t *testing.T) {
 	continuationId = "6gPjAUdxY0JXcGdCQ3BVQkNpUjVkRjl3WVdkbFgzTnVZWEJ6YUc5MFgyMTFjMmxqWDNCaFoyVmZjbVZuYVc5dVlXd1NIMUY2UW5SMVdUVnJhamRKWWpSRU9EaFFkVGR1YUZwMmVuQlZOakJsVW1jYVRBQUFaVzRBQVVOUEFBRkRUd0FCQUVaRmJYVnphV05mWkdWMFlXbHNYMkZ5ZEdsemRBQUJBVU1BQUFFQUFRQUFBUUVBVlVOUVF6Qk1NV1F5TlRONExVdDFUVTUzWVRBMVZIQkJBQUh5MnJPcUNnWkFBVWdBVUNr"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
-			"artistId":  artistId,
-			"continuationId":    continuationId,
-			"visitorId": visitorID,
+			"artistId":       artistId,
+			"continuationId": continuationId,
+			"visitorId":      visitorID,
 		},
 		resolvers.ArtistAlbums,
 	)
@@ -71,9 +74,9 @@ func TestArtistAlbums(t *testing.T) {
 	continuationId = ""
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
-			"artistId":  4444,
-			"continuationId":    continuationId,
-			"visitorId": visitorID,
+			"artistId":       4444,
+			"continuationId": continuationId,
+			"visitorId":      visitorID,
 		},
 		resolvers.ArtistAlbums,
 	)
@@ -86,9 +89,9 @@ func TestArtistAlbums(t *testing.T) {
 	artistId = "UCPC0L1d253x-KuMNwa05TpA"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
-			"artistId":  artistId,
-			"continuationId":    4444,
-			"visitorId": visitorID,
+			"artistId":       artistId,
+			"continuationId": 4444,
+			"visitorId":      visitorID,
 		},
 		resolvers.ArtistAlbums,
 	)
@@ -100,9 +103,9 @@ func TestArtistAlbums(t *testing.T) {
 	artistId = "UCPC0L1d253x-KuMNwa05TpA"
 	_, err = utils.GqlResolver[[]artist.CardItem](
 		map[string]any{
-			"artistId":  artistId,
-			"continuationId":    continuationId,
-			"visitorId": 4444,
+			"artistId":       artistId,
+			"continuationId": continuationId,
+			"visitorId":      4444,
 		},
 		resolvers.ArtistAlbums,
 	)

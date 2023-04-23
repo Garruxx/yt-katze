@@ -2,6 +2,7 @@ package mappers
 
 import (
 	"katze/src/mappers/browse"
+	"katze/src/mappers/player"
 	"katze/src/mappers/search"
 )
 
@@ -12,7 +13,7 @@ var BrowseArtistMusicList = browse.ArtistMusicList
 var BrowseArtistMusicPagination = browse.ArtistMusicPagination
 var BrowseArtistAlbums = browse.ArtistAlbums
 var BrowseArtistSingles = browse.ArtistSingles
-
+var BeowseRecomendations = browse.Recomendations
 // Album and Single
 var BrowseAlbum = browse.Album
 var BrowseSingle = browse.Single
@@ -32,3 +33,6 @@ var SearchArtistPagination = search.ArtistPagination
 // Album
 var SearchAlbumList = search.AlbumList
 var SearchAlbumPagination = search.AlbumPagination
+
+// Player
+var PlayerInformation = player.Information

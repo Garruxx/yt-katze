@@ -13,6 +13,7 @@ func Request(req models.Request) ([]byte, error) {
 		Params:   req.Params,
 		Query:    req.Query,
 		BrowseID: req.BrowseID,
+		VideoID:  req.VideoID,
 	}
 
 	bodyReq, err := ReqBodyConfig(body_config)

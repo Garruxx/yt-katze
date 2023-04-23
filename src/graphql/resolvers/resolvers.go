@@ -22,3 +22,4 @@ var ArtistMusicsList = browse.ArtistMusicsList
 var ArtistMusicsListPagination = browse.ArtistMusicsListPagination
 var ArtistProfile = browse.ArtistProfile
 var ArtistSingles = browse.ArtistSingles
+var SongsRecomendation = browse.SongsRecomendation
