@@ -27,12 +27,12 @@ func General(query string, visitorID string) (
 	var trackPagination external.General
 	err = json.Unmarshal(body, &trackPagination)
 	if err != nil {
-		err := fmt.Errorf("Error unmarshalling response body: %v", err)
+		err := fmt.Errorf("error unmarshalling response body: %v", err)
 		return external.General{}, err
 	}
 
 	if trackPagination.Error != nil {
-		err := fmt.Errorf("Error getting search result: %v", trackPagination.Error.Status)
+		err := fmt.Errorf("error getting search result: %v", trackPagination.Error.Status)
 		return external.General{}, err
 	}
 

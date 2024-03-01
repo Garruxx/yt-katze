@@ -1,7 +1,6 @@
 package song
 
 import (
-	"fmt"
 	"katze/src/mappers/search/general/utils"
 	"katze/src/mappers/utils/columns"
 	"katze/src/mappers/utils/simplifier"
@@ -22,15 +21,8 @@ func Mapper(listItemRenderer external.MischievousContent) (
 		return music.Song{}, err
 	}
 	// Validate the item renderer
-	err = utils.ValidateItemRenderer(itemRenderer, "MUSIC_TYPE", 2)
+	err = utils.ValidateItemRenderer(itemRenderer, "MUSIC_TYPE", 3)
 	if err != nil {
-		return music.Song{}, err
-	}
-
-	if len(itemRenderer.FlexColumns) != 2 {
-		err := fmt.Errorf(
-			"error invalid data, the flex columns should have 2 items",
-		)
 		return music.Song{}, err
 	}
 	titleColumn := itemRenderer.FlexColumns[0]

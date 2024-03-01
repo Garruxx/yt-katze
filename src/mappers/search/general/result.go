@@ -43,7 +43,7 @@ func Result(searchResult external.General) (
 		if err != nil {
 			return shelves.General{}, err
 		}
-	} else if err != nil && err.Error() != "cloud not find best result" {
+	} else if err.Error() != "cloud not find best result" {
 		return shelves.General{}, err
 	}
 
@@ -54,7 +54,7 @@ func Result(searchResult external.General) (
 		if err != nil {
 			return shelves.General{}, err
 		}
-	} else if err != nil && err.Error() != "could not find shelf" {
+	} else if err.Error() != "could not find shelf" {
 		return shelves.General{}, err
 	}
 
@@ -65,7 +65,7 @@ func Result(searchResult external.General) (
 		if err != nil {
 			return shelves.General{}, err
 		}
-	} else if err != nil && err.Error() != "could not find shelf" {
+	} else if err.Error() != "could not find shelf" {
 		return shelves.General{}, err
 	}
 
@@ -76,7 +76,7 @@ func Result(searchResult external.General) (
 		if err != nil {
 			return shelves.General{}, err
 		}
-	} else if err != nil && err.Error() != "could not find shelf" {
+	} else if err.Error() != "could not find shelf" {
 		return shelves.General{}, err
 	}
 
