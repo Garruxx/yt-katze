@@ -12,7 +12,7 @@ func main() {
 	// Set up port
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "80"
+		port = "7473"
 	}
 	addr := fmt.Sprintf(":%s", port)
 
