@@ -24,7 +24,7 @@ func main() {
 	go http.Handle("/graphql", handler)
 
 	// Start server
-	fmt.Println("Server started on port 80")
+	fmt.Println("Server started on port ", port)
 	err = http.ListenAndServe(addr, nil)
 	if err != nil {
 		logger.Errorf("Error starting server: %v", err)
